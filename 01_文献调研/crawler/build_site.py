@@ -176,10 +176,22 @@ def main():
     with open(GRAPH_JSON, 'r', encoding='utf-8') as f:
         gdata = f.read()
     html = HTML_TPL.replace('{GRAPH_DATA}', gdata)
+
+    # 修复 Python str.format 导致的 CSS/JS 双括号问题
+    # 只处理 <style> 块和 <script> 的 JS 逻辑部分（跳过 JSON 数据）
+    style_s = html.find('<style>') + len('<style>')
+    style_e = html.find('</style>')
+    html = html[:style_s] + html[style_s:style_e].replace('{{','{').replace('}}','}') + html[style_e:]
+
+    # JS 逻辑部分（const AN 之后）
+    an_idx  = html.rfind('const AN')
+    js_end  = html.rfind('</script>')
+    html = html[:an_idx] + html[an_idx:js_end].replace('{{','{').replace('}}','}') + html[js_end:]
+
     os.makedirs(DOCS_DIR, exist_ok=True)
     with open(OUT_HTML, 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f'生成完成：{OUT_HTML}  ({len(html)} 字符)')
+    print('生成完成：' + OUT_HTML + '  (' + str(len(html)) + ' 字符)')
 
 if __name__ == '__main__':
     main()

@@ -93,7 +93,7 @@ def classify_paper(title, keywords=''):
             if kw in text:
                 matched.append(cat_id)
                 break
-    return matched if matched else ['Z_其他']
+    return matched if matched else ['其他']
 
 
 def main():
@@ -140,7 +140,7 @@ def main():
 
     # ── 分类节点 ──────────────────────────────────────────
     for cat_id, plist in sorted(cat_papers.items(), key=lambda x: -len(x[1])):
-        cat_info = CATEGORIES.get(cat_id, {'label': cat_id, 'color': '#8b949e'})
+        cat_info = CATEGORIES.get(cat_id, {'label': cat_id.replace('Z_',''), 'color': '#8b949e'})
         nid[('cat', cat_id)] = idx
         nodes.append({
             'id':    idx,

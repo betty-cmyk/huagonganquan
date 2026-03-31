@@ -96,8 +96,11 @@ def main():
             year         INTEGER,
             abstract     TEXT,
             keywords     TEXT,
+            category_9   TEXT,
             directions   TEXT,
             source_kw    TEXT,
+            db_type      TEXT,
+            db_source    TEXT,
             source_url   TEXT,
             source_site  TEXT
         )
@@ -110,10 +113,11 @@ def main():
     ''')
     for p in filtered:
         cur.execute(
-            'INSERT INTO papers (title,author,unit,degree,year,abstract,keywords,directions,source_kw,source_url,source_site) VALUES (?,?,?,?,?,?,?,?,?,?,?)',
+            'INSERT INTO papers (title,author,unit,degree,year,abstract,keywords,category_9,directions,source_kw,db_type,db_source,source_url,source_site) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
             (p['title'], p.get('author',''), p.get('unit',''),
              p.get('degree',''), int(p['year']) if p.get('year','').isdigit() else 0,
-             p.get('abstract',''), p.get('keywords',''), p['directions_str'], p.get('source_keyword',''),
+             p.get('abstract',''), p.get('keywords',''), p.get('category_9',''), p['directions_str'],
+             p.get('source_keyword',''), p.get('db_type',''), p.get('db_source',''),
              p.get('source_url',''), p.get('source_site',''))
         )
         pid = cur.lastrowid
@@ -127,7 +131,8 @@ def main():
     with open(CSV_PATH, 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.DictWriter(f, fieldnames=[
             'title','author','unit','degree','year',
-            'abstract','keywords','directions_str','source_keyword','source_url','source_site'
+            'abstract','keywords','category_9','directions_str','source_keyword',
+            'db_type','db_source','source_url','source_site'
         ])
         w.writeheader()
         for p in filtered:
@@ -139,8 +144,11 @@ def main():
                 'year':           p.get('year',''),
                 'abstract':       p.get('abstract',''),
                 'keywords':       p.get('keywords',''),
+                'category_9':     p.get('category_9',''),
                 'directions_str': p['directions_str'],
                 'source_keyword': p.get('source_keyword',''),
+                'db_type':        p.get('db_type',''),
+                'db_source':      p.get('db_source',''),
                 'source_url':     p.get('source_url',''),
                 'source_site':    p.get('source_site',''),
             })
