@@ -67,6 +67,8 @@ REJECT_PATTERNS = [
     r"校园",
     r"护理",
     r"药品",
+    r"制药",
+    r"家具",
     r"地点.{0,6}化工管理",
 ]
 
@@ -104,7 +106,8 @@ def clean_text(text: str) -> str:
         return ""
     text = text.replace("~#@", "").replace("@#~", "")
     text = re.sub(r"\s+", " ", text)
-    return text.strip()
+    text = text.strip()
+    return text.encode("utf-8", "ignore").decode("utf-8", "ignore")
 
 
 def build_source_url(item: dict, query: str) -> str:
@@ -123,7 +126,7 @@ def build_source_url(item: dict, query: str) -> str:
     return f"https://search.cnki.com.cn/Search/Result?theme={urllib.parse.quote(query)}"
 
 
-def auto_review(title: str, summary: str) -> tuple[str, str]:
+def auto_review(category: str, title: str, summary: str) -> tuple[str, str]:
     text = f"{title} {summary}"
     if not any(token in text for token in CHEMICAL_TOKENS):
         return "reject", "缺少化工/危化品领域词"
@@ -134,6 +137,15 @@ def auto_review(title: str, summary: str) -> tuple[str, str]:
             return "reject", f"命中过滤词: {pattern}"
     if "管理" in title and "安全" not in title and "应急" not in title and "职业" not in title:
         return "reject", "偏化工管理/非安全主题"
+    if category == "运输与储存安全类":
+        if not any(token in title for token in ["运输", "道路", "仓储", "储存", "储罐", "罐区", "仓库"]):
+            return "reject", "缺少运输/储存核心词"
+    if category == "事故分析与应急类":
+        if not any(token in title for token in ["事故", "应急", "救援", "避难", "推演", "物资调度"]):
+            return "reject", "缺少事故/应急核心词"
+    if category == "职业卫生健康类":
+        if not any(token in title for token in ["职业卫生", "职业健康", "职业病", "职业病危害", "暴露", "粉尘", "噪声", "苯"]):
+            return "reject", "缺少职业卫生核心词"
     return "keep", "标题与摘要初筛相关"
 
 
@@ -154,7 +166,7 @@ def main() -> None:
                     seen_titles.add(title)
 
                     summary = clean_text(item.get("summary", ""))[:500]
-                    verdict, reason = auto_review(title, summary)
+                    verdict, reason = auto_review(category, title, summary)
                     out.append({
                         "category": category,
                         "query": query,
