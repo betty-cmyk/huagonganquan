@@ -94,6 +94,7 @@ def main():
             unit         TEXT,
             degree       TEXT,
             year         INTEGER,
+            abstract     TEXT,
             keywords     TEXT,
             directions   TEXT,
             source_kw    TEXT,
@@ -109,10 +110,10 @@ def main():
     ''')
     for p in filtered:
         cur.execute(
-            'INSERT INTO papers (title,author,unit,degree,year,keywords,directions,source_kw,source_url,source_site) VALUES (?,?,?,?,?,?,?,?,?,?)',
+            'INSERT INTO papers (title,author,unit,degree,year,abstract,keywords,directions,source_kw,source_url,source_site) VALUES (?,?,?,?,?,?,?,?,?,?,?)',
             (p['title'], p.get('author',''), p.get('unit',''),
              p.get('degree',''), int(p['year']) if p.get('year','').isdigit() else 0,
-             p.get('keywords',''), p['directions_str'], p.get('source_keyword',''),
+             p.get('abstract',''), p.get('keywords',''), p['directions_str'], p.get('source_keyword',''),
              p.get('source_url',''), p.get('source_site',''))
         )
         pid = cur.lastrowid
@@ -126,7 +127,7 @@ def main():
     with open(CSV_PATH, 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.DictWriter(f, fieldnames=[
             'title','author','unit','degree','year',
-            'keywords','directions_str','source_keyword','source_url','source_site'
+            'abstract','keywords','directions_str','source_keyword','source_url','source_site'
         ])
         w.writeheader()
         for p in filtered:
@@ -136,6 +137,7 @@ def main():
                 'unit':           p.get('unit',''),
                 'degree':         p.get('degree',''),
                 'year':           p.get('year',''),
+                'abstract':       p.get('abstract',''),
                 'keywords':       p.get('keywords',''),
                 'directions_str': p['directions_str'],
                 'source_keyword': p.get('source_keyword',''),
