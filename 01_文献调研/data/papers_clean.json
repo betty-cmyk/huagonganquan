@@ -1,5 +1,5 @@
 {
-  "total": 397,
+  "total": 420,
   "papers": [
     {
       "title": "基于Web的化工安全语音合成平台的研究与开发",
@@ -16,7 +16,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于尺度不变性的化工安全标志检测方法研究",
@@ -33,7 +35,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于Transformer的化工安全标志检测方法研究与应用",
@@ -50,7 +54,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "重大化工安全事故应急管理机制研究",
@@ -68,7 +74,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工安全领域的语义检索方法研究",
@@ -85,7 +93,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于元宇宙的化工安全生产建模研究",
@@ -102,7 +112,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于文本与视觉双模态结合的化工安全风险识别与分析",
@@ -119,7 +131,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工安全评估的复杂网络建模、分析技术研究",
@@ -136,7 +150,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工安全生产培训质量的评估模型构建研究",
@@ -154,7 +170,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于HAZOP报告的化工安全知识图谱问答系统构建",
@@ -172,7 +190,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于机器视觉的化工安全小目标识别技术研究",
@@ -189,7 +209,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于知识图谱的化工安全领域智能分析系统研究",
@@ -206,7 +228,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工安全事故的细粒度命名实体识别研究",
@@ -223,7 +247,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "石油化工安全监督检查智能支持系统研发",
@@ -241,7 +267,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于耗散理论的区域化工安全脆弱性预警研究",
@@ -258,7 +286,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工安全盲区的考察与研究",
@@ -275,7 +305,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于机器学习实现化工安全相关故障的检测与诊断",
@@ -292,7 +324,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "YA化工安全生产责任管理优化研究",
@@ -309,7 +343,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于图神经网络的石油化工安全知识图谱补全技术研究",
@@ -326,7 +362,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工安全领域的命名实体识别及关系抽取研究",
@@ -343,7 +381,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "自然语言处理技术在化工安全分析中的应用",
@@ -360,7 +400,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工安全知识图谱中的实体抽取和关系抽取研究",
@@ -377,7 +419,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工安全生产的安全帽与异物入侵检测方法研究",
@@ -394,7 +438,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于改进AHP-DEMATEL的永银化工安全评价及应用",
@@ -411,7 +457,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于常见化工安全事故调查报告的事理图谱构建方法研究",
@@ -428,7 +476,9 @@
       "sub_direction": [
         "事故分析"
       ],
-      "directions_str": "事故分析"
+      "directions_str": "事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "有机磷毒物的NMR快速检测方法及在化工安全分析中的应用",
@@ -445,7 +495,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工安全应急救援培训效果评估研究",
@@ -463,7 +515,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于虚拟交互的化工安全培训系统研究",
@@ -480,7 +534,9 @@
       "sub_direction": [
         "人员安全行为"
       ],
-      "directions_str": "人员安全行为"
+      "directions_str": "人员安全行为",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工安全生产状态预测系统的研究与实现",
@@ -497,7 +553,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工安全控制系统中央控制组件的设计与实现",
@@ -514,7 +572,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "磷化工安全评价决策支持系统的设计与开发",
@@ -531,7 +591,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于社会物理学的化工安全事故演化模型与控制模式研究",
@@ -548,7 +610,9 @@
       "sub_direction": [
         "事故分析"
       ],
-      "directions_str": "事故分析"
+      "directions_str": "事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于三维可视化技术的化工安全风险管理平台构建",
@@ -565,7 +629,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "安徽德邦化工安全信息管理与应急救援系统研究",
@@ -582,7 +648,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "胜华化工安全文化构建研究",
@@ -599,7 +667,9 @@
       "sub_direction": [
         "企业安全管理"
       ],
-      "directions_str": "企业安全管理"
+      "directions_str": "企业安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于小波神经网络的化工安全评价研究",
@@ -617,7 +687,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于道化学公司安全评价标准的化工安全评价计算机辅助系统的研究",
@@ -634,7 +706,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "M化工企业PBT项目安全风险管理研究",
@@ -651,7 +725,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "乌兰察布市化工行业安全监管问题研究",
@@ -668,7 +744,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "智能化工装备与系统的多尺度物联构架与安全效应",
@@ -685,7 +763,9 @@
       "sub_direction": [
         "智能化监管"
       ],
-      "directions_str": "智能化监管"
+      "directions_str": "智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工生产过程中安全防护品佩戴检测技术研究",
@@ -702,7 +782,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于化工危险品知识图谱的问答系统研究与应用",
@@ -719,7 +801,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工装置多安全风险演化机制研究",
@@ -736,7 +820,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于视觉SLAM的化工巡检车建图算法研究",
@@ -753,7 +839,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于时空特征融合的深度学习化工过程故障诊断方法研究",
@@ -771,7 +859,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工企业职业安全健康风险评估指标体系研究",
@@ -789,7 +879,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工实验室的开放式智能监控系统设计",
@@ -807,7 +899,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于前景理论的化工生产监管演化博弈研究",
@@ -824,7 +918,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "DH化工企业轻烃项目安全管理研究",
@@ -841,7 +937,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "A化工企业安全风险评价研究",
@@ -859,7 +957,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "境外A化工项目安全管理评估研究",
@@ -876,7 +976,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于风险云图的化工企业动态风险预警与定量风险评估技术研究",
@@ -894,7 +996,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "精细化工反应安全评估方法在高危化工工艺中的应用",
@@ -912,7 +1016,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "煤化工企业安全风险评价方法研究",
@@ -930,7 +1036,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区供热系统安全风险管理研究——以N化工园为例",
@@ -947,7 +1055,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "慧康生物化工生产安全风险评价研究与应用",
@@ -964,7 +1074,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "煤化工过程安全和环境性能评价方法研究",
@@ -981,7 +1093,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区整体性安全风险评估研究",
@@ -1000,7 +1114,9 @@
         "园区安全管理",
         "风险评价方法"
       ],
-      "directions_str": "园区安全管理 / 风险评价方法"
+      "directions_str": "园区安全管理 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "鄂尔多斯市煤化工行业安全管理问题研究",
@@ -1017,7 +1133,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "典型化工企业生产过程安全与环境风险评价",
@@ -1035,7 +1153,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于石油化工行业安全问题的安全管理信息系统设计与实现",
@@ -1052,7 +1172,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "龙口港液体化工码头安全管理评价研究",
@@ -1069,7 +1191,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工仪表网的网关研究",
@@ -1086,7 +1210,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "ZS石化公司安全管理评价研究",
@@ -1103,7 +1229,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "M煤化工企业安全信息共享模式研究",
@@ -1120,7 +1248,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "中小型化工企业的安全文化与工程伦理研究",
@@ -1137,7 +1267,9 @@
       "sub_direction": [
         "企业安全管理"
       ],
-      "directions_str": "企业安全管理"
+      "directions_str": "企业安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于风险的张城垸化工园区整体性安全评估研究",
@@ -1155,7 +1287,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于HAZOP和过程模拟的化工工艺安全性分析及优化",
@@ -1172,7 +1306,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于数据的非平稳化工过程监测方法研究",
@@ -1189,7 +1325,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工工艺流程气体泄漏扩散仿真建模研究",
@@ -1207,7 +1345,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于虚拟现实的化工园区安全培训系统设计",
@@ -1226,7 +1366,9 @@
         "园区安全管理",
         "人员安全行为"
       ],
-      "directions_str": "园区安全管理 / 人员安全行为"
+      "directions_str": "园区安全管理 / 人员安全行为",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于物联网化工实验室的设备制造与安全监控系统设计",
@@ -1244,7 +1386,9 @@
       "sub_direction": [
         "智能化监管"
       ],
-      "directions_str": "智能化监管"
+      "directions_str": "智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于HFACS模型的化工企业安全生产事故致因因素研究",
@@ -1262,7 +1406,9 @@
       "sub_direction": [
         "事故分析"
       ],
-      "directions_str": "事故分析"
+      "directions_str": "事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "ENH公司安全风险评估与管理研究",
@@ -1279,7 +1425,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于KAN模型的化工过程软测量研究及智能工业系统开发",
@@ -1297,7 +1445,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区危险性分析与评价",
@@ -1315,7 +1465,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工企业数据安全保护的技术研究",
@@ -1332,7 +1484,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工园区重大危险源的动态预测及评估方法研究",
@@ -1349,7 +1503,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "以化工产业为主导的区县风险评估研究——以猇亭区为例",
@@ -1366,7 +1522,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "Z市化工企业安全生产监管现状分析与完善对策研究",
@@ -1384,7 +1542,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工生产设备关联性风险辨识与评估研究",
@@ -1401,7 +1561,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "在役化工过程安全仪表系统屏障分析及SIL评估",
@@ -1418,7 +1580,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "云模型在高校化工类实验室安全管理评价中的应用",
@@ -1436,7 +1600,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工生产车间动态安全标志呈现方式感知效果研究",
@@ -1453,7 +1619,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于安全结构理论的化工生产事故对策研究",
@@ -1471,7 +1639,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于定目标和系统综合的化工过程安全风险削减方法研究",
@@ -1488,7 +1658,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工改扩建项目消防安全评价研究——基于组合权重模糊综合评价法",
@@ -1505,7 +1677,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于可拓学的化工企业安全风险评价研究",
@@ -1523,7 +1697,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于配送机器人的化工园区事故预救援研究",
@@ -1541,7 +1717,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于人工神经网络化工企业安全评价方法的研究",
@@ -1560,7 +1738,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于人工神经网络的石油化工企业安全评价研究",
@@ -1579,7 +1759,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于改进YOLOv7的化工车间安全防护着装检测研究",
@@ -1596,7 +1778,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区火灾场景分析与安全疏散研究",
@@ -1614,7 +1798,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "NJ化工园区危化品物流安全管理研究",
@@ -1633,7 +1819,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "复杂大规模化工过程分布式过程监测及故障诊断策略研究",
@@ -1650,7 +1838,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "TY化工有限公司安全生产影响因素分析与管理对策研究",
@@ -1667,7 +1857,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于自编码器和门控循环单元的化工过程故障监测与诊断研究",
@@ -1684,7 +1876,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于互信息主成分分析对多工况化工过程监测的研究",
@@ -1701,7 +1895,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工设备振动监测终端研发与应用",
@@ -1718,7 +1914,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向化工生产车间的图像描述研究",
@@ -1735,7 +1933,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于人体关键点检测的安全作业人员设备操作动作识别方法",
@@ -1752,7 +1952,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "LMBP神经网络方法在化工企业安全评价中的应用",
@@ -1771,7 +1973,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于深度学习的化工生产安全状态检测研究",
@@ -1788,7 +1992,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "煤化工生产安全管理问题研究：以鄂尔多斯市为例",
@@ -1805,7 +2011,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "B市化工企业安全风险评估及预警研究",
@@ -1823,7 +2031,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于AR技术的危险化学品企业安全巡检系统",
@@ -1840,7 +2050,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于系统动力学的化工园区事故演化分析与对策研究在A化工园区的应用",
@@ -1859,7 +2071,9 @@
         "事故分析",
         "园区安全管理"
       ],
-      "directions_str": "事故分析 / 园区安全管理"
+      "directions_str": "事故分析 / 园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工企业社会责任研究——以A化工园区为例",
@@ -1877,7 +2091,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工过程的本质安全评估模型及安全-经济评价、优化的研究",
@@ -1895,7 +2111,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区应急能力评估模型及方法研究",
@@ -1915,7 +2133,9 @@
         "应急处置",
         "园区安全管理"
       ],
-      "directions_str": "应急处置 / 园区安全管理"
+      "directions_str": "应急处置 / 园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工事故报告知识图谱构建方法研究",
@@ -1933,7 +2153,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "A化工企业员工不安全行为研究",
@@ -1951,7 +2173,9 @@
       "sub_direction": [
         "人员安全行为"
       ],
-      "directions_str": "人员安全行为"
+      "directions_str": "人员安全行为",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于深度学习的化工车间常见不安全行为检测",
@@ -1969,7 +2193,9 @@
       "sub_direction": [
         "人员安全行为"
       ],
-      "directions_str": "人员安全行为"
+      "directions_str": "人员安全行为",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "G市化工园区安全监管的数字化建设路径研究",
@@ -1990,7 +2216,9 @@
         "园区安全管理",
         "智能化监管"
       ],
-      "directions_str": "安全监管体系 / 园区安全管理 / 智能化监管"
+      "directions_str": "安全监管体系 / 园区安全管理 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工过程开车过程故障诊断方法研究",
@@ -2007,7 +2235,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于精益思想的A高校B化工类实验室安全管理应用研究",
@@ -2025,7 +2255,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "安全视角下长春北湖化工园区选址与危险品运输路径研究",
@@ -2044,7 +2276,9 @@
         "运输路径优化",
         "园区安全管理"
       ],
-      "directions_str": "运输路径优化 / 园区安全管理"
+      "directions_str": "运输路径优化 / 园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "S市智慧化工园区大数据项目进度与风险管理研究",
@@ -2063,7 +2297,9 @@
         "园区安全管理",
         "智能化监管"
       ],
-      "directions_str": "园区安全管理 / 智能化监管"
+      "directions_str": "园区安全管理 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于多米诺效应的化工园区区域风险安全管理研究——以BH化工园区为例",
@@ -2081,7 +2317,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于化工园区火灾风险等级安全巡检机器人路径优化",
@@ -2100,7 +2338,9 @@
         "运输路径优化",
         "园区安全管理"
       ],
-      "directions_str": "运输路径优化 / 园区安全管理"
+      "directions_str": "运输路径优化 / 园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工过程异常检测方法研究及应用",
@@ -2117,7 +2357,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "嘉兴市化工园区安全风险管理研究",
@@ -2134,7 +2376,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工爆炸事故原因分析与对策研究",
@@ -2151,7 +2395,9 @@
       "sub_direction": [
         "事故分析"
       ],
-      "directions_str": "事故分析"
+      "directions_str": "事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于机器视觉的化工厂区人员安全监测应用技术研究",
@@ -2168,7 +2414,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "A化工生产项目施工风险评价",
@@ -2185,7 +2433,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工材料行业数据平台的设计与实现",
@@ -2202,7 +2452,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区安全风险动态管控技术研究",
@@ -2219,7 +2471,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "草甘膦生产车间的安全风险评估应用研究",
@@ -2236,7 +2490,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "湖北省典型化工园区安全管理问题及对策研究",
@@ -2254,7 +2510,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "QT化工公司安全精细化管理研究",
@@ -2271,7 +2529,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工企业一线员工不安全行为影响因素研究",
@@ -2289,7 +2549,9 @@
       "sub_direction": [
         "人员安全行为"
       ],
-      "directions_str": "人员安全行为"
+      "directions_str": "人员安全行为",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "我国危险化学品安全监管制度研究",
@@ -2306,7 +2568,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "南京市中小企业危险化学品安全监管研究",
@@ -2324,7 +2588,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于事故案例的危险化学品安全监管系统功能失效模式分析",
@@ -2342,7 +2608,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品安全监管体系研究——以YC市为例",
@@ -2359,7 +2627,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "数字治理视角下危险化学品安全监管难点及路径优化研究",
@@ -2377,7 +2647,9 @@
         "运输路径优化",
         "安全监管体系"
       ],
-      "directions_str": "运输路径优化 / 安全监管体系"
+      "directions_str": "运输路径优化 / 安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "金普新区危险化学品安全监管失效案例研究",
@@ -2394,7 +2666,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品安全监管绩效评价研究——以青岛西海岸新区为例",
@@ -2411,7 +2685,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "Z市危险化学品安全监管的问题与对策研究",
@@ -2428,7 +2704,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "泉州市危险化学品安全监管政策执行研究",
@@ -2445,7 +2723,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "忻州市危险化学品安全监管问题与对策研究",
@@ -2462,7 +2742,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "苏州市吴中区危险化学品安全监管对策研究",
@@ -2479,7 +2761,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "沾化县危险化学品安全监管模式研究与改进",
@@ -2496,7 +2780,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "城市危险化学品安全监管长效机制构建研究",
@@ -2513,7 +2799,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "我国危险化学品安全监管研究——基于联动协调机制的分析",
@@ -2530,7 +2818,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "常州市危险化学品安全监管长效机制构建研究",
@@ -2547,7 +2837,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "张家港市危险化学品安全监管研究",
@@ -2566,7 +2858,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品安全监管信息化的研究",
@@ -2585,7 +2879,9 @@
         "安全监管体系",
         "智能化监管"
       ],
-      "directions_str": "安全监管体系 / 智能化监管"
+      "directions_str": "安全监管体系 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "大丰港区危险化学品政府安全监管研究",
@@ -2602,7 +2898,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "S省危险化学品行业安全监管研究",
@@ -2619,7 +2917,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "惠安县危险化学品安全监督管理研究",
@@ -2636,7 +2936,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "大连金州新区危险化学品经营企业安全监管调查研究",
@@ -2654,7 +2956,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品生产经营单位安全生产监管现状及对策研究：以东莞市为例",
@@ -2672,7 +2976,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "高速公路危险化学品运输安全风险评估研究",
@@ -2691,7 +2997,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "M区危险化学品安全生产监管存在的问题及对策研究",
@@ -2709,7 +3017,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "P市危险化学品企业安全生产分级监管研究",
@@ -2727,7 +3037,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "S市危险化学品安全生产监管中的问题与对策研究",
@@ -2745,7 +3057,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "大连海关危险化学品进口监管现状及对策研究",
@@ -2762,7 +3076,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "XT市危险化学品安全生产监管问题研究",
@@ -2780,7 +3096,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向危险化学品存储技术的命名实体识别研究",
@@ -2797,7 +3115,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "A县危险化学品生产经营企业安全监管体制优化研究",
@@ -2815,7 +3135,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "物联网背景下危险品道路运输安全监管研究——以N市化工园区为例",
@@ -2838,7 +3160,9 @@
         "园区安全管理",
         "智能化监管"
       ],
-      "directions_str": "运输监管 / 安全监管体系 / 园区安全管理 / 智能化监管"
+      "directions_str": "运输监管 / 安全监管体系 / 园区安全管理 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "C市港口危险货物安全监管问题与对策研究",
@@ -2855,7 +3179,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于24Model-HC与NVivo的危险化学品事故原因分析研究",
@@ -2872,7 +3198,9 @@
       "sub_direction": [
         "事故分析"
       ],
-      "directions_str": "事故分析"
+      "directions_str": "事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向危险化学品道路运输爆炸事故智能决策的应急方案数据库",
@@ -2893,7 +3221,9 @@
         "运输监管",
         "事故分析"
       ],
-      "directions_str": "运输监管 / 事故分析"
+      "directions_str": "运输监管 / 事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "风险管理视角下Z市危险化学品安全生产监管研究",
@@ -2911,7 +3241,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "福建省危险化学品安全生产监管研究",
@@ -2929,7 +3261,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "庄河市危险化学品行业安全生产",
@@ -2946,7 +3280,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "安宁市危险化学品安全生产监管的主要问题及对策研究",
@@ -2964,7 +3300,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品监管机制建构研究",
@@ -2981,7 +3319,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "陕西省道路危险品运输安全监管问题与对策研究",
@@ -2999,7 +3339,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于LabVIEW的危险化学品仓库无线监管系统设计",
@@ -3016,7 +3358,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品储运管理系统的设计与实现",
@@ -3033,7 +3377,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险废物环境安全风险评估技术研究",
@@ -3050,7 +3396,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "宁夏危险货物道路运输安全监管系统建设研究",
@@ -3069,7 +3417,9 @@
         "运输监管",
         "安全监管体系"
       ],
-      "directions_str": "运输监管 / 安全监管体系"
+      "directions_str": "运输监管 / 安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "H市危险化学品安全生产应急管理体系研究",
@@ -3089,7 +3439,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品重大危险源安全监管系统的设计与实现",
@@ -3108,7 +3460,9 @@
         "安全监管体系",
         "智能化监管"
       ],
-      "directions_str": "安全监管体系 / 智能化监管"
+      "directions_str": "安全监管体系 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "青岛某区危险化学品安全风险调查评估及对策建议",
@@ -3125,7 +3479,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品公路运输安全管理策略研究",
@@ -3143,7 +3499,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "河南省危险化学品安全生产问题研究",
@@ -3160,7 +3518,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "临沂市危险化学品安全生产监督管理研究",
@@ -3178,7 +3538,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品行业生产安全监管研究——以张家港市为例",
@@ -3195,7 +3557,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "整体性治理视角下危险化学品碎片化监管问题研究——基于N市的研究",
@@ -3212,7 +3576,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输监管研究",
@@ -3230,7 +3596,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品信息系统设计与实现",
@@ -3247,7 +3615,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "区域工贸企业安全智能监管模式研究及应用",
@@ -3267,7 +3637,9 @@
         "安全监管体系",
         "智能化监管"
       ],
-      "directions_str": "安全监管体系 / 智能化监管"
+      "directions_str": "安全监管体系 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于机器学习和质谱描述符的有机化学品风险预测",
@@ -3284,7 +3656,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "孝感市危险化学品监管系统的设计研究",
@@ -3301,7 +3675,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "澳门危险化学品储运监管制度之研究",
@@ -3318,7 +3694,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "兰州市危险化学品行业安全监管研究",
@@ -3335,7 +3713,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "典型有机化学品的人体致癌毒性和内分泌干扰毒性的机器学习分类与回归模型预测",
@@ -3352,7 +3732,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "服务性政府视角下的危险化学品监管研究——以义乌市为例",
@@ -3369,7 +3751,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于双目视觉的危险化学品库内堆垛测距关键技术的研究",
@@ -3386,7 +3770,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "A市危险化学品安全生产监管困境及其对策研究",
@@ -3404,7 +3790,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "四川省D市安全生产监管机制研究",
@@ -3422,7 +3810,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输车辆监控系统设计与研究",
@@ -3439,7 +3829,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "协同视角下姜堰区机械制造业企业安全生产监管研究",
@@ -3457,7 +3849,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "T市危险化学品安全生产监管政策执行存在的问题及对策研究",
@@ -3475,7 +3869,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "东莞市危险化学品经营安全监管问题与对策研究",
@@ -3492,7 +3888,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品生产企业安全等级定量评估方法研究",
@@ -3509,7 +3907,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输安全保障管理对策研究",
@@ -3526,7 +3926,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品水路运输安全监督博弈问题研究",
@@ -3543,7 +3945,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区危险化学品事故应急调度的研究",
@@ -3562,7 +3966,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输安全的优化调度研究",
@@ -3579,7 +3985,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "典型危险化学品环境风险评价的应用研究",
@@ -3596,7 +4004,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于RFID技术的危险化学品智能仓储管理系统",
@@ -3613,7 +4023,9 @@
       "sub_direction": [
         "储存安全"
       ],
-      "directions_str": "储存安全"
+      "directions_str": "储存安全",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品选址及车辆路径问题研究",
@@ -3630,7 +4042,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输事故分析及选线研究",
@@ -3651,7 +4065,9 @@
         "运输风险评估",
         "事故分析"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 事故分析"
+      "directions_str": "运输监管 / 运输风险评估 / 事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "A公司危险化学品仓储安全性评价与风险防范对策研究",
@@ -3668,7 +4084,9 @@
       "sub_direction": [
         "储存安全"
       ],
-      "directions_str": "储存安全"
+      "directions_str": "储存安全",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "Z市危险化学品安全生产监管存在问题及对策研究",
@@ -3686,7 +4104,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "中国危险化学品事故统计分析与对策研究",
@@ -3703,7 +4123,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "临沂市危险化学品安全生产管理现状及对策研究",
@@ -3721,7 +4143,9 @@
       "sub_direction": [
         "企业安全管理"
       ],
-      "directions_str": "企业安全管理"
+      "directions_str": "企业安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "农业化学实验室智能安全管理系统的研究",
@@ -3740,7 +4164,9 @@
       "sub_direction": [
         "智能化监管"
       ],
-      "directions_str": "智能化监管"
+      "directions_str": "智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "J区危险化学品安全生产监管存在的问题及对策研究",
@@ -3758,7 +4184,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于FRAM的危险化学品道路运输系统恢复力提升研究",
@@ -3776,7 +4204,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品危害风险信息多向交叉沟通机制研究",
@@ -3793,7 +4223,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "我国危险品航空运输监管机制研究",
@@ -3812,7 +4244,9 @@
         "运输监管",
         "安全监管体系"
       ],
-      "directions_str": "运输监管 / 安全监管体系"
+      "directions_str": "运输监管 / 安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "协同治理视角下广州海珠区安全生产监管优化研究",
@@ -3830,7 +4264,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品生产安全事故应急管理问题研究——以杭州湾上虞工业园区为例",
@@ -3849,7 +4285,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于时空数据的非法化学品工厂地理位置检测",
@@ -3866,7 +4304,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "大型城市的小包装危险化学品的经营方案",
@@ -3883,7 +4323,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品物流配送优化技术研究",
@@ -3900,7 +4342,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "安全监管对化工行业生产率的影响分析",
@@ -3917,7 +4361,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品行政许可制度的比较与实践",
@@ -3934,7 +4380,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品泄漏应急堵漏子系统的设计与实现",
@@ -3952,7 +4400,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "重庆市危险化学品企业环境风险分级管理研究",
@@ -3969,7 +4419,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "佛山市危险化学品安全管理存在问题及其对策研究",
@@ -3986,7 +4438,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "国家安全生产信息系统危险化学品监管子系统的设计与实现",
@@ -4004,7 +4458,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于Agent的危险化学品安全生产信息采集系统研究",
@@ -4021,7 +4477,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "海上危险货物运输海事监管研究",
@@ -4039,7 +4497,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "开发区工业园危险化学品应急管理能力调研分析",
@@ -4056,7 +4516,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "海关危化品信息化监管问题及对策研究",
@@ -4076,7 +4538,9 @@
         "安全监管体系",
         "智能化监管"
       ],
-      "directions_str": "安全监管体系 / 智能化监管"
+      "directions_str": "安全监管体系 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "长江干线危险品运输安全保障体系研究",
@@ -4093,7 +4557,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于电子标签的危险化学品气瓶安全管理系统研究与开发",
@@ -4110,7 +4576,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于风险公平性的危险品道路运输车辆调度问题研究",
@@ -4128,7 +4596,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "上海港散装液态危险化学品水环境风险评估研究",
@@ -4145,7 +4615,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "吉林石化公司危险品仓储管理研究",
@@ -4162,7 +4634,9 @@
       "sub_direction": [
         "储存安全"
       ],
-      "directions_str": "储存安全"
+      "directions_str": "储存安全",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "淄博市危险化学品安全生产防控体系研究",
@@ -4180,7 +4654,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "长江散装液体危险货物运输监管对策研究",
@@ -4199,7 +4675,9 @@
         "运输监管",
         "安全监管体系"
       ],
-      "directions_str": "运输监管 / 安全监管体系"
+      "directions_str": "运输监管 / 安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "东营市河口区安全生产监管问题及对策研究",
@@ -4217,7 +4695,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "成都市危险化学品重大危险源监督管理系统设计与实现",
@@ -4234,7 +4714,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化学工业园区安全生产监管现状及对策研究",
@@ -4254,7 +4736,9 @@
         "安全监管体系",
         "园区安全管理"
       ],
-      "directions_str": "安全监管体系 / 园区安全管理"
+      "directions_str": "安全监管体系 / 园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于3s技术的危险品集装箱物流监管中心的研究与开发",
@@ -4272,7 +4756,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "液货危险品船舶靠离泊安全性评价",
@@ -4289,7 +4775,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "适于政府监管的重大危险源分级方法研究",
@@ -4306,7 +4794,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "日照港船载危险化学品安全管理对策研究",
@@ -4323,7 +4813,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "宁波市危险化学品空间分布及泄漏灾害模拟地理信息系统研究",
@@ -4340,7 +4832,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "江苏省危险化学品道路运输动态监控现状分析与对策研究",
@@ -4357,7 +4851,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品有机溶剂废液的综合回收利用研究",
@@ -4374,7 +4870,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "面向重大危险源的人员定位监控系统关键技术研究与应用",
@@ -4391,7 +4889,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于数据挖掘的危险货物道路运输事故机理研究",
@@ -4409,7 +4909,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品运输监管及应急平台的分析与设计",
@@ -4428,7 +4930,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于可变模糊集理论的危险化学品重大危险源风险评价的研究",
@@ -4445,7 +4949,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品道路运输的安全问题及对策研究：以NJHX运输公司为例",
@@ -4464,7 +4970,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于窄带物联网的移动式压力容器信息监管技术研究",
@@ -4482,7 +4990,9 @@
       "sub_direction": [
         "智能化监管"
       ],
-      "directions_str": "智能化监管"
+      "directions_str": "智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "有机反应安全风险研究及安全工艺开发",
@@ -4500,7 +5010,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "TJ石化仓储企业安全管理提升研究",
@@ -4519,7 +5031,9 @@
         "储存安全",
         "应急处置"
       ],
-      "directions_str": "储存安全 / 应急处置"
+      "directions_str": "储存安全 / 应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于博弈理论的危化品安全生产监管中的主体行为分析",
@@ -4538,7 +5052,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品车辆实时风险预警研究及移动端软件设计",
@@ -4555,7 +5071,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于GPS/GPRS/GIS的危险品车辆在途监控预警技术研究",
@@ -4572,7 +5090,9 @@
       "sub_direction": [
         "智能化监管"
       ],
-      "directions_str": "智能化监管"
+      "directions_str": "智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "城市道路危险品运输限速与超速报警技术研究",
@@ -4589,7 +5109,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "甘肃出口危险货物包装检验监管现状及对策研究",
@@ -4606,7 +5128,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "道路危险货物运输安全管理研究",
@@ -4624,7 +5148,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "江苏省淮安市港口安全监管现状及对策研究",
@@ -4641,7 +5167,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "奉贤区中小危化企业安全生产监管研究",
@@ -4659,7 +5187,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "东莞市港口危化品安全监管机制研究",
@@ -4677,7 +5207,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品运输网络的可靠性博弈分析及减灾系统研究",
@@ -4694,7 +5226,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "制药行业危险工艺氟化反应的安全评价",
@@ -4712,7 +5246,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于物联网的重大危险源监管及应急救援信息系统研究",
@@ -4732,7 +5268,9 @@
         "应急处置",
         "智能化监管"
       ],
-      "directions_str": "应急处置 / 智能化监管"
+      "directions_str": "应急处置 / 智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "大连湾危险化学品输运过程精细化模拟研究",
@@ -4749,7 +5287,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "制药行业危险工艺氯磺酸磺化反应的安全评价",
@@ -4767,7 +5307,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "港口危化品物流风险评估及监管策略研究",
@@ -4786,7 +5328,9 @@
       "sub_direction": [
         "风险评价方法"
       ],
-      "directions_str": "风险评价方法"
+      "directions_str": "风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "员工风险感知对其生产不安全行为的影响及监管启示——嘉兴市为例",
@@ -4804,7 +5348,9 @@
       "sub_direction": [
         "人员安全行为"
       ],
-      "directions_str": "人员安全行为"
+      "directions_str": "人员安全行为",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "临沂市安全生产工作对策研究——基于政府监管的视角",
@@ -4822,7 +5368,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "连云港市灌云县安全生产监管面临的问题与对策研究",
@@ -4841,7 +5389,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区安全生产监管研究——以YHZ化工园区为例",
@@ -4860,7 +5410,9 @@
       "sub_direction": [
         "园区安全管理"
       ],
-      "directions_str": "园区安全管理"
+      "directions_str": "园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "强化昆山市工业企业安全生产主体责任研究——基于政府监管视角",
@@ -4878,7 +5430,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于电子标签的危化气瓶安全监管系统研究",
@@ -4895,7 +5449,9 @@
       "sub_direction": [
         "安全监管体系"
       ],
-      "directions_str": "安全监管体系"
+      "directions_str": "安全监管体系",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输的半开放式路径优化研究",
@@ -4912,7 +5468,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于多传感器的危险化学品运输监控平台",
@@ -4929,7 +5487,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于贝叶斯网络的危险化学品运输安全风险评估研究",
@@ -4948,7 +5508,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "海上危险化学品运输系统韧性研究",
@@ -4965,7 +5527,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输企业风险评估模型及应用研究",
@@ -4985,7 +5549,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于智慧物流生态链的危险化学品运输线路优化研究",
@@ -5002,7 +5568,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输车辆聚集区域内的动态风险分析",
@@ -5019,7 +5587,9 @@
       "sub_direction": [
         "运输风险评估"
       ],
-      "directions_str": "运输风险评估"
+      "directions_str": "运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "长江下游危险化学品运输风险及对策研究",
@@ -5036,7 +5606,9 @@
       "sub_direction": [
         "运输风险评估"
       ],
-      "directions_str": "运输风险评估"
+      "directions_str": "运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "湖南省高速公路危险化学品运输安全管理研究",
@@ -5054,7 +5626,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "道路危险化学品运输风险评估模型及选线优化研究",
@@ -5073,7 +5647,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "不确定条件下危险化学品运输路径优化研究",
@@ -5090,7 +5666,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "内河危险化学品运输服务链成本结构分析及优化",
@@ -5107,7 +5685,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输过程中安全管理监控系统设计与实现",
@@ -5125,7 +5705,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "长江危险化学品运输的系统风险评估研究",
@@ -5144,7 +5726,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "北京市危险化学品运输引发突发事件的风险管理研究",
@@ -5161,7 +5745,9 @@
       "sub_direction": [
         "运输风险评估"
       ],
-      "directions_str": "运输风险评估"
+      "directions_str": "运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "XF集团危险化学品运输管理优化研究",
@@ -5178,7 +5764,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输路径及选址问题研究",
@@ -5195,7 +5783,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "内河危险化学品运输应急物资储备策略研究",
@@ -5213,7 +5803,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输综合监测系统研究",
@@ -5230,7 +5822,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输车辆涉水桥梁交通事故环境风险防治安全设施建设究",
@@ -5248,7 +5842,9 @@
       "sub_direction": [
         "运输风险评估"
       ],
-      "directions_str": "运输风险评估"
+      "directions_str": "运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "重庆内河危险化学品运输企业的运输安全风险管理研究",
@@ -5266,7 +5862,9 @@
       "sub_direction": [
         "运输风险评估"
       ],
-      "directions_str": "运输风险评估"
+      "directions_str": "运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "物联网环境下危险化学品运输车辆调度问题研究",
@@ -5284,7 +5882,9 @@
       "sub_direction": [
         "智能化监管"
       ],
-      "directions_str": "智能化监管"
+      "directions_str": "智能化监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品运输管理平台的设计与其中若干问题的研究",
@@ -5301,7 +5901,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "考虑风险性约束的危险化学品运输路径优化研究",
@@ -5318,7 +5920,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "黄浦江上游水源地危险化学品运输风险评价及环境管理研究",
@@ -5337,7 +5941,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输事故动态风险评估与应急处置研究",
@@ -5360,7 +5966,9 @@
         "应急处置",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 应急处置 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 应急处置 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品停车场责任风险分析及保险研究",
@@ -5379,7 +5987,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品停车场安全防护设施设计研究",
@@ -5396,7 +6006,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于GIS的危险化学品道路运输管理研究",
@@ -5413,7 +6025,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输风险评价及管理对策研究",
@@ -5433,7 +6047,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输事故特征分析与推理模型研究",
@@ -5451,7 +6067,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于突变理论的海上散装化学品运输安全研究",
@@ -5468,7 +6086,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "多起点半开放式危险品运输路径优化",
@@ -5485,7 +6105,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品事故信息命名实体识别方法研究",
@@ -5502,7 +6124,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "交通流影响下的危险化学品道路运输动态风险研究",
@@ -5520,7 +6144,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输突发泄漏入河环境风险评估技术及应用研究",
@@ -5541,7 +6167,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品公路运输选线指标体系优化研究",
@@ -5558,7 +6186,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于可信性理论危险化学品道路运输物流成本优化——以时间驱动作业成本法的视角",
@@ -5575,7 +6205,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输风险评估及动态预测",
@@ -5595,7 +6227,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品可靠性选址运输问题研究",
@@ -5613,7 +6247,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输风险传导路径与网络脆弱性研究",
@@ -5631,7 +6267,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品公路运输的风险分析与保险研究",
@@ -5649,7 +6287,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "考虑海上救助资源的化学品船海上运输路径规划研究",
@@ -5666,7 +6306,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "考虑环境敏感区暴露风险的危险品公路运输风险研究",
@@ -5684,7 +6326,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品重大危险源的风险管控与环境安全设计",
@@ -5701,7 +6345,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品供应链安全风险研究——以航天A研究院为例",
@@ -5718,7 +6364,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区危险化学品储存风险研究",
@@ -5736,7 +6384,9 @@
         "储存安全",
         "园区安全管理"
       ],
-      "directions_str": "储存安全 / 园区安全管理"
+      "directions_str": "储存安全 / 园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "数据驱动的道路危险品车辆检测研究",
@@ -5753,7 +6403,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品内河运输泄漏事故模拟与风险评估技术研究",
@@ -5774,7 +6426,9 @@
         "事故分析",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 事故分析 / 风险评价方法"
+      "directions_str": "运输风险评估 / 事故分析 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于分层检测算法的危险品运输车辆识别及预警",
@@ -5791,7 +6445,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输风险管理研究",
@@ -5809,7 +6465,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品车辆监控平台的设计与实现",
@@ -5826,7 +6484,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品的动态车辆路径研究",
@@ -5843,7 +6503,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "ZS公司危险化学品储运业务安全隐患管理策略研究",
@@ -5860,7 +6522,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "海洋危险化学品对双壳贝类毒性效应与模拟泄漏实验研究",
@@ -5877,7 +6541,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品燃爆危险性综合评估与分级研究",
@@ -5894,7 +6560,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品公路运输事故情景构建与应急管理研究",
@@ -5914,7 +6582,9 @@
         "运输监管",
         "应急处置"
       ],
-      "directions_str": "运输监管 / 应急处置"
+      "directions_str": "运输监管 / 应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "LD公司危险品运输管理",
@@ -5931,7 +6601,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "铁路危险货物运输安全风险分析及对策",
@@ -5948,7 +6620,9 @@
       "sub_direction": [
         "运输风险评估"
       ],
-      "directions_str": "运输风险评估"
+      "directions_str": "运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "山东省危险化学品道路运输风险评价",
@@ -5968,7 +6642,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "液态危险化学品道路运输选线研究",
@@ -5985,7 +6661,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "公路运输危险化学品事故后果模拟研究",
@@ -6003,7 +6681,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "辽宁省危险化学品道路运输安全评价研究",
@@ -6022,7 +6702,9 @@
         "运输监管",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 风险评价方法"
+      "directions_str": "运输监管 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "我国危险化学品绿色运输方式评价",
@@ -6039,7 +6721,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "某危险品运输车排气系统内流场及温度场研究与结构优化",
@@ -6056,7 +6740,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "我国危险化学品事故的安全管理体系原因研究",
@@ -6074,7 +6760,9 @@
       "sub_direction": [
         "企业安全管理"
       ],
-      "directions_str": "企业安全管理"
+      "directions_str": "企业安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品水路运输风险评价及控制措施研究",
@@ -6093,7 +6781,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品道路运输实时在线监控系统设计与实现",
@@ -6110,7 +6800,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险气体道路运输泄漏事故后果评估及应急处置研究",
@@ -6131,7 +6823,9 @@
         "应急处置",
         "事故分析"
       ],
-      "directions_str": "运输监管 / 应急处置 / 事故分析"
+      "directions_str": "运输监管 / 应急处置 / 事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "海上散装液体危险化学品装载中“人”因素可靠性研究",
@@ -6148,7 +6842,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于轨迹数据的区域危险货物道路运输应急救援站点布局研究",
@@ -6167,7 +6863,9 @@
         "运输监管",
         "应急处置"
       ],
-      "directions_str": "运输监管 / 应急处置"
+      "directions_str": "运输监管 / 应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工园区危险化学品储存风险管控模型研究",
@@ -6186,7 +6884,9 @@
         "储存安全",
         "园区安全管理"
       ],
-      "directions_str": "储存安全 / 园区安全管理"
+      "directions_str": "储存安全 / 园区安全管理",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品仓储系统风险评价方法研究",
@@ -6204,7 +6904,9 @@
         "储存安全",
         "风险评价方法"
       ],
-      "directions_str": "储存安全 / 风险评价方法"
+      "directions_str": "储存安全 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "泉州市危险货物道路运输管理政策执行研究",
@@ -6221,7 +6923,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险液体化学品运输安全管理研究——以JY公司为例",
@@ -6239,7 +6943,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输泄漏扩散及火灾事故模拟研究",
@@ -6258,7 +6964,9 @@
         "运输监管",
         "事故分析"
       ],
-      "directions_str": "运输监管 / 事故分析"
+      "directions_str": "运输监管 / 事故分析",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "公路危险品运输决策策略研究",
@@ -6275,7 +6983,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品车辆路径问题及算法研究",
@@ -6292,7 +7002,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "内河液态危化品运输路线评价研究",
@@ -6309,7 +7021,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "J企业危险化学品公路运输的风险分析与控制研究",
@@ -6328,7 +7042,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "气体类化学品道路运输事故风险评价",
@@ -6349,7 +7065,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品事故损失计算研究",
@@ -6366,7 +7084,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "淮南市危险化学品安全信息管理系统研究",
@@ -6383,7 +7103,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "阜新市危险化学品管理机制研究",
@@ -6400,7 +7122,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品事故环境风险的定量评估及动态演化",
@@ -6417,7 +7141,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于遗传算法的危险品运输调度优化研究",
@@ -6434,7 +7160,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "考虑公平性约束的危险品运输网络设计研究",
@@ -6451,7 +7179,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品生产企业物流绩效评价研究",
@@ -6469,7 +7199,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品事故应急设施选址研究",
@@ -6487,7 +7219,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "云南危险品的物流流程风险管理研究",
@@ -6504,7 +7238,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "鞍山市危险化学品安全管理研究",
@@ -6521,7 +7257,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于海洋微藻的典型危险化学品毒性效应和生物清除研究",
@@ -6538,7 +7276,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于风险评价的危险化学品码头选址研究",
@@ -6556,7 +7296,9 @@
         "运输路径优化",
         "风险评价方法"
       ],
-      "directions_str": "运输路径优化 / 风险评价方法"
+      "directions_str": "运输路径优化 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "用于化学品危险性快速检测的过程强化研究",
@@ -6573,7 +7315,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输事故率计算方法研究",
@@ -6591,7 +7335,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于BTM模型的危险货物道路运输事故影响因素分析",
@@ -6609,7 +7355,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "我国危险化学品货物道路运输风险分析及防范研究",
@@ -6627,7 +7375,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "巨化集团危险化学品道路运输部门标准体系的研究",
@@ -6645,7 +7395,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于FMEA的莱德公司危化品运输风险管理研究",
@@ -6662,7 +7414,9 @@
       "sub_direction": [
         "运输风险评估"
       ],
-      "directions_str": "运输风险评估"
+      "directions_str": "运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "公路运输液态化学品风险辨识及危险度评价研究",
@@ -6680,7 +7434,9 @@
         "运输监管",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输风险评估"
+      "directions_str": "运输监管 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品仓储堆垛安全布局优化",
@@ -6697,7 +7453,9 @@
       "sub_direction": [
         "储存安全"
       ],
-      "directions_str": "储存安全"
+      "directions_str": "储存安全",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品罐式集装箱公路运输风险评价研究",
@@ -6717,7 +7475,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "不确定环境下危险化学品库存路径问题研究",
@@ -6734,7 +7494,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于ZigBee和百度地图的危化品运输跟踪监测系统研究",
@@ -6751,7 +7513,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品运输车辆远程监控系统的设计",
@@ -6768,7 +7532,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于贝叶斯网络的港区危险品运输事故影响因素分析",
@@ -6786,7 +7552,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "嘉绍大桥危险品运输风险评估和控制技术研究",
@@ -6805,7 +7573,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输风险评估 / 风险评价方法"
+      "directions_str": "运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危化品槽罐车运输安全监测信息处理技术研究",
@@ -6822,7 +7592,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "考虑风险公平性的危险品道路运输路径优化研究",
@@ -6841,7 +7613,9 @@
         "运输路径优化",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输路径优化 / 运输风险评估"
+      "directions_str": "运输监管 / 运输路径优化 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "化工企业危险品运输安全管理研究",
@@ -6859,7 +7633,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危化品道路运输的风险度量与路径优化研究",
@@ -6878,7 +7654,9 @@
         "运输路径优化",
         "运输风险评估"
       ],
-      "directions_str": "运输监管 / 运输路径优化 / 运输风险评估"
+      "directions_str": "运输监管 / 运输路径优化 / 运输风险评估",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "长江干线危险品运输组织方式优化研究",
@@ -6895,7 +7673,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于安全的危险品运输车辆优化调度研究",
@@ -6912,7 +7692,9 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品运输路径的动态选择和应急救援研究",
@@ -6930,7 +7712,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险品道路运输监控决策支持系统研究",
@@ -6947,7 +7731,9 @@
       "sub_direction": [
         "运输监管"
       ],
-      "directions_str": "运输监管"
+      "directions_str": "运输监管",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品道路运输风险评估系统的应用研究",
@@ -6967,7 +7753,9 @@
         "运输风险评估",
         "风险评价方法"
       ],
-      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法"
+      "directions_str": "运输监管 / 运输风险评估 / 风险评价方法",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品突发环境事件应急处置方法及决策支持系统构建研究",
@@ -6984,7 +7772,9 @@
       "sub_direction": [
         "应急处置"
       ],
-      "directions_str": "应急处置"
+      "directions_str": "应急处置",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "危险化学品物流中心选址问题研究",
@@ -7001,7 +7791,9 @@
       "sub_direction": [
         "运输路径优化"
       ],
-      "directions_str": "运输路径优化"
+      "directions_str": "运输路径优化",
+      "source_url": "",
+      "source_site": ""
     },
     {
       "title": "基于生命周期理论的危险化学品安全管理和评价",
@@ -7018,7 +7810,718 @@
       "sub_direction": [
         "其他"
       ],
-      "directions_str": "其他"
+      "directions_str": "其他",
+      "source_url": "",
+      "source_site": ""
+    },
+    {
+      "title": "????????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=05&yt=2020",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "HAZOP?????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=05&yt=2020",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "?????????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=08&yt=2022",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "??????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2026",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://aqhj.cbpt.cnki.net/portal/journal/portal/client/paper_list/type_benqi",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "AHP-??????????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2026",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://aqhj.cbpt.cnki.net/portal/journal/portal/client/paper_list/type_benqi",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "HAZOP??????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2006",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/portal/journal/portal/client/paperRank_list/type_yinyong",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2004",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/portal/journal/portal/client/paperRank_list/type_yinyong",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "?????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2004",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/portal/journal/portal/client/paperRank_list/type_yinyong",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "?????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=12&yt=2025",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "??????????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2026",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://aqhj.cbpt.cnki.net/portal/journal/portal/client/paper_list/type_benqi",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "????????????/???????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2026",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://aqhj.cbpt.cnki.net/portal/journal/portal/client/paper_list/type_benqi",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "????????????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2026",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://aqhj.cbpt.cnki.net/portal/journal/portal/client/paper_list/type_benqi",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "??????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "1996",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "?????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/portal/journal/portal/client/paperRank_list/type_yinyong",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "???????????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=08&yt=2024",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "?????????????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=08&yt=2024",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "?????+TOPSIS????????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=05&yt=2020",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "?????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/portal/journal/portal/client/paperRank_list/type_xiazaipaihang",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "???????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=05&yt=2020",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "CNG??????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/portal/journal/portal/client/paperRank_list/type_xiazaipaihang",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "????????(?)",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2005",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/portal/journal/portal/client/paperRank_list/type_yinyong",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "6?????????????",
+      "author": "",
+      "unit": "",
+      "degree": "",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????????"
+      ],
+      "source_keyword": "????_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????",
+        "??????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????? / ????? / ??????",
+      "source_url": "https://safe.cbpt.cnki.net/WKD/WebPublication/wkTextContent.aspx?colType=4&contentID=&st=01&yt=2023",
+      "source_site": "CNKI????"
+    },
+    {
+      "title": "????HSE????????",
+      "author": "",
+      "unit": "",
+      "degree": "??/??",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????"
+      ],
+      "source_keyword": "????_??_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????",
+      "source_url": "https://d.wanfangdata.com.cn/thesis/Y1355355",
+      "source_site": "????-????"
+    },
+    {
+      "title": "??ESN????????????",
+      "author": "",
+      "unit": "",
+      "degree": "??/??",
+      "year": "2015",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "????"
+      ],
+      "source_keyword": "????_??_2026-04-01",
+      "sub_direction": [
+        "????",
+        "??????",
+        "??????",
+        "????",
+        "????",
+        "????",
+        "??????",
+        "??????",
+        "??????",
+        "??????",
+        "?????"
+      ],
+      "directions_str": "???? / ?????? / ?????? / ???? / ???? / ???? / ?????? / ?????? / ?????? / ?????? / ?????",
+      "source_url": "https://d.wanfangdata.com.cn/thesis/D703201",
+      "source_site": "????-????"
     }
   ]
 }
