@@ -1,0 +1,5594 @@
+{
+  "total": 415,
+  "papers": [
+    {
+      "title": "基于Web的化工安全语音合成平台的研究与开发",
+      "author": "徐梦洁",
+      "unit": "合肥学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "化工安全；语音合成；音频工具；Web开发技术",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于尺度不变性的化工安全标志检测方法研究",
+      "author": "冉烁依",
+      "unit": "合肥学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于Transformer的化工安全标志检测方法研究与应用",
+      "author": "余豪",
+      "unit": "合肥学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "重大化工安全事故应急管理机制研究",
+      "author": "马国乐",
+      "unit": "沈阳化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工安全领域的语义检索方法研究",
+      "author": "柏宇婕",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于元宇宙的化工安全生产建模研究",
+      "author": "赵保中",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于文本与视觉双模态结合的化工安全风险识别与分析",
+      "author": "黄建辉",
+      "unit": "中南大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工安全评估的复杂网络建模、分析技术研究",
+      "author": "陆逸舟",
+      "unit": "常州大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工安全生产培训质量的评估模型构建研究",
+      "author": "丁添奕",
+      "unit": "杭州电子科技大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "人员行为"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于HAZOP报告的化工安全知识图谱问答系统构建",
+      "author": "汪港",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术",
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于机器视觉的化工安全小目标识别技术研究",
+      "author": "王浩",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于知识图谱的化工安全领域智能分析系统研究",
+      "author": "吴剑辉",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工安全事故的细粒度命名实体识别研究",
+      "author": "陈海东",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "石油化工安全监督检查智能支持系统研发",
+      "author": "赵鹏飞",
+      "unit": "常州大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于耗散理论的区域化工安全脆弱性预警研究",
+      "author": "江蕾",
+      "unit": "南京工业大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工安全盲区的考察与研究",
+      "author": "刘天齐",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "化工安全；盲区",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于机器学习实现化工安全相关故障的检测与诊断",
+      "author": "陈佳辉",
+      "unit": "郑州大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "YA化工安全生产责任管理优化研究",
+      "author": "高超",
+      "unit": "南京邮电大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于图神经网络的石油化工安全知识图谱补全技术研究",
+      "author": "曹鑫",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工安全领域的命名实体识别及关系抽取研究",
+      "author": "彭兰斐",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "自然语言处理技术在化工安全分析中的应用",
+      "author": "冯夏源",
+      "unit": "四川大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工安全知识图谱中的实体抽取和关系抽取研究",
+      "author": "任航玉",
+      "unit": "辽宁工业大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工安全生产的安全帽与异物入侵检测方法研究",
+      "author": "王达彤",
+      "unit": "山东大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于改进AHP-DEMATEL的永银化工安全评价及应用",
+      "author": "雷震",
+      "unit": "河南理工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于常见化工安全事故调查报告的事理图谱构建方法研究",
+      "author": "吴彤",
+      "unit": "合肥学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "有机磷毒物的NMR快速检测方法及在化工安全分析中的应用",
+      "author": "张盈盈",
+      "unit": "南京理工大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工安全应急救援培训效果评估研究",
+      "author": "刘凯",
+      "unit": "华北科技学院",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "人员行为"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于虚拟交互的化工安全培训系统研究",
+      "author": "陈桂园",
+      "unit": "沈阳航空航天大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "人员行为"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工安全生产状态预测系统的研究与实现",
+      "author": "张思密",
+      "unit": "北京邮电大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工安全控制系统中央控制组件的设计与实现",
+      "author": "黄彪",
+      "unit": "杭州电子科技大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "磷化工安全评价决策支持系统的设计与开发",
+      "author": "许冉",
+      "unit": "郑州大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "磷化工；安全评价；决策支持系统；作业条件危险分析；系统安全综合评价",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于社会物理学的化工安全事故演化模型与控制模式研究",
+      "author": "金逸翔",
+      "unit": "南京工业大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于三维可视化技术的化工安全风险管理平台构建",
+      "author": "周晓颖",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "安徽德邦化工安全信息管理与应急救援系统研究",
+      "author": "梁莹莹",
+      "unit": "安徽理工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "胜华化工安全文化构建研究",
+      "author": "陈荣芳",
+      "unit": "中国石油大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于小波神经网络的化工安全评价研究",
+      "author": "李晓利",
+      "unit": "太原理工大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于道化学公司安全评价标准的化工安全评价计算机辅助系统的研究",
+      "author": "李媛",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2004",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "M化工企业PBT项目安全风险管理研究",
+      "author": "王林",
+      "unit": "新疆大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工舆情分析系统的设计与实现",
+      "author": "黄雅娴",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "乌兰察布市化工行业安全监管问题研究",
+      "author": "郭立婷",
+      "unit": "内蒙古大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "智能化工装备与系统的多尺度物联构架与安全效应",
+      "author": "杨智敏",
+      "unit": "广东工业大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工生产过程中安全防护品佩戴检测技术研究",
+      "author": "张冰莹",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于化工危险品知识图谱的问答系统研究与应用",
+      "author": "张发伟",
+      "unit": "合肥学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工装置多安全风险演化机制研究",
+      "author": "孙志浩",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于视觉SLAM的化工巡检车建图算法研究",
+      "author": "王瑞",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于时空特征融合的深度学习化工过程故障诊断方法研究",
+      "author": "张子龙",
+      "unit": "燕山大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "化工过程故障诊断；化工安全；深度学习；时空特征融合；可解释性分析",
+      "abstract": "",
+      "direction": [
+        "智能技术",
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工企业职业安全健康风险评估指标体系研究",
+      "author": "杨婷婷",
+      "unit": "重庆医科大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "中俄化工产品贸易问题研究",
+      "author": "雍明",
+      "unit": "吉林化工学院",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工实验室的开放式智能监控系统设计",
+      "author": "陈磊静",
+      "unit": "四川大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术",
+        "实验室安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于前景理论的化工生产监管演化博弈研究",
+      "author": "张志颖",
+      "unit": "大连理工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "DH化工企业轻烃项目安全管理研究",
+      "author": "张艳明",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "A化工企业安全风险评价研究",
+      "author": "李涛",
+      "unit": "青岛科技大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "境外A化工项目安全管理评估研究",
+      "author": "易小红",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于风险云图的化工企业动态风险预警与定量风险评估技术研究",
+      "author": "牛宪涛",
+      "unit": "华侨大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "精细化工反应安全评估方法在高危化工工艺中的应用",
+      "author": "张克非",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "煤化工企业安全风险评价方法研究",
+      "author": "张兰",
+      "unit": "重庆大学",
+      "degree": "博士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工园区供热系统安全风险管理研究——以N化工园为例",
+      "author": "杨楠",
+      "unit": "浙江大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "慧康生物化工生产安全风险评价研究与应用",
+      "author": "史钰",
+      "unit": "西安科技大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "数字化转型对化工企业财务绩效的影响研究",
+      "author": "徐嘉妮",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "煤化工过程安全和环境性能评价方法研究",
+      "author": "王旸",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工园区整体性安全风险评估研究",
+      "author": "张皓",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "化工园区；多米诺效应；风险分级；AHP-DEMATEL；二维云模型",
+      "abstract": "化工园区具有生产装置大型化、生产工艺复杂性以及生产连续化等特点,园区内企业呈现多元化发展趋势,这对园区的安全生产管理带来了巨大挑战...",
+      "direction": [
+        "风险评价",
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "鄂尔多斯市煤化工行业安全管理问题研究",
+      "author": "段志强",
+      "unit": "内蒙古大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "煤化工；安全管理；鄂尔多斯市",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "典型化工企业生产过程安全与环境风险评价",
+      "author": "陈秀颀",
+      "unit": "青岛科技大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于石油化工行业安全问题的安全管理信息系统设计与实现",
+      "author": "邓跃",
+      "unit": "北京工业大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "龙口港液体化工码头安全管理评价研究",
+      "author": "吕烨",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工仪表网的网关研究",
+      "author": "尤竹钧",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "ZS石化公司安全管理评价研究",
+      "author": "罗莹",
+      "unit": "沈阳航空航天大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "M煤化工企业安全信息共享模式研究",
+      "author": "王念祖",
+      "unit": "河北工程大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "中小型化工企业的安全文化与工程伦理研究",
+      "author": "蔡辰",
+      "unit": "淮安大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于风险的张城垸化工园区整体性安全评估研究",
+      "author": "阳云风",
+      "unit": "武汉工程大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于HAZOP和过程模拟的化工工艺安全性分析及优化",
+      "author": "高明雪",
+      "unit": "沈阳化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于数据的非平稳化工过程监测方法研究",
+      "author": "纪成",
+      "unit": "北京化工大学",
+      "degree": "博士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工工艺流程气体泄漏扩散仿真建模研究",
+      "author": "刘乐天",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于虚拟现实的化工园区安全培训系统设计",
+      "author": "吕云",
+      "unit": "哈尔滨理工大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全",
+        "人员行为"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于物联网化工实验室的设备制造与安全监控系统设计",
+      "author": "肖洋",
+      "unit": "浙江科技大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "化工实验室；实验室安全；物联网；设备管理；blinker云平台",
+      "abstract": "",
+      "direction": [
+        "智能技术",
+        "实验室安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于HFACS模型的化工企业安全生产事故致因因素研究",
+      "author": "马鑫",
+      "unit": "曲阜师范大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "ENH公司安全风险评估与管理研究",
+      "author": "冯飞",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于KAN模型的化工过程软测量研究及智能工业系统开发",
+      "author": "杨韬",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术",
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "JM化工存货内部控制优化研究",
+      "author": "贾丽琬",
+      "unit": "沈阳化工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工园区危险性分析与评价",
+      "author": "孟宇强",
+      "unit": "沈阳化工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工企业数据安全保护的技术研究",
+      "author": "陈冠华",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工园区重大危险源的动态预测及评估方法研究",
+      "author": "谢晨风",
+      "unit": "杭州电子科技大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工企业跨国并购的逆向技术溢出机理研究——以中国化工集团为例",
+      "author": "曹紫伊",
+      "unit": "广西民族大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "以化工产业为主导的区县风险评估研究——以猇亭区为例",
+      "author": "洪永鑫",
+      "unit": "武汉大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "Z市化工企业安全生产监管现状分析与完善对策研究",
+      "author": "陆祺",
+      "unit": "江苏大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工生产设备关联性风险辨识与评估研究",
+      "author": "罗雅月",
+      "unit": "北京石油化工学院",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "在役化工过程安全仪表系统屏障分析及SIL评估",
+      "author": "关鹏婷",
+      "unit": "中国石油大学(北京)",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "云模型在高校化工类实验室安全管理评价中的应用",
+      "author": "滕博",
+      "unit": "中北大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "实验室安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工生产车间动态安全标志呈现方式感知效果研究",
+      "author": "李晓桐",
+      "unit": "辽宁工程技术大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于安全结构理论的化工生产事故对策研究",
+      "author": "贾松蒙",
+      "unit": "辽宁工程技术大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "化工生产事故；事故统计；安全管理；统计分析；安全结构理论；安全管控",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于定目标和系统综合的化工过程安全风险削减方法研究",
+      "author": "刘瀚泽",
+      "unit": "青岛科技大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工改扩建项目消防安全评价研究——基于组合权重模糊综合评价法",
+      "author": "郭坤",
+      "unit": "东北财经大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于可拓学的化工企业安全风险评价研究",
+      "author": "李通鑫",
+      "unit": "中国石油大学(华东)",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于配送机器人的化工园区事故预救援研究",
+      "author": "于恺滢",
+      "unit": "天津理工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于人工神经网络化工企业安全评价方法的研究",
+      "author": "高玮",
+      "unit": "大连交通大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "石油化工创新链与产业链耦合协调度研究",
+      "author": "赵梦远",
+      "unit": "西安石油大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于人工神经网络的石油化工企业安全评价研究",
+      "author": "陈祎",
+      "unit": "福州大学",
+      "degree": "硕士",
+      "year": "2004",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于改进YOLOv7的化工车间安全防护着装检测研究",
+      "author": "王皓",
+      "unit": "安徽理工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工园区火灾场景分析与安全疏散研究",
+      "author": "李帆",
+      "unit": "太原科技大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "NJ化工园区危化品物流安全管理研究",
+      "author": "王荣俊",
+      "unit": "南京农业大学经济管理学院",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全",
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "复杂大规模化工过程分布式过程监测及故障诊断策略研究",
+      "author": "宋玮",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "TY化工有限公司安全生产影响因素分析与管理对策研究",
+      "author": "顾明华",
+      "unit": "沈阳化工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于自编码器和门控循环单元的化工过程故障监测与诊断研究",
+      "author": "王雅楠",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于互信息主成分分析对多工况化工过程监测的研究",
+      "author": "王松涛",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工设备振动监测终端研发与应用",
+      "author": "邓蛟",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "化工设备；振动监测；故障诊断；迁移学习",
+      "abstract": "...、金属疲劳的发生或内部零件磨损,使得化工设备产生异常振动从而影响设备的正常运转,甚至造成安全生产事故。因此,对化工设备运行状态进行监测及时发现异常显得尤为重要...",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "HC煤化工公司发展战略研究",
+      "author": "李兵森",
+      "unit": "内蒙古财经大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "“双碳”目标；煤化工企业；发展战略；转型发展",
+      "abstract": "...、高端产品稀缺、环境污染等种种问题。我国的煤化工行业已经进入转型发展的关键时期,只有妥善地协调好能源安全、环境保护以及产业转型升级之间的相互关系...",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "面向化工生产车间的图像描述研究",
+      "author": "张新新",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "图像描述；化工生产；位置编码；多交互信息融合；深度学习",
+      "abstract": "...。人工监督的管理方式不仅增加了管理成本,而且可能致使化工生产过程中产生不必要的安全事故隐患或造成直接的经济效益损失。本文通过引入图像描述技术来实现对化工生产过程的深度理解和感知,提高对化工工业产品生产过程的自动化与智能化管理水平...",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "A化工公司一体化战略研究",
+      "author": "史文晋",
+      "unit": "桂林电子科技大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "煤化工；一体化战略；波特五力模型；SWOT分析；PEST分析",
+      "abstract": "...,在进行系统性规划布局的基础上,努力开展煤化工产业的示范升级,并将产业规模控制在合理范围内。A化工公司为L集团旗下子公司。“十四五”期间,L集团担负“能源安全保供、煤炭清洁高效利用...",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于Modelica的化工流程模拟技术研究",
+      "author": "杨文霈",
+      "unit": "浙江大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "化工过程；Modelica；建模仿真；稳态模拟；热力学模块；单元操作",
+      "abstract": "...,在商品化与市场化方面存在明显不足。一旦国外的化工流程模拟软件被禁止使用或出现安全问题,将会对国内化工设计系统造成重大影响。因此,为解决“卡脖子...",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "C化工公司发展战略研究",
+      "author": "田夏辉",
+      "unit": "河北工程大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "发展战略；SWOT矩阵；多样化战略；PEST分析法；精细化工",
+      "abstract": "...,再基于波特五力模型对C化工公司的竞争环境进行了分析,最后通过外部因素评价矩阵进行了定量评估;其次,通过对实物资源、人力资源、技术资源等公司资源与技术研发能力、安全环保管理能力等能力方面对C化工公司的内部环境进行分析...",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于人体关键点检测的安全作业人员设备操作动作识别方法",
+      "author": "张加伟",
+      "unit": "杭州电子科技大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "人体关键点检测；目标检测；化工安全生产；盲板抽堵；倒泵操作",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "LMBP神经网络方法在化工企业安全评价中的应用",
+      "author": "刘璐",
+      "unit": "天津大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于深度学习的化工生产安全状态检测研究",
+      "author": "叶德阳",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "煤化工生产安全管理问题研究：以鄂尔多斯市为例",
+      "author": "李丰",
+      "unit": "内蒙古大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "B市化工企业安全风险评估及预警研究",
+      "author": "张力",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于AR技术的危险化学品企业安全巡检系统",
+      "author": "李子阳",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于系统动力学的化工园区事故演化分析与对策研究在A化工园区的应用",
+      "author": "黄经程",
+      "unit": "四川大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工企业社会责任研究——以A化工园区为例",
+      "author": "钱林芳",
+      "unit": "江南大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工过程的本质安全评估模型及安全-经济评价、优化的研究",
+      "author": "朱佳兴",
+      "unit": "天津大学",
+      "degree": "博士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工园区应急能力评估模型及方法研究",
+      "author": "马宏宣",
+      "unit": "中国地质大学(北京)",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "化工园区；安全生产；应急能力；评估模型；成熟度理论",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "园区安全",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于ESG视角的中国石油化工集团绩效评价研究",
+      "author": "朱文静",
+      "unit": "内蒙古财经大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "石油化工项目管道焊接工程质量控制研究",
+      "author": "牛越",
+      "unit": "扬州大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于BIM技术的LN化工项目施工进度管理研究",
+      "author": "院靖韬",
+      "unit": "太原理工大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工事故报告知识图谱构建方法研究",
+      "author": "韩庆宾",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "Z化工企业供应链成本控制体系研究",
+      "author": "肖涵丹",
+      "unit": "中南大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "A化工企业员工不安全行为研究",
+      "author": "景雅治",
+      "unit": "北京交通大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "人员行为"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于深度学习的化工车间常见不安全行为检测",
+      "author": "钟海莲",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "人员行为",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "G市化工园区安全监管的数字化建设路径研究",
+      "author": "程婷婷",
+      "unit": "西北农林科技大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "园区安全",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工过程开车过程故障诊断方法研究",
+      "author": "王振恒",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于精益思想的A高校B化工类实验室安全管理应用研究",
+      "author": "何喜荣",
+      "unit": "厦门大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "实验室安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "大数据背景下化工产品O2O供应链优化研究",
+      "author": "李王琦",
+      "unit": "吉林化工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "安全视角下长春北湖化工园区选址与危险品运输路径研究",
+      "author": "张强",
+      "unit": "哈尔滨工业大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全",
+        "运输物流"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "S市智慧化工园区大数据项目进度与风险管理研究",
+      "author": "宋思聪",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全",
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于杜邦分析体系的沈阳化工盈利能力研究",
+      "author": "魏畅",
+      "unit": "沈阳化工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于多米诺效应的化工园区区域风险安全管理研究——以BH化工园区为例",
+      "author": "李月",
+      "unit": "南京农业大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "化工园区；多米诺效应；安全管理；区域风险",
+      "abstract": "",
+      "direction": [
+        "园区安全",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于化工园区火灾风险等级安全巡检机器人路径优化",
+      "author": "王浩",
+      "unit": "北京石油化工学院",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工过程异常检测方法研究及应用",
+      "author": "王嘉玺",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "工艺过程"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "KL化工公司生产成本管理研究",
+      "author": "陈锁兵",
+      "unit": "华中师范大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "嘉兴市化工园区安全风险管理研究",
+      "author": "张伟强",
+      "unit": "上海交通大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "KT化工公司竞争战略研究",
+      "author": "周博",
+      "unit": "山东大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工爆炸事故原因分析与对策研究",
+      "author": "郝鑫瑞",
+      "unit": "吉林建筑大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "基于机器视觉的化工厂区人员安全监测应用技术研究",
+      "author": "许林杰",
+      "unit": "淮阴工学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "A化工生产项目施工风险评价",
+      "author": "谢刚",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工材料行业数据平台的设计与实现",
+      "author": "山璐旻",
+      "unit": "华东师范大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工园区安全风险动态管控技术研究",
+      "author": "曲秋影",
+      "unit": "中国石油大学(华东)",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "草甘膦生产车间的安全风险评估应用研究",
+      "author": "杨启",
+      "unit": "广东工业大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "湖北省典型化工园区安全管理问题及对策研究",
+      "author": "田纪锋",
+      "unit": "中共湖北省委党校",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全",
+        "企业安全管理"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "QT化工公司安全精细化管理研究",
+      "author": "刘晓雨",
+      "unit": "东北石油大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "化工企业一线员工不安全行为影响因素研究",
+      "author": "徐晓明",
+      "unit": "西安科技大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "人员行为"
+      ],
+      "source_keyword": "化工安全"
+    },
+    {
+      "title": "我国危险化学品安全监管制度研究",
+      "author": "李欣然",
+      "unit": "中国矿业大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "南京市中小企业危险化学品安全监管研究",
+      "author": "孟凡晟",
+      "unit": "上海海洋大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于事故案例的危险化学品安全监管系统功能失效模式分析",
+      "author": "霍思雨",
+      "unit": "中国地质大学(北京)",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "危险化学品；安全监管；监管系统；功能失效；失效模式",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品安全监管体系研究——以YC市为例",
+      "author": "孙辉",
+      "unit": "东南大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "数字治理视角下危险化学品安全监管难点及路径优化研究",
+      "author": "徐硕",
+      "unit": "吉林大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "金普新区危险化学品安全监管失效案例研究",
+      "author": "赵伟楠",
+      "unit": "大连理工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品安全监管绩效评价研究——以青岛西海岸新区为例",
+      "author": "丛帅",
+      "unit": "青岛理工大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "Z市危险化学品安全监管的问题与对策研究",
+      "author": "唐熙",
+      "unit": "西南科技大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "泉州市危险化学品安全监管政策执行研究",
+      "author": "苏伟仁",
+      "unit": "华侨大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "忻州市危险化学品安全监管问题与对策研究",
+      "author": "康艳飞",
+      "unit": "西北大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "苏州市吴中区危险化学品安全监管对策研究",
+      "author": "丁佳敏",
+      "unit": "大连理工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "沾化县危险化学品安全监管模式研究与改进",
+      "author": "郭莹莹",
+      "unit": "长安大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "城市危险化学品安全监管长效机制构建研究",
+      "author": "李本一",
+      "unit": "太原理工大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "我国危险化学品安全监管研究——基于联动协调机制的分析",
+      "author": "包雪峰",
+      "unit": "南京师范大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "常州市危险化学品安全监管长效机制构建研究",
+      "author": "王漪",
+      "unit": "苏州大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "张家港市危险化学品安全监管研究",
+      "author": "范永刚",
+      "unit": "同济大学经济与管理学院",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "张家港市；危险化学品；安全生产；安全监管；安全管理；生产工；学术界；特大安全事故；生态环境污染；机制；公共管理理论；健康和安全；化学品生产；重视安全；重点行业；重大损失；严重损害；生产状况；社会稳定；切实加强",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "事故分析",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品安全监管信息化的研究",
+      "author": "周琦",
+      "unit": "江苏大学",
+      "degree": "硕士",
+      "year": "2005",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "大丰港区危险化学品政府安全监管研究",
+      "author": "贾娟",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "S省危险化学品行业安全监管研究",
+      "author": "郝哲远",
+      "unit": "西安电子科技大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "惠安县危险化学品安全监督管理研究",
+      "author": "陈恒",
+      "unit": "华侨大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "大连金州新区危险化学品经营企业安全监管调查研究",
+      "author": "王亚明",
+      "unit": "大连理工大学人文与社会科学学部",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品生产经营单位安全生产监管现状及对策研究：以东莞市为例",
+      "author": "罗柱洪",
+      "unit": "广西师范大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "高速公路危险化学品运输安全风险评估研究",
+      "author": "范芮雯",
+      "unit": "贵州大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "M区危险化学品安全生产监管存在的问题及对策研究",
+      "author": "王笑宇",
+      "unit": "山东大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "P市危险化学品企业安全生产分级监管研究",
+      "author": "杨宝",
+      "unit": "西南财经大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "S市危险化学品安全生产监管中的问题与对策研究",
+      "author": "蔡灵男",
+      "unit": "四川大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "大连海关危险化学品进口监管现状及对策研究",
+      "author": "于永斌",
+      "unit": "大连理工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "XT市危险化学品安全生产监管问题研究",
+      "author": "宫海波",
+      "unit": "湖南农业大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "面向危险化学品存储技术的命名实体识别研究",
+      "author": "王生旗",
+      "unit": "合肥学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "A县危险化学品生产经营企业安全监管体制优化研究",
+      "author": "李星",
+      "unit": "西北大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "物联网背景下危险品道路运输安全监管研究——以N市化工园区为例",
+      "author": "朱巧巧",
+      "unit": "南京理工大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "危险品运输管理；运政安全监管；数字治理；技术治理",
+      "abstract": "...,以N市代表性区域交通运政部门对化学工业园区的公共管理实践为例,梳理其学工业园区的危险品道路运输安全监管发展历程与存在的问题,从政策、机制、技术等方面研究制约危险品道路运输安全监管发展的深层原因...",
+      "direction": [
+        "安全监管",
+        "园区安全",
+        "智能技术",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "C市港口危险货物安全监管问题与对策研究",
+      "author": "杨治林",
+      "unit": "西南政法大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "港口；危险货物；安全监管",
+      "abstract": "...,对以石油、天然气、化工原料品等危险化学品为代表的危险货物的需求量急剧增加。水运由于成本低......,从中央到地方都高度重视港口危险货物安全问题。但港口安全监管受各方面因素影响,复杂的外部形势是地方港口管理部门做好危险货物安全监管的重大考验...",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于24Model-HC与NVivo的危险化学品事故原因分析研究",
+      "author": "武志军",
+      "unit": "江苏大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "24Model；NVivo；事故原因分析；危险化学品事故；事故致因理论",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "面向危险化学品道路运输爆炸事故智能决策的应急方案数据库",
+      "author": "王梦婷",
+      "unit": "江汉大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析",
+        "智能技术",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "风险管理视角下Z市危险化学品安全生产监管研究",
+      "author": "张毅",
+      "unit": "湖南大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "福建省危险化学品安全生产监管研究",
+      "author": "林媛",
+      "unit": "福建农林大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "庄河市危险化学品行业安全生产",
+      "author": "周孟键",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "安宁市危险化学品安全生产监管的主要问题及对策研究",
+      "author": "刘雯婷",
+      "unit": "云南大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品监管机制建构研究",
+      "author": "王慧丽",
+      "unit": "山东师范大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "陕西省道路危险品运输安全监管问题与对策研究",
+      "author": "许丹萍",
+      "unit": "西北大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于LabVIEW的危险化学品仓库无线监管系统设计",
+      "author": "魏东格",
+      "unit": "天津理工大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品储运管理系统的设计与实现",
+      "author": "王圣鑫",
+      "unit": "山东科技大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险废物环境安全风险评估技术研究",
+      "author": "钱若晨",
+      "unit": "中钢集团武汉安全环保研究院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "宁夏危险货物道路运输安全监管系统建设研究",
+      "author": "徐鹏",
+      "unit": "重庆交通大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "H市危险化学品安全生产应急管理体系研究",
+      "author": "金鑫",
+      "unit": "哈尔滨工业大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "危化品生产；安全事故；应急管理",
+      "abstract": "近年来,由危险化学品引发的社会事件时有发生,例如天津滨海新区危险品爆炸事故等类似事件直接威胁社会安全。此类事件的发生表明地方政府危险化学品安全生产监管和事故应急救援机制尚存诸多待完善之处...",
+      "direction": [
+        "应急管理",
+        "事故分析",
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品重大危险源安全监管系统的设计与实现",
+      "author": "王兴红",
+      "unit": "电子科技大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "危险化学品；重大危险源；安全监管；物联网技术；设计实现；试点应用",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "青岛某区危险化学品安全风险调查评估及对策建议",
+      "author": "徐伟娜",
+      "unit": "山东科技大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品公路运输安全管理策略研究",
+      "author": "黄兰",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "河南省危险化学品安全生产问题研究",
+      "author": "张建伟",
+      "unit": "郑州大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "临沂市危险化学品安全生产监督管理研究",
+      "author": "程强",
+      "unit": "南京航空航天大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品行业生产安全监管研究——以张家港市为例",
+      "author": "高凯",
+      "unit": "西北农林科技大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "整体性治理视角下危险化学品碎片化监管问题研究——基于N市的研究",
+      "author": "丁甜甜",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品道路运输监管研究",
+      "author": "斯樊锋",
+      "unit": "复旦大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品信息系统设计与实现",
+      "author": "张扬之",
+      "unit": "浙江工业大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "区域工贸企业安全智能监管模式研究及应用",
+      "author": "朱伶俐",
+      "unit": "重庆科技学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理",
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于机器学习和质谱描述符的有机化学品风险预测",
+      "author": "胡松",
+      "unit": "山东大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "孝感市危险化学品监管系统的设计研究",
+      "author": "刘倩",
+      "unit": "中国地质大学(武汉)",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "澳门危险化学品储运监管制度之研究",
+      "author": "谢耀光",
+      "unit": "华侨大学",
+      "degree": "硕士",
+      "year": "2005",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "兰州市危险化学品行业安全监管研究",
+      "author": "石",
+      "unit": "西北师范大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "典型有机化学品的人体致癌毒性和内分泌干扰毒性的机器学习分类与回归模型预测",
+      "author": "郝宁",
+      "unit": "吉林大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "机器学习；有机化学品；致癌性；内分泌干扰性；分子动力学",
+      "abstract": "...、美国生态环境保护署和欧洲环境署等国家环境保护机构正面临评估化学品的健康危害和环境影响的挑战,故寻找高效可靠的化学品毒性评估方法迫在眉睫。本文通过中华人民共和国应急管理部（原中国国家安全监管总局）发布的《危险化学品目录（2015版）》...",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "服务性政府视角下的危险化学品监管研究——以义乌市为例",
+      "author": "陈梦蕾",
+      "unit": "浙江师范大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "服务性；政府；视角；危险化学品；监管研究",
+      "abstract": "...、电镀等义乌支柱行业的快速发展，危险化学品的作用日益凸显。义乌市危险化学品产业分布广，企业呈“小、散、乱”状态、致使监管非常困难。目前本市安全监管中比较突出的三个矛盾即产业发展与城市规划所产生的矛盾...",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于双目视觉的危险化学品库内堆垛测距关键技术的研究",
+      "author": "袁碧贤",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "双目视觉；危险化学品；堆垛；测距",
+      "abstract": "...,研究机器视觉中的双目视觉测距方法实现对危化品堆垛“五距”测量,进而实现堆垛的安全状态监测,是非常有前景的解决方案,对于危险化学品的有效监管与安全预防有重要的意义。本文开展双目视觉“五距...",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "A市危险化学品安全生产监管困境及其对策研究",
+      "author": "徐艳",
+      "unit": "华东政法大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "...",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "四川省D市安全生产监管机制研究",
+      "author": "刘涛",
+      "unit": "中共四川省委党校",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "安全生产；工业城市；监管机制",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品运输车辆监控系统设计与研究",
+      "author": "夏武",
+      "unit": "江汉大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "协同视角下姜堰区机械制造业企业安全生产监管研究",
+      "author": "陈祎",
+      "unit": "南京理工大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "T市危险化学品安全生产监管政策执行存在的问题及对策研究",
+      "author": "浦巍",
+      "unit": "扬州大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "东莞市危险化学品经营安全监管问题与对策研究",
+      "author": "邓俊浩",
+      "unit": "中山大学政治与公共事务管理学院",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品生产企业安全等级定量评估方法研究",
+      "author": "陈震西",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品道路运输安全保障管理对策研究",
+      "author": "张爱红",
+      "unit": "长安大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品水路运输安全监督博弈问题研究",
+      "author": "袁国栋",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "化工园区危险化学品事故应急调度的研究",
+      "author": "任正中",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析",
+        "园区安全"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品运输安全的优化调度研究",
+      "author": "马欣",
+      "unit": "中国地质大学(武汉)",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "典型危险化学品环境风险评价的应用研究",
+      "author": "李向阳",
+      "unit": "天津工业大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于RFID技术的危险化学品智能仓储管理系统",
+      "author": "杨飞龙",
+      "unit": "天津理工大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "危险化学品；智能仓储管理系统；RFID；LabVIEW；无线充电",
+      "abstract": "...、信息修改功能等不仅加强了信息的安全性,同时也使用户查阅信息更加方便,大大提高了危险化学品仓储管理系统的自动化和智能化水平......,能够应用于危险化学品仓库的日常监管中。",
+      "direction": [
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品选址及车辆路径问题研究",
+      "author": "徐腾飞",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "危险化学品；应急中心选址；车辆路径问题；多目标规划；蚁群算法",
+      "abstract": "...。随着经济的快速发展,危险化学品的生产量以及使用量日益增加,其生产和运输面临着更大的安全以及监管压力。对生产和使用危险化学品的化工厂建立应急中心并对应急中心进行合理的选址...",
+      "direction": [
+        "应急管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品道路运输事故分析及选线研究",
+      "author": "朱婷",
+      "unit": "上海交通大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "危险化学品；运输企业；风险控制；事故分析；选线管理",
+      "abstract": "...，不乏造成巨大经济和社会损失的重大事故。为了降低危险化学品道路运输风险，确保运输安全，同时为政府监管部门及危险化学品运输企业提供相应管理决策支持，本文对危险化学品道路运输事故及运输选线进行了相关研究...",
+      "direction": [
+        "事故分析",
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "A公司危险化学品仓储安全性评价与风险防范对策研究",
+      "author": "李晓雨",
+      "unit": "南京财经大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "化工企业；危险化学品；仓储安全性；风险防范；作业流程",
+      "abstract": "...。2015年轰动全国的812天津爆炸事故再次引起社会关注，给监管部门和责任主体敲响了警钟。 安全生产管理是企业管理的重要组成部分，关系着企业的生存和发展。危险化学品仓库是易燃易爆等化学物品的集中储存场所，建设初期就需要考虑选址...",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "Z市危险化学品安全生产监管存在问题及对策研究",
+      "author": "付净萍",
+      "unit": "四川大学",
+      "degree": "硕士",
+      "year": "2024",
+      "keywords": "",
+      "abstract": "...",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "中国危险化学品事故统计分析与对策研究",
+      "author": "杨洪敏",
+      "unit": "辽宁师范大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "危险化学品；统计分析；聚类分析；指数平滑法",
+      "abstract": "...，探讨危险化学品事故的未来趋势，为危险化学品事故的应急管理提供科学依据。首先，本文基于国家安全生产监督管理总局和中国化工安全网这2个网站的数据......、伤亡人数多等特点。监督管理部门职能交叉监管不利、企业无证经营等现象是引起危险化学品事故频繁发生的根本原因...",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "临沂市危险化学品安全生产管理现状及对策研究",
+      "author": "李爱玲",
+      "unit": "山东大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "危险化学品；安全生产；管理体系；应急体系",
+      "abstract": "...，从多个方面和环节采取一系列措施加强安全生产管理，初步形成综合监管和行业监管结合、国家监察与地方监察结合、政府监督和其他监督结合的安全管理格局1。危险化学品是安全生产管理的一个重要和重点组成部分...",
+      "direction": [
+        "应急管理",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "农业化学实验室智能安全管理系统的研究",
+      "author": "张悦云",
+      "unit": "湖南农业大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "实验室安全；危险化学品；人脸识别技术；物联网；多传感器数据融合",
+      "abstract": "...、助燃等性质的危险化学药品,对人体、设施、环境均存在一定的安全隐患。近年来实验室危化品引发的安全事故频发......,可有效对实验室各类安全要素进行监管和预警,对推进实验室安全管理数字化...",
+      "direction": [
+        "企业安全管理",
+        "智能技术",
+        "实验室安全"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "J区危险化学品安全生产监管存在的问题及对策研究",
+      "author": "奚栋梁",
+      "unit": "扬州大学",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "",
+      "abstract": "...,是构建和谐社会的重要基础。如今,危险化学品使用范围涉及到人们生产生活的各个方面,接二连三发生的生产安全事故,一次次的给我们敲响了警钟。本文从责任主体、监管效能、社会制约机制三个方面总结了...",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于FRAM的危险化学品道路运输系统恢复力提升研究",
+      "author": "张杨薇",
+      "unit": "中国地质大学(北京)",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "恢复力；危险化学品道路运输；安全管理；功能共振分析方法",
+      "abstract": "危险化学品道路运输的安全是我国重点关注的问题之一......,对这些功能的变化和变化耦合情况进行分析,并提出相应的屏障和监管的建议措施,对危险化学品道路运输系统的运行管理过程提出了改进意见...",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品危害风险信息多向交叉沟通机制研究",
+      "author": "李慧茹",
+      "unit": "北京理工大学",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "危险化学品；风险沟通；正式沟通；非正式沟通；信息多向交叉",
+      "abstract": "针对当前危险化学品事故频发与公众安全防护安全常识没有随之增加的现实挑战......,结合危化品法律法规和危化品管控实际案例,以及危化品监管现状,构建出危化品风险信息多向交叉沟通机制...",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "我国危险品航空运输监管机制研究",
+      "author": "孙本芳",
+      "unit": "上海交通大学",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "危险品航空运输；监管；机制",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "协同治理视角下广州海珠区安全生产监管优化研究",
+      "author": "龚文涛",
+      "unit": "华南理工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品生产安全事故应急管理问题研究——以杭州湾上虞工业园区为例",
+      "author": "吴述兰",
+      "unit": "新疆农业大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析",
+        "园区安全"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于时空数据的非法化学品工厂地理位置检测",
+      "author": "朱政",
+      "unit": "电子科技大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "大型城市的小包装危险化学品的经营方案",
+      "author": "黄静哲",
+      "unit": "上海财经大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "大型城市；小包装危险化学品；危险化学品管制；分销模式；经营方案",
+      "abstract": "...、经营和使用如何确保安全的问题。 目前,对于危险化学品的危害、对于危险化学品如何管制研究成果很多,形成大多数的解决方案是通过制订法律法规、加强监管、增加技术手段或者是围绕危险化学品本身入手...",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品物流配送优化技术研究",
+      "author": "易玉枚",
+      "unit": "东北大学",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "危险化学品；配送中心；选址-选线；优化；算法",
+      "abstract": "...。基于配送过程风险分析的选址-选线优化研究可降低危险化学品道路运输事故率和沿线人员伤亡风险,为政府监管部门和危险化学品生产经营单位的运输安全规划提供决策技术支持。再一方面...",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "安全监管对化工行业生产率的影响分析",
+      "author": "戴欣",
+      "unit": "浙江财经大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "化工行业；安全监管；化工行业生产率；U型；监管体系",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品行政许可制度的比较与实践",
+      "author": "王鹏",
+      "unit": "天津工业大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品泄漏应急堵漏子系统的设计与实现",
+      "author": "秦童",
+      "unit": "北京邮电大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "重庆市危险化学品企业环境风险分级管理研究",
+      "author": "石运刚",
+      "unit": "重庆大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "佛山市危险化学品安全管理存在问题及其对策研究",
+      "author": "朱锦泉",
+      "unit": "华南师范大学",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "国家安全生产信息系统危险化学品监管子系统的设计与实现",
+      "author": "隗光远",
+      "unit": "北京邮电大学",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于Agent的危险化学品安全生产信息采集系统研究",
+      "author": "刘婕",
+      "unit": "昆明理工大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "海上危险货物运输海事监管研究",
+      "author": "洪辉",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "开发区工业园危险化学品应急管理能力调研分析",
+      "author": "张润婕",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "海关危化品信息化监管问题及对策研究",
+      "author": "管晓倩",
+      "unit": "上海海关学院",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "智能技术",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "长江干线危险品运输安全保障体系研究",
+      "author": "王涛",
+      "unit": "武汉理工大学",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于电子标签的危险化学品气瓶安全管理系统研究与开发",
+      "author": "康健",
+      "unit": "上海交通大学",
+      "degree": "硕士",
+      "year": "2006",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于风险公平性的危险品道路运输车辆调度问题研究",
+      "author": "刘洪义",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "上海港散装液态危险化学品水环境风险评估研究",
+      "author": "武娟",
+      "unit": "复旦大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "散装液态危险化学品；风险评估；指标体系",
+      "abstract": "...,构成了巨大的安全和污染风险。一旦发生重大水上交通事故,极可能造成船载危险化学品货物泄漏,对青草沙......,筛选出需要重点监管的散装液态危险化学品名单供政府部门监管参考。具体结论如下...",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "吉林石化公司危险品仓储管理研究",
+      "author": "杜娟",
+      "unit": "吉林财经大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "仓储管理；危险品化学；质量管理；安全管理；信息技术",
+      "abstract": "...;危险品仓储信息化与标准化监管能力较差,缺乏有效的危险品管理信息共享机制,各个库房内危险化学品的名称、数量......,实现实时库存管理,实现实时监控,提升仓库安全;通过引进人才,加强员工培训,建立激励性考核机制...",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "淄博市危险化学品安全生产防控体系研究",
+      "author": "魏巍",
+      "unit": "山东大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "淄博市；危化品安全生产防控体系；现状；对策与建议",
+      "abstract": "...,天津港发生了举世震惊的危险品特大火灾爆炸事故......。危化品的性质决定了在生产过程中潜在的风险和不安全因素高于其他化学品生产,本文以淄博市危化品安全生产防控体系为典型案例进行研究分析......,提出应采取的安全监管措施,最大限度的消除危险和降低事故的严重程度......",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "长江散装液体危险货物运输监管对策研究",
+      "author": "徐珑",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "长江；散装液体危险货物；运输监管；综合执法",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "东营市河口区安全生产监管问题及对策研究",
+      "author": "张晓蝉",
+      "unit": "山东师范大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "成都市危险化学品重大危险源监督管理系统设计与实现",
+      "author": "张志高",
+      "unit": "电子科技大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "化学工业园区安全生产监管现状及对策研究",
+      "author": "周耀",
+      "unit": "华南理工大学",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "园区安全",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于3s技术的危险品集装箱物流监管中心的研究与开发",
+      "author": "程青青",
+      "unit": "上海交通大学",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "液货危险品船舶靠离泊安全性评价",
+      "author": "吴立丽",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "适于政府监管的重大危险源分级方法研究",
+      "author": "赵璟玲",
+      "unit": "中国地质大学(北京)",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "日照港船载危险化学品安全管理对策研究",
+      "author": "王强",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "宁波市危险化学品空间分布及泄漏灾害模拟地理信息系统研究",
+      "author": "朱云飞",
+      "unit": "宁波大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "江苏省危险化学品道路运输动态监控现状分析与对策研究",
+      "author": "李鹏飞",
+      "unit": "江苏大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品有机溶剂废液的综合回收利用研究",
+      "author": "许琨",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "面向重大危险源的人员定位监控系统关键技术研究与应用",
+      "author": "彭圣仆",
+      "unit": "杭州电子科技大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于数据挖掘的危险货物道路运输事故机理研究",
+      "author": "魏珊珊",
+      "unit": "长安大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "危险货物；道路运输事故；数据挖掘；事故严重程度分析；事故严重程度预测",
+      "abstract": "...,我国已成为全球最大的化学品生产国,伴随而生的化工物流也随着生产销售等领域的蓬勃发展而迅速增加......、交通运输部门和公安交通管理部门制定科学、有效的监管方法、事故预防措施和救援方案提供理论基础......、财产损坏和环境破坏,提高危险货物道路运输安全性有一定的帮助作用......",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险品运输监管及应急平台的分析与设计",
+      "author": "董智勇",
+      "unit": "大连理工大学数学科学学院",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "",
+      "abstract": "...,危险品在众多领域也随之广泛的被应用。危险化学品制作、加工、经营......,并且威胁到人民的人身安全,导致了不必要的财产损失......。因此本文分析并设计了危险品运输监管及应急平台。本文首先对安监局在危险品运输监控领域以及事故应急的基本职能上进行了解......",
+      "direction": [
+        "安全监管",
+        "应急管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于可变模糊集理论的危险化学品重大危险源风险评价的研究",
+      "author": "刘岩",
+      "unit": "大连交通大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "二元比较分析；可变模糊识别模型；重大危险源风险评价；指标体系",
+      "abstract": "...(GB18218—2009)从重大危险源固有危险方面考虑,而随着经济、技术的发展,物质的种类和储存数量也越来越多,为了配合安全监督管理部门及企业更有效的监管危险化学品重大危险源,区别不同危险化学品重大危险源的危险度差异性...",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险品道路运输的安全问题及对策研究：以NJHX运输公司为例",
+      "author": "王洪萍",
+      "unit": "南京农业大学经济管理学院",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "危险品；道路运输；安全评估；事故树分析",
+      "abstract": "...、毒害、腐蚀、放射性等特殊的物理、化学性质。在道路运输过程中危险性强、危害性大......“事故树分析”方法并选择“危险品货物运输安全监管问题”作为事故树的顶上事件...",
+      "direction": [
+        "事故分析",
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于窄带物联网的移动式压力容器信息监管技术研究",
+      "author": "孟春节",
+      "unit": "武汉工程大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "移动式压力容器；信息监管；运行监控；窄带物联网；云平台",
+      "abstract": "...移动式压力容器主要充装危险货物或者危险化学品,按照特种设备进行市场监管。现行的移动式压力容器信息监管系统以介质充装......,本文探讨了具备远程实时运行监控功能的移动式压力容器信息监管系统,以推动安全风险管控手段向数字化、网络化、智能化升级...",
+      "direction": [
+        "安全监管",
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "有机反应安全风险研究及安全工艺开发",
+      "author": "王晓飞",
+      "unit": "中国科学院大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "有机反应；风险评估；安全工艺",
+      "abstract": "...化工产品是生活的必需品，化学工业的发展给人们带来了便捷的生活......。但一次次的化工安全事故让许多人对化工产生了错误的认知，认为化工是非常危险的产业。而国家也希望化工行业可以更加安全的发展......，结合国家安全监管总局在2017年下发的《国家安全监管总局关于加强精细化工反应安全风险评估工作的指导意见......",
+      "direction": [
+        "风险评价",
+        "工艺过程"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "TJ石化仓储企业安全管理提升研究",
+      "author": "张桐赫",
+      "unit": "天津工业大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "石化仓储企业；安全管理；提升策略；应急管理",
+      "abstract": "石化仓储安全管理是保障石化行业稳定发展的关键环节......、应急响应能力不足、危险化学品库房不合规等。为了解决这些问题......;强调完善安全管理制度,加强监管和执行力度;倡导引入先进的技术手段......",
+      "direction": [
+        "应急管理",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于博弈理论的危化品安全生产监管中的主体行为分析",
+      "author": "张天星",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "危险化学品；安全投入；安全监管；序贯博弈；演化博弈",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险品车辆实时风险预警研究及移动端软件设计",
+      "author": "孙润",
+      "unit": "中国地质大学(北京)",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于GPS/GPRS/GIS的危险品车辆在途监控预警技术研究",
+      "author": "张令勇",
+      "unit": "山东理工大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "城市道路危险品运输限速与超速报警技术研究",
+      "author": "陈万吉",
+      "unit": "吉林大学交通学院",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "甘肃出口危险货物包装检验监管现状及对策研究",
+      "author": "刘杰",
+      "unit": "兰州交通大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "道路危险货物运输安全管理研究",
+      "author": "刘晓宾",
+      "unit": "长安大学",
+      "degree": "硕士",
+      "year": "2006",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "江苏省淮安市港口安全监管现状及对策研究",
+      "author": "李杰",
+      "unit": "燕山大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "奉贤区中小危化企业安全生产监管研究",
+      "author": "朱勇全",
+      "unit": "华东政法大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "东莞市港口危化品安全监管机制研究",
+      "author": "王子兴",
+      "unit": "广西师范大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "港口危化品；安全监管机制；东莞",
+      "abstract": "...、储存的重点区域,也是华南地区危险化学品的主要集散中心,更是危化品道路运输的起点,往来船舶和车辆交通密度大、路况复杂、人员众多。因此,如何强化东莞市港口危化品的安全监管,提高行政主管部门、安全监管职能部门和港口危化品经营储运企业的安全监管和应急救援水平...",
+      "direction": [
+        "安全监管",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险品运输网络的可靠性博弈分析及减灾系统研究",
+      "author": "陈钢铁",
+      "unit": "西南交通大学",
+      "degree": "博士",
+      "year": "2013",
+      "keywords": "危险品；运输路网；可靠性；减灾系统；博弈",
+      "abstract": "...、毒害等特殊物理和化学特性,一旦承运这些货物的车辆在运输过程中发生泄漏......,如何确保道路危险品运输安全,降低事故风险...... 研究危险品运输过程中,政府相关的监管部门与危险品运输企业博弈问题......",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "制药行业危险工艺氟化反应的安全评价",
+      "author": "张俪昽",
+      "unit": "天津工业大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "制药行业；氟化反应；危险工艺；安全评价；技术改进",
+      "abstract": "...。国家安监总局对危险化学品生产及使用企业十分重视，为了方便对各企业的监管，区分不同企业的危险程度...... 为了保证医药生产企业的安全生产，安全评价是目前最有效，也是运用最普遍的方法。安全评价可以对企业潜在的危险...",
+      "direction": [
+        "风险评价",
+        "工艺过程"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于物联网的重大危险源监管及应急救援信息系统研究",
+      "author": "郑宇",
+      "unit": "江西理工大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "物联网；重大危险源；实时监管；应急救援；系统",
+      "abstract": "...，尤其缺少适用于地方危险化学品重大危险源在线监管和应急救援监测方面的软件系统。本文针对江西省安全生产监督管理局对危险化学品重大危险源的日常监管需求和应急救援指挥需求...",
+      "direction": [
+        "安全监管",
+        "应急管理",
+        "智能技术"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "大连湾危险化学品输运过程精细化模拟研究",
+      "author": "陈超",
+      "unit": "上海海洋大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "随着我国经济的快速发展,危险化学品的产量和用量迅速增加,种类不断更新......,便于加强政府监管部门的监督,可以对同类型企业进行统一的安全防护指导,避免事故发生...",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "制药行业危险工艺氯磺酸磺化反应的安全评价",
+      "author": "丁旭东",
+      "unit": "天津工业大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "危险工艺；安全评价；危险辨识；制药行业；氯磺酸；磺化反应",
+      "abstract": "... 本论文采用定性及定量的安全评价方法重点针对藻酸双酯钠生产及储存过程中的火灾爆炸事故进行了安全评价，确定了企业“两重点一重大”的安全现状，包括:藻酸双酯钠生产过程应重点监管的危险化学品有甲醇、环氧丙烷和氯磺酸;应重点监管的危险工艺为氯磺酸磺化工艺...",
+      "direction": [
+        "风险评价",
+        "工艺过程"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "港口危化品物流风险评估及监管策略研究",
+      "author": "周欢",
+      "unit": "大连海事大学",
+      "degree": "博士",
+      "year": "2020",
+      "keywords": "港口危化品物流；风险评估；WRT模型；演化博弈；监管策略",
+      "abstract": "...,同时暴露出港口危化品物流中存在较大安全隐患和严重的监管问题,亟需开展有效的风险监督和管理。危险化学品,简称危化品,是一类特殊化学品,具有腐蚀、放射性和易爆...",
+      "direction": [
+        "安全监管",
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "员工风险感知对其生产不安全行为的影响及监管启示——嘉兴市为例",
+      "author": "吴梦婷",
+      "unit": "上海交通大学",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "风险感知；不安全行为；影响因素；监管启示",
+      "abstract": "...,因此亟需研究不同因素对员工工作中的不安全行为的影响,从而在此基础上提出政府相应的监管策略,进一步减少安全生产事故的发生。在各类企业中,危险化学品生产企业由于易燃、易爆...",
+      "direction": [
+        "安全监管",
+        "人员行为"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "临沂市安全生产工作对策研究——基于政府监管的视角",
+      "author": "滕飞",
+      "unit": "南京航空航天大学",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "临沂市；安全；生产工；对策研究；政府监管",
+      "abstract": "...。作者在临沂市县两级安全监管部门工作7年多时间,从事过应急救援、危险化学品监管、行政许可、行政执法等具体工作,对两级安全监管部门的工作机制基本熟悉...",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "连云港市灌云县安全生产监管面临的问题与对策研究",
+      "author": "殷成坤",
+      "unit": "燕山大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "安全生产；监管；事故",
+      "abstract": "...。近年来,通过不断重视安全生产工作,安全生产逐渐趋向良好发展,但总体态势仍然不容乐观。连云港市灌云县作为江苏省危险化学品重点县,县内化工企业数量众多,监管任务艰巨,面临着较多监管问题...",
+      "direction": [
+        "安全监管",
+        "事故分析",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "化工园区安全生产监管研究——以YHZ化工园区为例",
+      "author": "陈鹏",
+      "unit": "南京理工大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "化工园区；安全生产；监管",
+      "abstract": "...,造成重大的人身伤亡和财产损失,公众提高对安全生产工作的关注度,特别是对储存有大量易燃易爆、高温高压危险化学品的化工集中区域的安全生产监管。如何更好的监管化工园区安全生产,避免发生有重大影响力的事故...",
+      "direction": [
+        "安全监管",
+        "园区安全",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "强化昆山市工业企业安全生产主体责任研究——基于政府监管视角",
+      "author": "徐瑜浓",
+      "unit": "苏州大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "昆山市；工业；企业安全生产；主体责任；政府监管",
+      "abstract": "...、工业企业群规模的扩大以及危险化学品使用量的增加,促使安全生产事故发生风险的概率增加......。相比商贸企业,工业企业是安全生产监管的重中之重。然而大部分企业在市场的激烈竞争中...",
+      "direction": [
+        "安全监管",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "基于电子标签的危化气瓶安全监管系统研究",
+      "author": "张捷",
+      "unit": "复旦大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "RFID；危化气瓶；安全监管；监管系统；RFID中间件",
+      "abstract": "我国危险化学品气瓶使用数量呈逐年上升趋势,由于气瓶在使用过程中存在着诸多人为操作失误以及有效监管等因素......。 政府对气瓶安全工作高度重视,随着各项危险品安全监管条例的颁布,传统的危化气瓶监管手段例如条码...",
+      "direction": [
+        "安全监管"
+      ],
+      "source_keyword": "危险化学品安全监管"
+    },
+    {
+      "title": "危险化学品运输的半开放式路径优化研究",
+      "author": "周仲鑫",
+      "unit": "河北工程大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于多传感器的危险化学品运输监控平台",
+      "author": "李沛昂",
+      "unit": "武汉工程大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于贝叶斯网络的危险化学品运输安全风险评估研究",
+      "author": "李雅静",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "海上危险化学品运输系统韧性研究",
+      "author": "马德浩",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品运输企业风险评估模型及应用研究",
+      "author": "苏进",
+      "unit": "中国石油大学(华东)",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于智慧物流生态链的危险化学品运输线路优化研究",
+      "author": "陈鹏",
+      "unit": "沈阳工业大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品运输车辆聚集区域内的动态风险分析",
+      "author": "赖昱颖",
+      "unit": "中国石油大学(北京)",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "长江下游危险化学品运输风险及对策研究",
+      "author": "石宁",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "湖南省高速公路危险化学品运输安全管理研究",
+      "author": "聂俊江",
+      "unit": "湖南大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "道路危险化学品运输风险评估模型及选线优化研究",
+      "author": "任竞舟",
+      "unit": "湖南科技大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "不确定条件下危险化学品运输路径优化研究",
+      "author": "杜皎幔",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "内河危险化学品运输服务链成本结构分析及优化",
+      "author": "贾禹",
+      "unit": "重庆交通大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品运输过程中安全管理监控系统设计与实现",
+      "author": "吴孔峰",
+      "unit": "厦门大学软件学院",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "危险化学品运输；地理信息；车辆监控；安全管理；系统开发",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "长江危险化学品运输的系统风险评估研究",
+      "author": "张雷",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "北京市危险化学品运输引发突发事件的风险管理研究",
+      "author": "张瑞鑫",
+      "unit": "北京交通大学",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "XF集团危险化学品运输管理优化研究",
+      "author": "刘剑峰",
+      "unit": "三峡大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品运输路径及选址问题研究",
+      "author": "何洋",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "内河危险化学品运输应急物资储备策略研究",
+      "author": "李雪洁",
+      "unit": "重庆交通大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品运输综合监测系统研究",
+      "author": "吴志华",
+      "unit": "北京交通大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品运输车辆涉水桥梁交通事故环境风险防治安全设施建设究",
+      "author": "严志坚",
+      "unit": "武汉工程大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "重庆内河危险化学品运输企业的运输安全风险管理研究",
+      "author": "何娜敏",
+      "unit": "重庆交通大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "物联网环境下危险化学品运输车辆调度问题研究",
+      "author": "赵露",
+      "unit": "合肥工业大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "智能技术",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品运输管理平台的设计与其中若干问题的研究",
+      "author": "赵新欣",
+      "unit": "华东师范大学软件学院",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "考虑风险性约束的危险化学品运输路径优化研究",
+      "author": "李孟波",
+      "unit": "合肥工业大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "黄浦江上游水源地危险化学品运输风险评价及环境管理研究",
+      "author": "刘静",
+      "unit": "华东师范大学资源与环境科学学院环境科学系",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输事故动态风险评估与应急处置研究",
+      "author": "王亚坤",
+      "unit": "北京石油化工学院",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析",
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品停车场责任风险分析及保险研究",
+      "author": "郑壹哲",
+      "unit": "沈阳航空航天大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "危险化学品；运输车；停车场；风险评价；保险",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品停车场安全防护设施设计研究",
+      "author": "姚见",
+      "unit": "沈阳航空航天大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于GIS的危险化学品道路运输管理研究",
+      "author": "韩小刚",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输风险评价及管理对策研究",
+      "author": "田亚辉",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输事故特征分析与推理模型研究",
+      "author": "伍江乐",
+      "unit": "湖南科技大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于突变理论的海上散装化学品运输安全研究",
+      "author": "刁亚琳",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "多起点半开放式危险品运输路径优化",
+      "author": "刘文佳",
+      "unit": "吉林大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品事故信息命名实体识别方法研究",
+      "author": "戴慧",
+      "unit": "中国矿业大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "交通流影响下的危险化学品道路运输动态风险研究",
+      "author": "傅佳萍",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输突发泄漏入河环境风险评估技术及应用研究",
+      "author": "陈思莉",
+      "unit": "华南理工大学",
+      "degree": "博士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品公路运输选线指标体系优化研究",
+      "author": "王丽",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于可信性理论危险化学品道路运输物流成本优化——以时间驱动作业成本法的视角",
+      "author": "曹锐",
+      "unit": "石家庄铁道大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输风险评估及动态预测",
+      "author": "王影",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "危化品道路运输；贝叶斯网络；风险评估；动态预测；参数学习",
+      "abstract": "...,随着我国经济及化工行业的快速发展,危险化学品(简称危化品)生产量及运输量不断增加,以道路运输危险化学品的运输方式占所有方式的70%以上。由于危化品本身具有的特殊性质...",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品可靠性选址运输问题研究",
+      "author": "范杰",
+      "unit": "北京化工大学",
+      "degree": "博士",
+      "year": "2020",
+      "keywords": "危险化学品；仓库故障；选址分配问题；选址路径问题；智能算法",
+      "abstract": "",
+      "direction": [
+        "智能技术",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输风险传导路径与网络脆弱性研究",
+      "author": "李泳暾",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2021",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品公路运输的风险分析与保险研究",
+      "author": "袁龙海",
+      "unit": "沈阳航空航天大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "考虑海上救助资源的化学品船海上运输路径规划研究",
+      "author": "随东雪",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "考虑环境敏感区暴露风险的危险品公路运输风险研究",
+      "author": "刘文龙",
+      "unit": "昆明理工大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品重大危险源的风险管控与环境安全设计",
+      "author": "王文浩",
+      "unit": "天津工业大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品供应链安全风险研究——以航天A研究院为例",
+      "author": "高维川",
+      "unit": "对外经济贸易大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "化工园区危险化学品储存风险研究",
+      "author": "程婷婷",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "园区安全"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "数据驱动的道路危险品车辆检测研究",
+      "author": "周立建",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2023",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品内河运输泄漏事故模拟与风险评估技术研究",
+      "author": "詹水芬",
+      "unit": "兰州交通大学",
+      "degree": "博士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于分层检测算法的危险品运输车辆识别及预警",
+      "author": "张浩东",
+      "unit": "吉林大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输风险管理研究",
+      "author": "席永鹏",
+      "unit": "沈阳航空航天大学",
+      "degree": "硕士",
+      "year": "2015",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险品车辆监控平台的设计与实现",
+      "author": "宫晨",
+      "unit": "山东大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险品的动态车辆路径研究",
+      "author": "王青波",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "ZS公司危险化学品储运业务安全隐患管理策略研究",
+      "author": "原子鸣",
+      "unit": "吉林大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "海洋危险化学品对双壳贝类毒性效应与模拟泄漏实验研究",
+      "author": "李禹含",
+      "unit": "中国海洋大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品燃爆危险性综合评估与分级研究",
+      "author": "尚文娟",
+      "unit": "南京工业大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品公路运输事故情景构建与应急管理研究",
+      "author": "曹鹏波",
+      "unit": "西安建筑科技大学",
+      "degree": "硕士",
+      "year": "2018",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "LD公司危险品运输管理",
+      "author": "季健",
+      "unit": "西北农林科技大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "铁路危险货物运输安全风险分析及对策",
+      "author": "金哲宇",
+      "unit": "兰州交通大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "山东省危险化学品道路运输风险评价",
+      "author": "温彩霞",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "液态危险化学品道路运输选线研究",
+      "author": "梁启超",
+      "unit": "北京交通大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "公路运输危险化学品事故后果模拟研究",
+      "author": "孙尚新",
+      "unit": "中国地质大学（武汉）",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "辽宁省危险化学品道路运输安全评价研究",
+      "author": "杜钢",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "我国危险化学品绿色运输方式评价",
+      "author": "赵杰君",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "某危险品运输车排气系统内流场及温度场研究与结构优化",
+      "author": "符耀民",
+      "unit": "贵州大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "我国危险化学品事故的安全管理体系原因研究",
+      "author": "周琳",
+      "unit": "中国矿业大学(北京)",
+      "degree": "博士",
+      "year": "2018",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险品水路运输风险评价及控制措施研究",
+      "author": "江俐颖",
+      "unit": "浙江海洋大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险品道路运输实时在线监控系统设计与实现",
+      "author": "谢尧尧",
+      "unit": "重庆大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险气体道路运输泄漏事故后果评估及应急处置研究",
+      "author": "王凌睿",
+      "unit": "湖南科技大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "海上散装液体危险化学品装载中“人”因素可靠性研究",
+      "author": "张瑞恒",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于轨迹数据的区域危险货物道路运输应急救援站点布局研究",
+      "author": "肖丹蕾",
+      "unit": "长安大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "化工园区危险化学品储存风险管控模型研究",
+      "author": "玄军伟",
+      "unit": "首都经济贸易大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "化工园区；危险化学品；储存；风险管控",
+      "abstract": "...,在众多化工企业的安全生产事故当中,危险化学品储存阶段的事故也是多发、频发。在2016年12月国务院办公厅印发的《危险化学品安全综合治理方案》和2017年3月交通运输部办公厅印发的《关于加强港口危险货物储罐安全管理的意见...",
+      "direction": [
+        "风险评价",
+        "园区安全"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品仓储系统风险评价方法研究",
+      "author": "杨卓倩",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "危险化学品；仓储安全；风险评价；耦合协调度模型；灵敏度分析",
+      "abstract": "...随着我国经济的迅速发展,各行各业对危险化学品的需求也在与日俱增。由于具有易燃、易爆、毒性、强烈腐蚀性和放射性等特性,危险化学品在生产、储存、使用、经营、运输、处置等环节面临着巨大安全隐患...",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "泉州市危险货物道路运输管理政策执行研究",
+      "author": "张俊逸",
+      "unit": "华侨大学",
+      "degree": "硕士",
+      "year": "2020",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险液体化学品运输安全管理研究——以JY公司为例",
+      "author": "王梦晨",
+      "unit": "浙江万里学院",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输泄漏扩散及火灾事故模拟研究",
+      "author": "钱博",
+      "unit": "南京工业大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "公路危险品运输决策策略研究",
+      "author": "贾红梅",
+      "unit": "吉林大学交通学院",
+      "degree": "硕士",
+      "year": "2006",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品车辆路径问题及算法研究",
+      "author": "王健",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "内河液态危化品运输路线评价研究",
+      "author": "朱骋",
+      "unit": "重庆交通大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "J企业危险化学品公路运输的风险分析与控制研究",
+      "author": "姜长海",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "气体类化学品道路运输事故风险评价",
+      "author": "刘犀子",
+      "unit": "北京交通大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品事故损失计算研究",
+      "author": "王琼",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "淮南市危险化学品安全信息管理系统研究",
+      "author": "陈霞",
+      "unit": "安徽理工大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "阜新市危险化学品管理机制研究",
+      "author": "冯博雅",
+      "unit": "辽宁工程技术大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品事故环境风险的定量评估及动态演化",
+      "author": "任星星",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "危险化学品；定量评估；情景分析；动态演化",
+      "abstract": "...,事故发生的可能性也大为增加。危险化学品事故不仅会造成人体直接伤害,更对环境构成了极大地威胁。如何定量地评估事故环境风险及其动态演化轨迹不仅是安全生产、运输和处理处置决策的依据和事故预警与应急救援的关键...",
+      "direction": [
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于遗传算法的危险品运输调度优化研究",
+      "author": "杨士宇",
+      "unit": "大连海事大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "遗传算法；危险品；运输调度优化；信息系统",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "考虑公平性约束的危险品运输网络设计研究",
+      "author": "彭姗姗",
+      "unit": "北京交通大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品生产企业物流绩效评价研究",
+      "author": "刘迅猛",
+      "unit": "华东理工大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品事故应急设施选址研究",
+      "author": "彭云",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "事故分析"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "云南危险品的物流流程风险管理研究",
+      "author": "刘猛",
+      "unit": "昆明理工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "鞍山市危险化学品安全管理研究",
+      "author": "王碧辉",
+      "unit": "辽宁大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于海洋微藻的典型危险化学品毒性效应和生物清除研究",
+      "author": "王秀粉",
+      "unit": "中国海洋大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于风险评价的危险化学品码头选址研究",
+      "author": "周薇",
+      "unit": "南京大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "用于化学品危险性快速检测的过程强化研究",
+      "author": "王德志",
+      "unit": "青岛科技大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输事故率计算方法研究",
+      "author": "张芮博",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于BTM模型的危险货物道路运输事故影响因素分析",
+      "author": "师静圆",
+      "unit": "北京交通大学",
+      "degree": "硕士",
+      "year": "2022",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "我国危险化学品货物道路运输风险分析及防范研究",
+      "author": "严少伟",
+      "unit": "苏州大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "巨化集团危险化学品道路运输部门标准体系的研究",
+      "author": "张红英",
+      "unit": "浙江工业大学",
+      "degree": "硕士",
+      "year": "2010",
+      "keywords": "化工企业；危险化学品；道路运输；标准体系",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于FMEA的莱德公司危化品运输风险管理研究",
+      "author": "张兴伟",
+      "unit": "中国海洋大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "公路运输液态化学品风险辨识及危险度评价研究",
+      "author": "张建莉",
+      "unit": "长安大学",
+      "degree": "硕士",
+      "year": "2006",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品仓储堆垛安全布局优化",
+      "author": "任海胜",
+      "unit": "北京化工大学",
+      "degree": "硕士",
+      "year": "2019",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品罐式集装箱公路运输风险评价研究",
+      "author": "郝连胜",
+      "unit": "上海海事大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "不确定环境下危险化学品库存路径问题研究",
+      "author": "胡皓",
+      "unit": "北京化工大学",
+      "degree": "博士",
+      "year": "2018",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "其他"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于ZigBee和百度地图的危化品运输跟踪监测系统研究",
+      "author": "苑宇坤",
+      "unit": "中北大学",
+      "degree": "硕士",
+      "year": "2016",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险品运输车辆远程监控系统的设计",
+      "author": "马克军",
+      "unit": "宁夏大学",
+      "degree": "硕士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于贝叶斯网络的港区危险品运输事故影响因素分析",
+      "author": "李伊人",
+      "unit": "东南大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "事故分析",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "嘉绍大桥危险品运输风险评估和控制技术研究",
+      "author": "祁晨旭",
+      "unit": "长安大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危化品槽罐车运输安全监测信息处理技术研究",
+      "author": "崔远慧",
+      "unit": "大连理工大学电子科学与技术学院",
+      "degree": "博士",
+      "year": "2013",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "考虑风险公平性的危险品道路运输路径优化研究",
+      "author": "毛洁",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "化工企业危险品运输安全管理研究",
+      "author": "吕亚君",
+      "unit": "南京林业大学",
+      "degree": "硕士",
+      "year": "2008",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危化品道路运输的风险度量与路径优化研究",
+      "author": "王春晓",
+      "unit": "江西理工大学",
+      "degree": "硕士",
+      "year": "2025",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "长江干线危险品运输组织方式优化研究",
+      "author": "康旸",
+      "unit": "武汉理工大学",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "运输组织方式；模糊层次分析；危险品运输；优化",
+      "abstract": "...。2008年,我国内河危险品运输量已达2亿多吨,其中长江水系1.5亿吨,约占全国内河总运量的70%。长江干线危险品运输以原油、成品油、化学品、液化气以及其他固体品种为主...",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于安全的危险品运输车辆优化调度研究",
+      "author": "邹坤",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2012",
+      "keywords": "危险化学品；安全；物流配送；车辆调度",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险品运输路径的动态选择和应急救援研究",
+      "author": "陈小峰",
+      "unit": "同济大学交通运输工程学院",
+      "degree": "博士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险品道路运输监控决策支持系统研究",
+      "author": "闫利勇",
+      "unit": "重庆交通大学",
+      "degree": "硕士",
+      "year": "2011",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品道路运输风险评估系统的应用研究",
+      "author": "姜龙",
+      "unit": "华东交通大学",
+      "degree": "硕士",
+      "year": "2014",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "风险评价",
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品突发环境事件应急处置方法及决策支持系统构建研究",
+      "author": "蔡凌",
+      "unit": "天津大学",
+      "degree": "博士",
+      "year": "2017",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "应急管理"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "危险化学品物流中心选址问题研究",
+      "author": "武小东",
+      "unit": "西南交通大学",
+      "degree": "硕士",
+      "year": "2007",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "运输物流"
+      ],
+      "source_keyword": "危险化学品运输"
+    },
+    {
+      "title": "基于生命周期理论的危险化学品安全管理和评价",
+      "author": "蔡攀",
+      "unit": "中山大学化学与化学工程学院",
+      "degree": "硕士",
+      "year": "2009",
+      "keywords": "",
+      "abstract": "",
+      "direction": [
+        "企业安全管理"
+      ],
+      "source_keyword": "危险化学品运输"
+    }
+  ]
+}
