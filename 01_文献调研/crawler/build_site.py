@@ -315,7 +315,7 @@ function render(){
 
   // 轻力学：拉向理想位 + 论文间轻排斥（让布局更自然）
   const RELAX_ITERS = 180;
-  const REPULSE_DIST = S * 1.6;
+  const REPULSE_DIST = S * 3.2;
   for (let it = 0; it < RELAX_ITERS; it++) {
     // 拉向理想位
     papers.forEach(p => {
