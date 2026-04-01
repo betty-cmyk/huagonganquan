@@ -14116,30 +14116,42 @@ function render(){
   const papers = G.nodes.filter(n=>n.type==='paper');
   const catByKey = new Map(categories.map(c=>[c.cat_id,c]));
 
-  const ringR = Math.min(W, H) * 0.34;
   categories.forEach((c, i)=>{
-    const a = (i / categories.length) * Math.PI * 2 - Math.PI / 2;
-    c.fx = W/2 + Math.cos(a) * ringR;
-    c.fy = H/2 + Math.sin(a) * ringR;
-    c.x = c.fx; c.y = c.fy;
+    const a = (i / categories.length) * Math.PI * 2;
+    c.x = W/2 + Math.cos(a) * 100;
+    c.y = H/2 + Math.sin(a) * 100;
   });
 
   papers.forEach(p=>{
     const c = catByKey.get(p.primary_category) || categories[0];
     const a = seededAngle(p.id);
-    const rr = 24 + ((p.id * 37) % 90);
-    p.x = c.fx + Math.cos(a) * rr;
-    p.y = c.fy + Math.sin(a) * rr;
+    const rr = 24 + ((p.id * 37) % 60);
+    p.x = c.x + Math.cos(a) * rr;
+    p.y = c.y + Math.sin(a) * rr;
   });
 
   const sim = d3.forceSimulation(G.nodes)
-    .force('link', d3.forceLink(G.edges).id(d=>d.id).distance(d=>d.type==='cat_cat'?150:34).strength(d=>d.type==='cat_cat'?0.12:0.32))
-    .force('charge', d3.forceManyBody().strength(d=>d.type==='paper'?-8:0))
-    .force('x', d3.forceX(d=>d.type==='category' ? d.fx : (catByKey.get(d.primary_category)?.fx || W/2)).strength(d=>d.type==='category'?1:0.28))
-    .force('y', d3.forceY(d=>d.type==='category' ? d.fy : (catByKey.get(d.primary_category)?.fy || H/2)).strength(d=>d.type==='category'?1:0.28))
-    .force('collision', d3.forceCollide().radius(d=>d.type==='paper' ? d.r + 1.2 : 0));
+    .force('link', d3.forceLink(G.edges).id(d=>d.id).distance(d=>d.type==='cat_cat'?350:35).strength(d=>d.type==='cat_cat'?0.05:0.75))
+    .force('charge', d3.forceManyBody().strength(d=>d.type==='paper'?-6:0))
+    .force('center', d3.forceCenter(W/2, H/2).strength(0.04))
+    .force('collision', d3.forceCollide().radius(d=>d.type==='paper' ? d.r + 1.2 : 0))
+    .force('cat_repel', alpha => {
+       for(let i=0; i<categories.length; i++) {
+         for(let j=i+1; j<categories.length; j++) {
+           let dx = categories[i].x - categories[j].x;
+           let dy = categories[i].y - categories[j].y;
+           let l = Math.sqrt(dx*dx + dy*dy) || 1;
+           const minDist = 420;
+           if(l < minDist){
+             let f = (minDist - l) * alpha * 0.4;
+             categories[i].vx += (dx/l)*f; categories[i].vy += (dy/l)*f;
+             categories[j].vx -= (dx/l)*f; categories[j].vy -= (dy/l)*f;
+           }
+         }
+       }
+    });
 
-  for(let i=0;i<520;i++) sim.tick();
+  for(let i=0;i<600;i++) sim.tick();
   sim.stop();
 
   const ge = d3.select('#ge'); ge.selectAll('*').remove();
