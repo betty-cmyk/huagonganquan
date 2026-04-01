@@ -14867,21 +14867,30 @@ function render(){
     .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
     .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.5 : 0.18);
 
-  // 全局晕染层：论文气泡（范围放大5倍）+ 连线 + 类标题
+  // 全局晕染层（降亮40% + 平滑Blob边缘）
   const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
   defs.selectAll('*').remove();
 
   defs.append('filter')
     .attr('id', 'paper-glow-blur')
-    .attr('x', '-180%')
-    .attr('y', '-180%')
-    .attr('width', '460%')
-    .attr('height', '460%')
+    .attr('x', '-120%')
+    .attr('y', '-120%')
+    .attr('width', '340%')
+    .attr('height', '340%')
     .append('feGaussianBlur')
-    .attr('stdDeviation', 8.2);
+    .attr('stdDeviation', 6.2);
 
   defs.append('filter')
     .attr('id', 'edge-glow-blur')
+    .attr('x', '-60%')
+    .attr('y', '-60%')
+    .attr('width', '220%')
+    .attr('height', '220%')
+    .append('feGaussianBlur')
+    .attr('stdDeviation', 1.2);
+
+  defs.append('filter')
+    .attr('id', 'title-glow-blur')
     .attr('x', '-80%')
     .attr('y', '-80%')
     .attr('width', '260%')
@@ -14889,30 +14898,51 @@ function render(){
     .append('feGaussianBlur')
     .attr('stdDeviation', 1.8);
 
-  defs.append('filter')
-    .attr('id', 'title-glow-blur')
-    .attr('x', '-120%')
-    .attr('y', '-120%')
-    .attr('width', '340%')
-    .attr('height', '340%')
-    .append('feGaussianBlur')
-    .attr('stdDeviation', 2.6);
+  // 1) 类别Blob平滑边缘（替代规整圆）
+  const blobLayer = gh.append('g')
+    .attr('class', 'blob-layer')
+    .attr('pointer-events', 'none');
 
+  const geoPath = d3.geoPath();
+  const papersByCat = d3.group(papers, d => d.primary_category);
+  for (const [cid, plist] of papersByCat) {
+    if (!plist || plist.length < 3) continue;
+    const color = catByKey.get(cid)?.color || '#58a6ff';
+    const density = d3.contourDensity()
+      .x(d => d.x)
+      .y(d => d.y)
+      .size([W, H])
+      .bandwidth(Math.max(28, S * 0.95))
+      .thresholds(16);
+    const contours = density(plist);
+    const outer = contours.slice(0, Math.min(6, contours.length));
+    outer.forEach((ct, i) => {
+      blobLayer.append('path')
+        .attr('d', geoPath(ct))
+        .attr('fill', color)
+        .attr('fill-opacity', 0.038 - i * 0.005)
+        .attr('filter', 'url(#paper-glow-blur)');
+    });
+  }
+
+  // 2) 连线晕染（仅跨类连线，减轻卡顿）
   const edgeGlow = gh.append('g')
     .attr('class', 'edge-glow-layer')
     .attr('pointer-events', 'none');
 
-  edgeGlow.selectAll('line.sim-glow').data(relEdges).join('line')
+  const crossEdges = relEdges.filter(d => d.type === 'paper_sim_cross');
+  edgeGlow.selectAll('line.sim-glow').data(crossEdges).join('line')
     .attr('class', 'sim-glow')
     .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
     .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
     .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
     .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
-    .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
-    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 2.2 : 1.4)
-    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.14 : 0.08)
+    .attr('stroke', '#58a6ff')
+    .attr('stroke-width', 1.4)
+    .attr('stroke-opacity', 0.084)
     .attr('filter', 'url(#edge-glow-blur)');
 
+  // 3) 论文节点微光（降亮40%）
   const paperGlow = gh.append('g')
     .attr('class', 'paper-glow-layer')
     .attr('pointer-events', 'none');
@@ -14921,11 +14951,12 @@ function render(){
     .attr('class', 'paper-glow')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(34, d.r * 9))
+    .attr('r', d => Math.max(30, d.r * 8))
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.11)
+    .attr('fill-opacity', 0.066)
     .attr('filter', 'url(#paper-glow-blur)');
 
+  // 4) 类标题微光（降亮40%）
   const titleGlow = gh.append('g')
     .attr('class', 'title-glow-layer')
     .attr('pointer-events', 'none');
@@ -14936,7 +14967,7 @@ function render(){
     .attr('y', d => d.y)
     .attr('text-anchor', 'middle')
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.22)
+    .attr('fill-opacity', 0.132)
     .style('font-size', '13px')
     .style('font-weight', 700)
     .text(d => d.label)
