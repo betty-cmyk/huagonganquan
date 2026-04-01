@@ -3468,10 +3468,10 @@
       "label": "精细化工反应安全评估方法在高危...",
       "full_title": "精细化工反应安全评估方法在高危化工工艺中的应用",
       "type": "paper",
-      "color": "#ff7b72",
+      "color": "#6e7681",
       "count": 1,
       "r": 4,
-      "primary_category": "A_风险评价",
+      "primary_category": "J_工艺安全",
       "categories": [
         "A_风险评价",
         "J_工艺安全"
@@ -3759,10 +3759,10 @@
       "label": "基于HAZOP和过程模拟的化工...",
       "full_title": "基于HAZOP和过程模拟的化工工艺安全性分析及优化",
       "type": "paper",
-      "color": "#ff7b72",
+      "color": "#6e7681",
       "count": 1,
       "r": 4,
-      "primary_category": "A_风险评价",
+      "primary_category": "J_工艺安全",
       "categories": [
         "A_风险评价",
         "J_工艺安全"
@@ -3798,10 +3798,10 @@
       "label": "化工工艺流程气体泄漏扩散仿真建...",
       "full_title": "化工工艺流程气体泄漏扩散仿真建模研究",
       "type": "paper",
-      "color": "#ffa657",
+      "color": "#6e7681",
       "count": 1,
       "r": 4,
-      "primary_category": "B_灾害防控",
+      "primary_category": "J_工艺安全",
       "categories": [
         "B_灾害防控",
         "J_工艺安全"

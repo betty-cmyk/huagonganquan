@@ -167,14 +167,22 @@ function render(){
   const S = 35; // 更大的网格间距，保证文字放得下
   const D = 9;  // 缩小距离以贴合视觉
 
-  const macroHex = [
-    {q: 0, r: 0},
-    {q: D, r: 0}, {q: D, r: -D}, {q: 0, r: -D}, {q: -D, r: 0}, {q: -D, r: D}, {q: 0, r: D},
-    {q: 2*D, r: 0}, {q: 2*D, r: -D}, {q: -2*D, r: D}
-  ];
+  // 按语义手工锚定：把工艺安全类放到风险评价/灾害防控附近
+  const macroHexByCat = {
+    'A_风险评价': {q: 0, r: 0},
+    'J_工艺安全': {q: 4, r: -2},
+    'B_灾害防控': {q: 8, r: -4},
+    'E_事故应急': {q: 8, r: 0},
+    'H_运输储存': {q: 4, r: 3},
+    'C_安全管理体系': {q: -4, r: 3},
+    'D_安全技术监测': {q: -8, r: 0},
+    'I_园区企业': {q: -8, r: 4},
+    'G_职业卫生': {q: -4, r: 7},
+    'F_基础理论': {q: 0, r: 7},
+  };
 
   categories.forEach((c, i)=>{
-    const h = macroHex[i % macroHex.length];
+    const h = macroHexByCat[c.cat_id] || {q: (i-5)*2, r: (i%2===0?0:2)};
     c.axial_q = h.q; c.axial_r = h.r;
     c.x = S * Math.sqrt(3) * (c.axial_q + c.axial_r/2);
     c.y = S * 3/2 * c.axial_r;
@@ -206,12 +214,25 @@ function render(){
     if(p.categories && p.categories.length) {
       cats = p.categories.map(cid => catByKey.get(cid)).filter(Boolean);
     }
-    if(!cats.length) cats = [catByKey.get(p.primary_category) || categories[0]];
-    
-    let sumX = 0, sumY = 0;
-    cats.forEach(c => { sumX += c.x; sumY += c.y; });
-    p.idealX = sumX / cats.length + (Math.random()-0.5)*S*0.5;
-    p.idealY = sumY / cats.length + (Math.random()-0.5)*S*0.5;
+    const primaryCat = catByKey.get(p.primary_category);
+    if (!cats.length && primaryCat) cats = [primaryCat];
+
+    // 主分类增强：优先贴近主分类中心，避免工艺安全等小类被完全拉走
+    let sumX = 0, sumY = 0, wSum = 0;
+    cats.forEach(c => {
+      const w = (primaryCat && c.cat_id === primaryCat.cat_id) ? 0.68 : 0.32 / Math.max(1, cats.length - 1);
+      sumX += c.x * w;
+      sumY += c.y * w;
+      wSum += w;
+    });
+    if (wSum <= 0 && primaryCat) {
+      sumX = primaryCat.x;
+      sumY = primaryCat.y;
+      wSum = 1;
+    }
+
+    p.idealX = sumX / wSum + (Math.random()-0.5)*S*0.35;
+    p.idealY = sumY / wSum + (Math.random()-0.5)*S*0.35;
     p.r = 5;
   });
 
