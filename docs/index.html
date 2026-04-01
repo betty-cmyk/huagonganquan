@@ -2,9 +2,6 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
 <title>化工安全论文知识网络图</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -16165,38 +16162,27 @@ function render(){
 
   // 轻云雾背景：按分类颜色做柔和过渡（不画边界）
   const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
-  if (defs.select('#cloud-blur').empty()) {
-    defs.append('filter')
-      .attr('id', 'cloud-blur')
-      .attr('x', '-40%')
-      .attr('y', '-40%')
-      .attr('width', '180%')
-      .attr('height', '180%')
-      .append('feGaussianBlur')
-      .attr('stdDeviation', 42);
-  }
+  defs.selectAll('*').remove();
+  
+  categories.forEach(c => {
+    const grad = defs.append('radialGradient')
+      .attr('id', 'grad-' + c.cat_id)
+      .attr('cx', '50%').attr('cy', '50%').attr('r', '50%');
+    grad.append('stop').attr('offset', '0%').attr('stop-color', c.color).attr('stop-opacity', 0.22);
+    grad.append('stop').attr('offset', '40%').attr('stop-color', c.color).attr('stop-opacity', 0.1);
+    grad.append('stop').attr('offset', '100%').attr('stop-color', c.color).attr('stop-opacity', 0);
+  });
 
   const cloudBg = gh.append('g')
     .attr('class', 'cat-clouds')
     .attr('pointer-events', 'none');
 
-  cloudBg.selectAll('circle.cloud-outer').data(categories).join('circle')
-    .attr('class', 'cloud-outer')
+  cloudBg.selectAll('circle.cat-glow').data(categories).join('circle')
+    .attr('class', 'cat-glow')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(S * 8.8, Math.sqrt((d.count || 1)) * S * 4.2))
-    .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.16)
-    .attr('filter', 'url(#cloud-blur)');
-
-  cloudBg.selectAll('circle.cloud-inner').data(categories).join('circle')
-    .attr('class', 'cloud-inner')
-    .attr('cx', d => d.x)
-    .attr('cy', d => d.y)
-    .attr('r', d => Math.max(S * 5.4, Math.sqrt((d.count || 1)) * S * 3.1))
-    .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.24)
-    .attr('filter', 'url(#cloud-blur)');
+    .attr('r', d => Math.max(S * 4.5, Math.sqrt((d.count || 1)) * S * 2.1))
+    .attr('fill', d => `url(#grad-${d.cat_id})`);
 
   const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
 
