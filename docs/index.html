@@ -24,9 +24,10 @@ svg{width:100%;height:100%}
 .hull{stroke-width:1.4}
 .cat-label{font-size:13px;font-weight:700;paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round}
 #analysis-btn{background:#388bfd;color:#fff;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;font-size:12px;font-weight:bold;pointer-events:auto;box-shadow:0 0 10px rgba(56,139,253,0.4)}
-#charts-tray{position:fixed;bottom:-400px;left:320px;right:0;height:400px;background:#161b22;border-top:1px solid #30363d;transition:bottom .3s;z-index:200;padding:20px;display:flex;gap:20px}
+#charts-tray{position:fixed;bottom:-450px;left:0;right:0;height:450px;background:#161b22;border-top:1px solid #30363d;transition:bottom .3s, right .3s;z-index:200;padding:20px;display:flex;gap:15px;overflow-x:auto}
 #charts-tray.active{bottom:0}
-.chart-box{flex:1;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:15px;display:flex;flex-direction:column}
+#charts-tray.with-sbr{right:320px}
+.chart-box{min-width:300px;flex:1;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:15px;display:flex;flex-direction:column}
 .chart-title{font-size:13px;color:#79c0ff;margin-bottom:10px;text-align:center;font-weight:bold}
 #close-tray{position:absolute;top:10px;right:10px;background:none;border:none;color:#8b949e;cursor:pointer;font-size:20px}
 .stat-tag{display:inline-block;padding:2px 8px;border-radius:12px;font-size:10px;margin:2px;background:#21262d;border:1px solid #30363d}
@@ -53,8 +54,9 @@ svg{width:100%;height:100%}
     <div id="charts-tray">
       <button id="close-tray" onclick="toggleAnalysis()">×</button>
       <div class="chart-box" id="chart-years"><div class="chart-title">历年论文产出趋势</div><div class="chart-canvas" style="flex:1"></div></div>
-      <div class="chart-box" id="chart-cats"><div class="chart-title">各研究方向占比</div><div class="chart-canvas" style="flex:1"></div></div>
-      <div class="chart-box" id="chart-kws"><div class="chart-title">核心关键词云</div><div class="chart-canvas" style="flex:1;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;overflow:hidden"></div></div>
+      <div class="chart-box" id="chart-cats"><div class="chart-title">研究方向分布</div><div class="chart-canvas" style="flex:1"></div></div>
+      <div class="chart-box" id="chart-units"><div class="chart-title">核心研究机构Top10</div><div class="chart-canvas" style="flex:1"></div></div>
+      <div class="chart-box" id="chart-kws"><div class="chart-title">关键词分布热度</div><div class="chart-canvas" style="flex:1;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;overflow:hidden"></div></div>
     </div>
   </div>
 </div>
@@ -15825,11 +15827,33 @@ function initCharts(){
   // 3. 词云 (简单标签云实现)
   const kwMap = {};
   G.nodes.filter(n=>n.type==='paper').forEach(p=>{ (p.keywords||'').split(/[，,]/).forEach(k=>{ if(k.trim().length>1) kwMap[k.trim()]=(kwMap[k.trim()]||0)+1; }); });
-  const topKws = Object.entries(kwMap).sort((a,b)=>b[1]-a[1]).slice(0,30);
-  const kBox = d3.select('#chart-kws');
+  const topKws = Object.entries(kwMap).sort((a,b)=>b[1]-a[1]).slice(0,25);
+  const kBox = d3.select('#chart-kws .chart-canvas');
+  kBox.html(''); 
   topKws.forEach(([word, count])=>{
-    kBox.append('span').attr('class','stat-tag').style('font-size',`${Math.min(18, 9 + count*1.5)}px`).style('color',d3.interpolateCool(Math.random())).text(word);
+    kBox.append('span').attr('class','stat-tag').style('font-size',`${Math.min(16, 8 + count*1.4)}px`).style('color',d3.interpolateCool(Math.random())).text(word);
   });
+
+  // 4. 核心机构柱状图
+  const units = {};
+  G.nodes.filter(n=>n.type==='paper').forEach(p=>{ if(p.unit && p.unit!=='未记录') units[p.unit] = (units[p.unit]||0)+1; });
+  const unitData = Object.entries(units).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const uBox = d3.select('#chart-units .chart-canvas');
+  uBox.html('');
+  const uw = uBox.node().clientWidth, uh = uBox.node().clientHeight;
+  const usclX = d3.scaleLinear().domain([0, d3.max(unitData, d=>d[1])]).range([0, uw-100]);
+  const usclY = d3.scaleBand().domain(unitData.map(d=>d[0])).range([10, uh-30]).padding(0.3);
+  const usvg = uBox.append('svg').attr('width',uw).attr('height',uh);
+  
+  usvg.selectAll('rect').data(unitData).join('rect')
+    .attr('x', 80).attr('y', d=>usclY(d[0])).attr('width', d=>usclX(d[1])).attr('height', usclY.bandwidth())
+    .attr('fill', '#388bfd').attr('rx', 3);
+  usvg.selectAll('.u-label').data(unitData).join('text').attr('class','u-label')
+    .attr('x', 75).attr('y', d=>usclY(d[0]) + usclY.bandwidth()/2).attr('dy', '.35em').text(d=>d[0])
+    .attr('text-anchor','end').attr('fill','#c9d1d9').style('font-size','10px');
+  usvg.selectAll('.v-label').data(unitData).join('text').attr('class','v-label')
+    .attr('x', d=>85 + usclX(d[1])).attr('y', d=>usclY(d[0]) + usclY.bandwidth()/2).attr('dy', '.35em').text(d=>d[1])
+    .attr('fill','#79c0ff').style('font-size','10px').style('font-weight','bold');
 }
 
 function seededAngle(id){
@@ -16136,11 +16160,40 @@ function render(){
     .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
     .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.5 : 0.18);
 
-  // 按用户要求：保留论文之间连线，不绘制分类边界与分类连线
+  // 轻云雾背景：按分类颜色做柔和过渡（不画边界）
+  const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
+  if (defs.select('#cloud-blur').empty()) {
+    defs.append('filter')
+      .attr('id', 'cloud-blur')
+      .attr('x', '-40%')
+      .attr('y', '-40%')
+      .attr('width', '180%')
+      .attr('height', '180%')
+      .append('feGaussianBlur')
+      .attr('stdDeviation', 42);
+  }
 
+  const cloudBg = gh.append('g')
+    .attr('class', 'cat-clouds')
+    .attr('pointer-events', 'none');
 
-  // 按用户要求：移除分类边界线与背景色，仅保留分类标题 + 论文气泡颜色
+  cloudBg.selectAll('circle.cloud-outer').data(categories).join('circle')
+    .attr('class', 'cloud-outer')
+    .attr('cx', d => d.x)
+    .attr('cy', d => d.y)
+    .attr('r', d => Math.max(S * 5.8, Math.sqrt((d.count || 1)) * S * 2.7))
+    .attr('fill', d => d.color)
+    .attr('fill-opacity', 0.055)
+    .attr('filter', 'url(#cloud-blur)');
 
+  cloudBg.selectAll('circle.cloud-inner').data(categories).join('circle')
+    .attr('class', 'cloud-inner')
+    .attr('cx', d => d.x)
+    .attr('cy', d => d.y)
+    .attr('r', d => Math.max(S * 3.2, Math.sqrt((d.count || 1)) * S * 1.8))
+    .attr('fill', d => d.color)
+    .attr('fill-opacity', 0.10)
+    .attr('filter', 'url(#cloud-blur)');
 
   const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
 
