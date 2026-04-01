@@ -102,8 +102,8 @@ function render(){
   const papers = G.nodes.filter(n=>n.type==='paper');
   const catByKey = new Map(categories.map(c=>[c.cat_id,c]));
 
-  const S = 24; // 网格单元间距
-  const D = 10; // 大类中心之间的固定距离为10个格点，对应边缘之间大概留出 6-7 个单位空隙
+  const S = 35; // 更大的网格间距，保证文字放得下
+  const D = 9;  // 缩小距离以贴合视觉
 
   const macroHex = [
     {q: 0, r: 0},
@@ -150,7 +150,7 @@ function render(){
     cats.forEach(c => { sumX += c.x; sumY += c.y; });
     p.idealX = sumX / cats.length + (Math.random()-0.5)*S*0.5;
     p.idealY = sumY / cats.length + (Math.random()-0.5)*S*0.5;
-    p.r = 4.5;
+    p.r = 5;
   });
 
   // 2. 占位保护：类别中心及第一圈不得填入论文
@@ -220,19 +220,31 @@ function render(){
   const gh = d3.select('#gh'); gh.selectAll('*').remove();
   const gn = d3.select('#gn'); gn.selectAll('*').remove();
 
-  const edges = G.edges.filter(e=>e.type==='cat_cat');
-  // Since we removed forceSimulation, we must map integer IDs to node coordinates manually
-  const nodeById = new Map();
-  [...categories, ...papers].forEach(n => nodeById.set(n.id, n));
+  // 生成论文与论文之间的网格连线
+  const paperByHex = new Map();
+  papers.forEach(p => paperByHex.set(`${p.axial_q},${p.axial_r}`, p));
+  const paperEdges = [];
+  papers.forEach(p => {
+    hexDirs.forEach(d => {
+      const nKey = `${p.axial_q + d.dq},${p.axial_r + d.dr}`;
+      if(paperByHex.has(nKey)){
+        const n = paperByHex.get(nKey);
+        if(n.id > p.id) { // 避免双向重复连线
+          const sameCat = p.primary_category === n.primary_category;
+          paperEdges.push({ source: p, target: n, sameCat });
+        }
+      }
+    });
+  });
 
-  ge.selectAll('line').data(edges).join('line')
-    .attr('x1', d => nodeById.get(d.source).x)
-    .attr('y1', d => nodeById.get(d.source).y)
-    .attr('x2', d => nodeById.get(d.target).x)
-    .attr('y2', d => nodeById.get(d.target).y)
-    .attr('stroke', '#58a6ff')
-    .attr('stroke-width', d=>Math.min(10, Math.max(2, d.weight*0.4)))
-    .attr('stroke-opacity', .5);
+  ge.selectAll('line').data(paperEdges).join('line')
+    .attr('x1', d => d.source.x)
+    .attr('y1', d => d.source.y)
+    .attr('x2', d => d.target.x)
+    .attr('y2', d => d.target.y)
+    .attr('stroke', d => d.sameCat ? '#8b949e' : '#58a6ff')
+    .attr('stroke-width', d => d.sameCat ? 0.3 : 0.8)
+    .attr('stroke-opacity', d => d.sameCat ? 0.2 : 0.6);
 
   const hullData = categories.map(c=>{
     const pts = papers.filter(p=>(p.categories && p.categories.includes(c.cat_id)) || p.primary_category === c.cat_id).map(p=>[p.x,p.y]);
@@ -264,9 +276,9 @@ function render(){
       .attr('class','hull')
       .attr('d', path)
       .attr('fill', h.cat.color)
-      .attr('fill-opacity', .13)
+      .attr('fill-opacity', .06)
       .attr('stroke', h.cat.color)
-      .attr('stroke-opacity', .55)
+      .attr('stroke-opacity', .35)
       .style('cursor','pointer')
       .on('click', ()=>showInfo(h.cat));
   });
@@ -283,11 +295,10 @@ function render(){
   const labels = paperNode.append('text')
     .text(d=>d.label)
     .attr('text-anchor', 'middle')
-    .attr('dy', d=>d.r+10)
-    .attr('font-size', 3.5)
-    .attr('fill', '#8b949e')
-    .attr('pointer-events','none')
-    .style('opacity', 0);
+    .attr('dy', d=>d.r+8)
+    .attr('font-size', 2.8)
+    .attr('fill', '#c9d1d9')
+    .attr('pointer-events','none');
 
   const catLabel = gn.selectAll('text.cat-label').data(categories).join('text')
     .attr('class','cat-label')
@@ -317,13 +328,13 @@ function render(){
     .on('mousemove', e=>{tt.style.left=(e.clientX+15)+'px';tt.style.top=(e.clientY-10)+'px';})
     .on('mouseout', ()=>tt.style.display='none');
 
-  function updateLabelVisibility(k){ labels.style('opacity', k > 2 ? 1 : 0); }
+  function updateLabelVisibility(k){ labels.style('opacity', 1); }
   updateLabelVisibility(kScale);
 }
 
 svg = d3.select('#svg');
 root = d3.select('#root');
-svg.call(d3.zoom().scaleExtent([0.05, 10]).on('zoom', e=>{kScale = e.transform.k; root.attr('transform', e.transform); root.selectAll('g.paper text').style('opacity', kScale > 2 ? 1 : 0);}));
+svg.call(d3.zoom().scaleExtent([0.05, 10]).on('zoom', e=>{kScale = e.transform.k; root.attr('transform', e.transform); }));
 
 render();
 </script>

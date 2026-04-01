@@ -3,7 +3,9 @@
 gen_graph_v4.py  —  仅研究分类视图：无“其他”类，分类锚点 + 论文网络
 """
 import os
+import re
 import json
+from collections import defaultdict
 from itertools import combinations
 
 CRAWLER_DIR = os.path.dirname(os.path.abspath(__file__))
