@@ -285,6 +285,17 @@ function render(){
     p.x = realPt.x; p.y = realPt.y;
   });
 
+  // 小类标题贴近本类论文簇，避免“标题远离气泡”
+  categories.forEach(c => {
+    const own = papers.filter(p => p.primary_category === c.cat_id);
+    if (own.length > 0 && own.length <= 10) {
+      const mx = own.reduce((s, p) => s + p.x, 0) / own.length;
+      const my = own.reduce((s, p) => s + p.y, 0) / own.length;
+      c.x = c.x * 0.3 + mx * 0.7;
+      c.y = c.y * 0.3 + my * 0.7;
+    }
+  });
+
   // Center mathematically
   let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
   [...categories, ...papers].forEach(n => {
