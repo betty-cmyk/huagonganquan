@@ -15779,11 +15779,48 @@ function initCharts(){
   const cBox = d3.select('#chart-cats .chart-canvas');
   const cw = cBox.node().clientWidth, ch = cBox.node().clientHeight;
   const csvg = cBox.append('svg').attr('width',cw).attr('height',ch).append('g').attr('transform',`translate(${cw/2},${ch/2})`);
-  const pie = d3.pie().value(d=>d.count);
-  const arc = d3.arc().innerRadius(ch/5).outerRadius(ch/2.5);
-  const labelArc = d3.arc().innerRadius(ch/2.2).outerRadius(ch/2.2);
-  csvg.selectAll('path').data(pie(cats)).join('path').attr('d',arc).attr('fill',d=>d.data.color).attr('stroke','#161b22').attr('stroke-width',1);
-  csvg.selectAll('.pie-label').data(pie(cats)).join('text').attr('class','pie-label').attr('transform',d=>`translate(${labelArc.centroid(d)})`).text(d=>`${d.data.label.replace(/^.*_/,'')} (${d.data.count})`).attr('text-anchor','middle').attr('fill','#c9d1d9').style('font-size','9px');
+  const pie = d3.pie().value(d=>d.count).sort(null);
+  const arc = d3.arc().innerRadius(ch/5).outerRadius(ch/3.2);
+  const outerArc = d3.arc().innerRadius(ch/2.3).outerRadius(ch/2.3);
+  
+  const pData = pie(cats);
+  csvg.selectAll('path.slice').data(pData).join('path').attr('class','slice').attr('d',arc).attr('fill',d=>d.data.color).attr('stroke','#161b22').attr('stroke-width',1);
+
+  // Anti-overlap layout for labels
+  pData.forEach(d => {
+    let midA = d.startAngle + (d.endAngle - d.startAngle)/2;
+    d.pos = outerArc.centroid(d);
+    d.side = midA < Math.PI ? 1 : -1;
+    d.pos[0] = ch/2.3 * d.side;
+  });
+  
+  for(let iter=0; iter<30; iter++){
+    for(let i=0; i<pData.length; i++){
+      for(let j=i+1; j<pData.length; j++){
+        let a = pData[i], b = pData[j];
+        if(a.side === b.side){
+          let dy = b.pos[1] - a.pos[1];
+          if(Math.abs(dy) < 14){
+            let push = (14 - Math.abs(dy)) * 0.5 * Math.sign(dy || 1);
+            a.pos[1] -= push; b.pos[1] += push;
+          }
+        }
+      }
+    }
+  }
+
+  csvg.selectAll('polyline').data(pData).join('polyline')
+    .attr('points', d => {
+        let p1 = arc.centroid(d);
+        let p2 = outerArc.centroid(d);
+        return [p1, p2, d.pos];
+    }).style('fill','none').style('stroke','#484f58').style('stroke-width',1);
+
+  csvg.selectAll('.pie-label').data(pData).join('text').attr('class','pie-label')
+    .attr('transform', d => `translate(${d.pos[0] + d.side * 4}, ${d.pos[1]})`)
+    .text(d => `${d.data.label.replace(/^.*_/,'')} (${d.data.count})`)
+    .attr('text-anchor', d => d.side===1 ? 'start' : 'end')
+    .attr('fill', '#c9d1d9').style('font-size', '10px').attr('dy', '.3em');
   
   // 3. 词云 (简单标签云实现)
   const kwMap = {};
@@ -16013,6 +16050,59 @@ function render(){
       c.y = c.y * 0.88 + my * 0.12;
     }
   });
+
+  // 分类标题排斥：避免标题覆盖论文气泡
+  const LABEL_REPEL_ITERS = 140;
+  for (let it = 0; it < LABEL_REPEL_ITERS; it++) {
+    // 标题与论文排斥
+    categories.forEach(c => {
+      const labelR = Math.max(42, c.label.length * 8.2);
+      papers.forEach(p => {
+        let dx = c.x - p.x;
+        let dy = c.y - p.y;
+        let d = Math.sqrt(dx * dx + dy * dy) || 0.001;
+        const minD = labelR + p.r + 16;
+        if (d < minD) {
+          const push = (minD - d) * 0.16;
+          dx /= d;
+          dy /= d;
+          c.x += dx * push;
+          c.y += dy * push;
+        }
+      });
+    });
+
+    // 标题与标题也互斥，防止互压
+    for (let i = 0; i < categories.length; i++) {
+      for (let j = i + 1; j < categories.length; j++) {
+        const a = categories[i], b = categories[j];
+        let dx = b.x - a.x;
+        let dy = b.y - a.y;
+        let d = Math.sqrt(dx * dx + dy * dy) || 0.001;
+        const minD = Math.max(86, (a.label.length + b.label.length) * 4.6);
+        if (d < minD) {
+          const push = (minD - d) * 0.08;
+          dx /= d;
+          dy /= d;
+          a.x -= dx * push; a.y -= dy * push;
+          b.x += dx * push; b.y += dy * push;
+        }
+      }
+    }
+
+    // 标题不能跑太远，保持语义锚点
+    categories.forEach(c => {
+      let adx = c.x - c.anchorX;
+      let ady = c.y - c.anchorY;
+      let ad = Math.sqrt(adx * adx + ady * ady) || 0.001;
+      const maxAnchorDrift = S * 3.6;
+      if (ad > maxAnchorDrift) {
+        const back = (ad - maxAnchorDrift) * 0.22;
+        c.x -= (adx / ad) * back;
+        c.y -= (ady / ad) * back;
+      }
+    });
+  }
 
   // Center mathematically
   let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
