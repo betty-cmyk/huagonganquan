@@ -57,7 +57,7 @@ svg{width:100%;height:100%}
       <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类标题（无边界底色）</div>
       <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
       <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
-        ● 空间关系固定，不可拖拽<br>● 仅显示分类标题与论文气泡<br>● 论文气泡颜色代表分类
+        ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 论文气泡颜色代表分类
       </div>
       <button id="analysis-btn" onclick="toggleAnalysis()">查看统计分析图表</button>
     </div>
@@ -385,7 +385,18 @@ function render(){
   const nodeById = new Map();
   [...categories, ...papers].forEach(n => nodeById.set(n.id, n));
 
-  // 按用户要求：仅保留分类标题与论文气泡颜色，不绘制任何连线
+  const relEdges = G.edges.filter(e => e.type === 'paper_sim_intra' || e.type === 'paper_sim_cross');
+  ge.selectAll('line.sim').data(relEdges).join('line')
+    .attr('class', 'sim')
+    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
+    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
+    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
+    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
+    .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
+    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
+    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.5 : 0.18);
+
+  // 按用户要求：保留论文之间连线，不绘制分类边界与分类连线
 
 
   // 按用户要求：移除分类边界线与背景色，仅保留分类标题 + 论文气泡颜色
