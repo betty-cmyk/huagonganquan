@@ -330,7 +330,7 @@ function render(){
         let dx = b.x - a.x, dy = b.y - a.y;
         let d = Math.sqrt(dx*dx + dy*dy) || 0.001;
         if (d < REPULSE_DIST) {
-          const push = (REPULSE_DIST - d) * 0.09;
+          const push = (REPULSE_DIST - d) * 0.04;
           dx /= d; dy /= d;
           a.x -= dx * push; a.y -= dy * push;
           b.x += dx * push; b.y += dy * push;
