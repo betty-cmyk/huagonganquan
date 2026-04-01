@@ -50,7 +50,7 @@ svg{width:100%;height:100%}
       <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类异形气泡（包裹论文）</div>
       <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
       <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
-        ● 空间关系固定，不可拖拽<br>● 滚动缩放查看细节<br>● 点击分类查看分类内论文
+        ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 点击分类查看分类内论文
       </div>
     </div>
     <div id="tt"></div>
@@ -220,31 +220,30 @@ function render(){
   const gh = d3.select('#gh'); gh.selectAll('*').remove();
   const gn = d3.select('#gn'); gn.selectAll('*').remove();
 
-  // 生成论文与论文之间的网格连线
-  const paperByHex = new Map();
-  papers.forEach(p => paperByHex.set(`${p.axial_q},${p.axial_r}`, p));
-  const paperEdges = [];
-  papers.forEach(p => {
-    hexDirs.forEach(d => {
-      const nKey = `${p.axial_q + d.dq},${p.axial_r + d.dr}`;
-      if(paperByHex.has(nKey)){
-        const n = paperByHex.get(nKey);
-        if(n.id > p.id) { // 避免双向重复连线
-          const sameCat = p.primary_category === n.primary_category;
-          paperEdges.push({ source: p, target: n, sameCat });
-        }
-      }
-    });
-  });
+  const nodeById = new Map();
+  [...categories, ...papers].forEach(n => nodeById.set(n.id, n));
 
-  ge.selectAll('line').data(paperEdges).join('line')
-    .attr('x1', d => d.source.x)
-    .attr('y1', d => d.source.y)
-    .attr('x2', d => d.target.x)
-    .attr('y2', d => d.target.y)
-    .attr('stroke', d => d.sameCat ? '#8b949e' : '#58a6ff')
-    .attr('stroke-width', d => d.sameCat ? 0.3 : 0.8)
-    .attr('stroke-opacity', d => d.sameCat ? 0.2 : 0.6);
+  const relEdges = G.edges.filter(e => e.type === 'paper_sim_intra' || e.type === 'paper_sim_cross');
+  ge.selectAll('line.sim').data(relEdges).join('line')
+    .attr('class', 'sim')
+    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
+    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
+    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
+    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
+    .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
+    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
+    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.55 : 0.22);
+
+  const catEdges = G.edges.filter(e => e.type === 'cat_cat');
+  ge.selectAll('line.cat').data(catEdges).join('line')
+    .attr('class', 'cat')
+    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
+    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
+    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
+    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
+    .attr('stroke', '#79c0ff')
+    .attr('stroke-width', d => Math.min(3, 0.6 + (d.weight || 1) * 0.06))
+    .attr('stroke-opacity', 0.28);
 
   const hullData = categories.map(c=>{
     const pts = papers.filter(p=>(p.categories && p.categories.includes(c.cat_id)) || p.primary_category === c.cat_id).map(p=>[p.x,p.y]);

@@ -38,7 +38,7 @@ svg{width:100%;height:100%}
       <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类异形气泡（包裹论文）</div>
       <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
       <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
-        ● 空间关系固定，不可拖拽<br>● 滚动缩放查看细节<br>● 点击分类查看分类内论文
+        ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 点击分类查看分类内论文
       </div>
     </div>
     <div id="tt"></div>
@@ -14961,6 +14961,750 @@ const G = {
       "target": 8,
       "weight": 4,
       "type": "cat_cat"
+    },
+    {
+      "source": 14,
+      "target": 28,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 18,
+      "target": 151,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 20,
+      "target": 131,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 20,
+      "target": 392,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 43,
+      "target": 153,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 56,
+      "target": 269,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 56,
+      "target": 375,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 269,
+      "target": 375,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 57,
+      "target": 71,
+      "weight": 3.333,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 57,
+      "target": 386,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 71,
+      "target": 386,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 97,
+      "target": 98,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 110,
+      "target": 120,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 117,
+      "target": 282,
+      "weight": 1.818,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 281,
+      "target": 282,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 136,
+      "target": 165,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 136,
+      "target": 201,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 165,
+      "target": 201,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 146,
+      "target": 201,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 166,
+      "target": 201,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 164,
+      "target": 201,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 139,
+      "target": 152,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 140,
+      "target": 143,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 142,
+      "target": 155,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 145,
+      "target": 155,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 146,
+      "target": 166,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 146,
+      "target": 164,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 146,
+      "target": 173,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 146,
+      "target": 216,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 164,
+      "target": 166,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 164,
+      "target": 173,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 164,
+      "target": 178,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 166,
+      "target": 173,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 166,
+      "target": 216,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 173,
+      "target": 201,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 173,
+      "target": 216,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 164,
+      "target": 216,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 201,
+      "target": 216,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 148,
+      "target": 149,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 148,
+      "target": 246,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 148,
+      "target": 248,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 148,
+      "target": 270,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 149,
+      "target": 246,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 149,
+      "target": 248,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 149,
+      "target": 270,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 246,
+      "target": 248,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 246,
+      "target": 270,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 248,
+      "target": 270,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 162,
+      "target": 220,
+      "weight": 10.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 178,
+      "target": 205,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 164,
+      "target": 205,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 181,
+      "target": 333,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 186,
+      "target": 321,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 186,
+      "target": 326,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 186,
+      "target": 341,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 295,
+      "target": 321,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 321,
+      "target": 395,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 335,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 379,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 207,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 310,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 191,
+      "target": 314,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 207,
+      "target": 335,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 207,
+      "target": 379,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 207,
+      "target": 315,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 310,
+      "target": 335,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 310,
+      "target": 379,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 310,
+      "target": 314,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 310,
+      "target": 325,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 314,
+      "target": 335,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 314,
+      "target": 379,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 314,
+      "target": 325,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 315,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 315,
+      "target": 335,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 315,
+      "target": 379,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 325,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 325,
+      "target": 335,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 325,
+      "target": 379,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 335,
+      "target": 379,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 360,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 335,
+      "target": 360,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 360,
+      "target": 379,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 320,
+      "target": 400,
+      "weight": 4.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 191,
+      "target": 400,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 335,
+      "target": 400,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 379,
+      "target": 400,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 289,
+      "target": 400,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 203,
+      "target": 291,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 206,
+      "target": 372,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 208,
+      "target": 387,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 209,
+      "target": 331,
+      "weight": 3.333,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 210,
+      "target": 287,
+      "weight": 2.5,
+      "type": "paper_sim_cross"
+    },
+    {
+      "source": 216,
+      "target": 268,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 225,
+      "target": 436,
+      "weight": 6.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 235,
+      "target": 403,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 274,
+      "target": 277,
+      "weight": 3.636,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 293,
+      "target": 440,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 295,
+      "target": 395,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 301,
+      "target": 308,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 308,
+      "target": 393,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 302,
+      "target": 411,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 302,
+      "target": 423,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 411,
+      "target": 423,
+      "weight": 2.0,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 359,
+      "target": 394,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 373,
+      "target": 433,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 373,
+      "target": 437,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 373,
+      "target": 438,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 373,
+      "target": 439,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 373,
+      "target": 429,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 429,
+      "target": 433,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 429,
+      "target": 437,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 429,
+      "target": 438,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 429,
+      "target": 439,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 433,
+      "target": 437,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 433,
+      "target": 438,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 433,
+      "target": 439,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 437,
+      "target": 438,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 437,
+      "target": 439,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 438,
+      "target": 439,
+      "weight": 3.333,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 373,
+      "target": 442,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 433,
+      "target": 442,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 437,
+      "target": 442,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 438,
+      "target": 442,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
+    },
+    {
+      "source": 439,
+      "target": 442,
+      "weight": 2.5,
+      "type": "paper_sim_intra"
     }
   ],
   "total": 446
@@ -15126,31 +15870,30 @@ function render(){
   const gh = d3.select('#gh'); gh.selectAll('*').remove();
   const gn = d3.select('#gn'); gn.selectAll('*').remove();
 
-  // 生成论文与论文之间的网格连线
-  const paperByHex = new Map();
-  papers.forEach(p => paperByHex.set(`${p.axial_q},${p.axial_r}`, p));
-  const paperEdges = [];
-  papers.forEach(p => {
-    hexDirs.forEach(d => {
-      const nKey = `${p.axial_q + d.dq},${p.axial_r + d.dr}`;
-      if(paperByHex.has(nKey)){
-        const n = paperByHex.get(nKey);
-        if(n.id > p.id) { // 避免双向重复连线
-          const sameCat = p.primary_category === n.primary_category;
-          paperEdges.push({ source: p, target: n, sameCat });
-        }
-      }
-    });
-  });
+  const nodeById = new Map();
+  [...categories, ...papers].forEach(n => nodeById.set(n.id, n));
 
-  ge.selectAll('line').data(paperEdges).join('line')
-    .attr('x1', d => d.source.x)
-    .attr('y1', d => d.source.y)
-    .attr('x2', d => d.target.x)
-    .attr('y2', d => d.target.y)
-    .attr('stroke', d => d.sameCat ? '#8b949e' : '#58a6ff')
-    .attr('stroke-width', d => d.sameCat ? 0.3 : 0.8)
-    .attr('stroke-opacity', d => d.sameCat ? 0.2 : 0.6);
+  const relEdges = G.edges.filter(e => e.type === 'paper_sim_intra' || e.type === 'paper_sim_cross');
+  ge.selectAll('line.sim').data(relEdges).join('line')
+    .attr('class', 'sim')
+    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
+    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
+    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
+    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
+    .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
+    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
+    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.55 : 0.22);
+
+  const catEdges = G.edges.filter(e => e.type === 'cat_cat');
+  ge.selectAll('line.cat').data(catEdges).join('line')
+    .attr('class', 'cat')
+    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
+    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
+    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
+    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
+    .attr('stroke', '#79c0ff')
+    .attr('stroke-width', d => Math.min(3, 0.6 + (d.weight || 1) * 0.06))
+    .attr('stroke-opacity', 0.28);
 
   const hullData = categories.map(c=>{
     const pts = papers.filter(p=>(p.categories && p.categories.includes(c.cat_id)) || p.primary_category === c.cat_id).map(p=>[p.x,p.y]);

@@ -47,6 +47,29 @@ FALLBACK_RULES = [
     ('评价', 'A_风险评价'), ('工艺', 'J_工艺安全'), ('反应', 'J_工艺安全'),
 ]
 
+TITLE_STOPWORDS = {
+    '研究', '分析', '探讨', '应用', '基于', '视角', '影响', '机制', '模型',
+    '方法', '系统', '优化', '构建', '设计', '策略', '现状', '对策', '实验',
+    '中国', '我国', '企业', '化工', '安全'
+}
+
+
+def tokenize_text(text):
+    terms = set()
+    for t in re.findall(r'[\u4e00-\u9fff]{2,8}', text or ''):
+        if t not in TITLE_STOPWORDS:
+            terms.add(t)
+    return terms
+
+
+def jaccard_sim(a, b):
+    if not a or not b:
+        return 0.0
+    inter = len(a & b)
+    if inter == 0:
+        return 0.0
+    return inter / len(a | b)
+
 
 def classify_multi(title, keywords=''):
     text = (title or '') + ' ' + (keywords or '')
@@ -74,7 +97,8 @@ def main():
     edges = []
     idx = 0
     cat_node_id = {}
-    cat_links = {}
+    cat_links = defaultdict(int)
+    paper_nodes = []
 
     for cat_id, cat_info in CATEGORIES.items():
         cat_node_id[cat_id] = idx
@@ -91,13 +115,18 @@ def main():
         idx += 1
 
     for p in papers:
-        cats = classify_multi(p.get('title', ''), p.get('keywords', ''))
+        title = p.get('title', '')
+        keywords = p.get('keywords', '')
+        cats = classify_multi(title, keywords)
         primary = cats[0]
         pid = idx
-        nodes.append({
+
+        token_set = tokenize_text(f"{title} {keywords}")
+
+        node = {
             'id': pid,
-            'label': (p.get('title', '')[:15] + '...') if len(p.get('title', '')) > 15 else p.get('title', ''),
-            'full_title': p.get('title', ''),
+            'label': (title[:15] + '...') if len(title) > 15 else title,
+            'full_title': title,
             'type': 'paper',
             'color': CATEGORIES[primary]['color'],
             'count': 1,
@@ -107,25 +136,26 @@ def main():
             'year': p.get('year', ''),
             'author': p.get('author', ''),
             'unit': p.get('unit', ''),
-            'keywords': p.get('keywords', ''),
+            'keywords': keywords,
             'abstract': p.get('abstract', ''),
-            'outline': p.get('outline', '')
-        })
+            'outline': p.get('outline', ''),
+            '_tokens': sorted(token_set),
+        }
+        nodes.append(node)
+        paper_nodes.append(node)
         idx += 1
 
         for c_id in cats:
             c_idx = cat_node_id[c_id]
             nodes[c_idx]['count'] += 1
-            nodes[c_idx]['papers'].append({'title': p.get('title', ''), 'year': p.get('year', '')})
+            nodes[c_idx]['papers'].append({'title': title, 'year': p.get('year', '')})
             edges.append({'source': pid, 'target': c_idx, 'weight': 1, 'type': 'paper_cat'})
 
         if len(cats) > 1:
-            cc = sorted(cats)
-            for i in range(len(cc)):
-                for j in range(i + 1, len(cc)):
-                    key = (cc[i], cc[j])
-                    cat_links[key] = cat_links.get(key, 0) + 1
+            for pair in combinations(sorted(cats), 2):
+                cat_links[pair] += 1
 
+    # 分类之间关联
     for (c1, c2), weight in cat_links.items():
         edges.append({
             'source': cat_node_id[c1],
@@ -134,11 +164,55 @@ def main():
             'type': 'cat_cat'
         })
 
+    # 论文之间关联：按标题+关键词 Jaccard 相似度，分类内+跨分类都保留
+    paper_to_neighbors = defaultdict(list)
+    for i in range(len(paper_nodes)):
+        ni = paper_nodes[i]
+        ti = set(ni.get('_tokens', []))
+        for j in range(i + 1, len(paper_nodes)):
+            nj = paper_nodes[j]
+            tj = set(nj.get('_tokens', []))
+            sim = jaccard_sim(ti, tj)
+            if sim < 0.18:
+                continue
+
+            same_primary = ni['primary_category'] == nj['primary_category']
+            # 同类阈值更宽，跨类更严格
+            if same_primary and sim >= 0.18:
+                paper_to_neighbors[ni['id']].append((nj['id'], sim, 'paper_sim_intra'))
+                paper_to_neighbors[nj['id']].append((ni['id'], sim, 'paper_sim_intra'))
+            elif (not same_primary) and sim >= 0.24:
+                paper_to_neighbors[ni['id']].append((nj['id'], sim, 'paper_sim_cross'))
+                paper_to_neighbors[nj['id']].append((ni['id'], sim, 'paper_sim_cross'))
+
+    # 每篇论文最多保留 Top-K 相似边，防止过密
+    TOP_K = 5
+    seen_pair = set()
+    for sid, arr in paper_to_neighbors.items():
+        arr.sort(key=lambda x: x[1], reverse=True)
+        for tid, sim, et in arr[:TOP_K]:
+            a, b = (sid, tid) if sid < tid else (tid, sid)
+            if (a, b) in seen_pair:
+                continue
+            seen_pair.add((a, b))
+            edges.append({
+                'source': a,
+                'target': b,
+                'weight': round(sim * 10, 3),
+                'type': et
+            })
+
+    # 去除仅用于构图的临时字段
+    for n in nodes:
+        if n.get('type') == 'paper' and '_tokens' in n:
+            del n['_tokens']
+
     graph = {'nodes': nodes, 'edges': edges, 'total': len(papers)}
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(graph, f, ensure_ascii=False, indent=2)
 
-    print(f"Nodes: {len(nodes)}, Edges: {len(edges)}, Cross-links: {len(cat_links)}")
+    sim_edges = len([e for e in edges if str(e.get('type', '')).startswith('paper_sim')])
+    print(f"Nodes: {len(nodes)}, Edges: {len(edges)}, Cross-links: {len(cat_links)}, Similarity-edges: {sim_edges}")
 
 
 if __name__ == '__main__':
