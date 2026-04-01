@@ -29,13 +29,15 @@ body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',sans-serif;overflow
 .sb-item-title{color:#e6edf3;margin-bottom:5px;line-height:1.4}
 #graph-wrap{flex:1;position:relative;background:radial-gradient(circle at center, #161b22 0%, #0d1117 100%)}
 svg{width:100%;height:100%}
-#legend{position:absolute;top:20px;right:20px;background:rgba(22,27,34,.8);border:1px solid #30363d;padding:15px;border-radius:10px;pointer-events:none}
-.lr{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:12px}
-.ld{width:10px;height:10px;border-radius:50%}
-#tt{position:fixed;pointer-events:none;background:rgba(13,17,23,.95);border:1px solid #388bfd;padding:12px;border-radius:8px;font-size:12px;max-width:300px;display:none;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+#sidebar-right{width:320px;min-width:320px;background:#161b22;border-left:1px solid #30363d;display:flex;flex-direction:column;transition:width .3s;z-index:100;transform:translateX(100%);position:absolute;right:0;top:0;bottom:0}
+#sidebar-right.active{transform:translateX(0)}
+#sbr-header{padding:15px;border-bottom:1px solid #30363d;display:flex;justify-content:space-between;align-items:center}
+#sbr-title{font-size:14px;color:#79c0ff;font-weight:bold}
+#sbr-toggle{background:none;border:1px solid #30363d;color:#8b949e;border-radius:4px;padding:2px 8px;cursor:pointer}
+#sbr-list{flex:1;overflow-y:auto;padding:15px;font-size:12px;color:#e6edf3;line-height:1.6}
 .hull{stroke-width:1.4}
 .cat-label{font-size:13px;font-weight:700;paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round}
-#analysis-btn{background:#388bfd;color:#fff;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;font-size:12px;font-weight:bold;pointer-events:auto;box-shadow:0 0 10px rgba(56,139,253,0.4)}
+#analysis-btn{position:absolute;top:20px;right:20px;background:#388bfd;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:bold;pointer-events:auto;box-shadow:0 0 10px rgba(56,139,253,0.4);z-index:150;}
 #charts-tray{position:fixed;bottom:-450px;left:0;right:0;height:450px;background:#161b22;border-top:1px solid #30363d;transition:bottom .3s, right .3s;z-index:200;padding:20px;display:flex;gap:15px;overflow-x:auto}
 #charts-tray.active{bottom:0}
 #charts-tray.with-sbr{right:320px}
@@ -53,22 +55,17 @@ svg{width:100%;height:100%}
   </div>
   <div id="graph-wrap">
     <svg id="svg"><g id="root"><g id="gh"></g><g id="ge"></g><g id="gn"></g></g></svg>
-    <div id="legend">
-      <h3 style="font-size:14px;margin-bottom:10px;color:#79c0ff">研究分类视图（固定布局·异形包裹）</h3>
-      <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类标题（无边界底色）</div>
-      <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
-      <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
-        ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 论文气泡颜色代表分类
-      </div>
-      <button id="analysis-btn" onclick="toggleAnalysis()">查看统计分析图表</button>
+    <button id="analysis-btn" onclick="toggleAnalysis()">查看统计分析图表</button>
+    <div id="sidebar-right" class="active">
+      <div id="sbr-header"><span id="sbr-title">论文档案</span><button id="sbr-toggle" onclick="toggleSBR()">关闭</button></div>
+      <div id="sbr-list">请在网络图中点击具体论文气泡查看详细信息。</div>
     </div>
-    <div id="tt"></div>
     <div id="charts-tray">
       <button id="close-tray" onclick="toggleAnalysis()">×</button>
       <div class="chart-box" id="chart-years"><div class="chart-title">历年论文产出趋势</div><div class="chart-canvas" style="flex:1"></div></div>
       <div class="chart-box" id="chart-cats"><div class="chart-title">研究方向分布</div><div class="chart-canvas" style="flex:1"></div></div>
       <div class="chart-box" id="chart-units"><div class="chart-title">核心研究机构Top10</div><div class="chart-canvas" style="flex:1"></div></div>
-      <div class="chart-box" id="chart-kws"><div class="chart-title">关键词分布热度</div><div class="chart-canvas" style="flex:1;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;overflow:hidden"></div></div>
+      <div class="chart-box" id="chart-kws"><div class="chart-title">关键词分布热度</div><div class="chart-canvas" style="flex:1;display:flex;flex-wrap:wrap;align-content:flex-start;justify-content:flex-start;overflow-y:auto;overflow-x:hidden;padding:6px"></div></div>
     </div>
   </div>
 </div>
@@ -83,22 +80,42 @@ function toggleSB(){
   document.getElementById('sb-toggle').textContent=sbOpen?'收起':'展开';
 }
 
+let sbrOpen = true;
+function toggleSBR(){
+  sbrOpen=!sbrOpen;
+  document.getElementById('sidebar-right').classList.toggle('active', sbrOpen);
+  document.getElementById('charts-tray').classList.toggle('with-sbr', sbrOpen);
+}
+
 function showInfo(d){
-  const list = document.getElementById('sb-list');
   if(d.type === 'category'){
+    const list = document.getElementById('sb-list');
     document.getElementById('sb-title').textContent = d.label;
     const papers = (d.papers || []).sort((a,b)=>((b.year||'0')<(a.year||'0')?-1:1));
     list.innerHTML = `<div style="padding:10px;font-size:11px;color:#8b949e;background:#0d1117;margin-bottom:5px">共收集论文 ${papers.length} 篇</div>` + 
-      papers.map((p,i)=>`<div class="sb-item"><div class="sb-item-title">${i+1}. ${p.title}</div><div style="display:flex;justify-content:space-between;color:#8b949e"><span>${p.year||'未知'}</span></div></div>`).join('');
+      papers.map((p,i)=>`<div class="sb-item" onclick='focusPaper(${JSON.stringify(p.title)})'><div class="sb-item-title">${i+1}. ${p.title}</div><div style="display:flex;justify-content:space-between;color:#8b949e"><span>${p.year||'未知'}</span></div></div>`).join('');
+    if(!sbOpen) toggleSB();
   }else{
-    document.getElementById('sb-title').textContent = '论文详情';
-    list.innerHTML = `<div class="sb-item"><div class="sb-item-title" style="font-size:14px;color:#79c0ff">${d.full_title}</div><p style="margin-top:10px">年份: ${d.year||'未知'}</p><p>作者: ${d.author||'未知'}</p><p>单位: ${d.unit||'未知'}</p>
-      <div style="margin-top:15px;padding-top:10px;border-top:1px solid #30363d">
-        <div style="color:#79c0ff;margin-bottom:5px">关键词:</div>
-        ${(d.keywords || '').split(/[，,]/).map(k=>`<span class="stat-tag">${k}</span>`).join('')}
-      </div></div>`;
+    const rlist = document.getElementById('sbr-list');
+    document.getElementById('sbr-title').textContent = '论文档案';
+    rlist.innerHTML = `<div style="font-size:16px;color:#79c0ff;font-weight:bold;margin-bottom:15px;border-bottom:1px solid #30363d;padding-bottom:10px">${d.full_title}</div>
+      <div style="display:flex;justify-content:space-between;color:#8b949e;margin-bottom:10px"><span>年份：${d.year||'未知'}</span></div>
+      <div style="color:#e6edf3;margin-bottom:15px"><strong>作者：</strong>${d.author||'未记录'}</div>
+      <div style="color:#e6edf3;margin-bottom:20px"><strong>单位：</strong>${d.unit||'未记录'}</div>
+      <div style="color:#79c0ff;margin-bottom:8px;font-weight:bold">核心摘要</div>
+      <div style="background:#0d1117;padding:12px;border-radius:6px;border:1px solid #30363d;margin-bottom:20px">${d.abstract||'暂无摘要信息。'}</div>
+      <div style="color:#79c0ff;margin-bottom:8px;font-weight:bold">关键词标签</div>
+      <div style="margin-bottom:20px">${(d.keywords || '').split(/[，,]/).map(k=>`<span class="stat-tag">${k}</span>`).join('')}</div>
+      <div style="color:#79c0ff;margin-bottom:8px;font-weight:bold">结构大纲</div>
+      <div style="background:#0d1117;padding:12px;border-radius:6px;border:1px solid #30363d">${d.outline||'无目录提取记录。'}</div>
+    `;
+    if(!sbrOpen) toggleSBR();
   }
-  if(!sbOpen) toggleSB();
+}
+
+function focusPaper(title){
+  const p = G.nodes.find(n=>n.full_title === title);
+  if(p) showInfo(p);
 }
 
 let chartsInited = false;
@@ -112,19 +129,64 @@ function toggleAnalysis(){
 }
 
 function initCharts(){
-  // 1. 年份趋势线
-  const years = {};
-  G.nodes.filter(n=>n.type==='paper').forEach(p=>{ if(p.year && p.year.length===4) years[p.year] = (years[p.year]||0)+1; });
-  const yearData = Object.entries(years).sort((a,b)=>a[0]-b[0]);
+  // 1. 按类别历年趋势多折线
+  const papers = G.nodes.filter(n => n.type==='paper');
+  const catMap = new Map(G.nodes.filter(n => n.type==='category').map(c => [c.cat_id, c]));
+  const yearSet = new Set();
+  const seriesMap = new Map();
+
+  papers.forEach(p => {
+    const y = Number(p.year);
+    if (!Number.isFinite(y) || y < 1900 || y > 2100) return;
+    const cid = p.primary_category || 'UNKNOWN';
+    const cname = catMap.get(cid)?.label || cid;
+    if (!seriesMap.has(cid)) seriesMap.set(cid, { id: cid, label: cname, color: catMap.get(cid)?.color || '#8b949e', years: {} });
+    const s = seriesMap.get(cid);
+    s.years[y] = (s.years[y] || 0) + 1;
+    yearSet.add(y);
+  });
+
+  const allYears = Array.from(yearSet).sort((a,b) => a-b);
+  const yearDataByCat = Array.from(seriesMap.values()).map(s => ({
+    ...s,
+    data: allYears.map(y => ({ year: y, value: s.years[y] || 0 }))
+  })).sort((a,b) => b.data.reduce((t,d)=>t+d.value,0) - a.data.reduce((t,d)=>t+d.value,0));
+
   const yBox = d3.select('#chart-years .chart-canvas');
-  const yw = yBox.node().clientWidth, yh = yBox.node().clientHeight - 20;
-  const ysclX = d3.scalePoint().domain(yearData.map(d=>d[0])).range([30, yw-10]);
-  const ysclY = d3.scaleLinear().domain([0, d3.max(yearData, d=>d[1])]).range([yh-20, 10]);
-  const ysvg = yBox.append('svg').attr('width',yw).attr('height',yh);
-  ysvg.append('path').datum(yearData).attr('fill','none').attr('stroke','#388bfd').attr('stroke-width',2).attr('d', d3.line().x(d=>ysclX(d[0])).y(d=>ysclY(d[1])).curve(d3.curveMonotoneX));
-  ysvg.selectAll('circle').data(yearData).join('circle').attr('cx',d=>ysclX(d[0])).attr('cy',d=>ysclY(d[1])).attr('r',3).attr('fill','#388bfd');
-  ysvg.selectAll('.val-label').data(yearData).join('text').attr('class','val-label').attr('x',d=>ysclX(d[0])).attr('y',d=>ysclY(d[1])-8).text(d=>d[1]).attr('text-anchor','middle').attr('fill','#c9d1d9').style('font-size','9px');
-  ysvg.append('g').attr('transform',`translate(0,${yh-20})`).call(d3.axisBottom(ysclX).tickValues(ysclX.domain().filter((d,i)=>!(i%2)))).selectAll('text').style('font-size','9px').attr('transform','rotate(45)').style('text-anchor','start');
+  const yw = yBox.node().clientWidth, yh = yBox.node().clientHeight - 16;
+  const ysvg = yBox.append('svg').attr('width', yw).attr('height', yh);
+
+  const maxY = d3.max(yearDataByCat.flatMap(s => s.data.map(d => d.value))) || 1;
+  const x = d3.scalePoint().domain(allYears).range([40, yw - 12]);
+  const y = d3.scaleLinear().domain([0, maxY]).nice().range([yh - 28, 10]);
+
+  ysvg.append('g')
+    .attr('transform', `translate(0,${yh - 28})`)
+    .call(d3.axisBottom(x).tickValues(allYears.filter((d,i)=>!(i%2))))
+    .selectAll('text').style('font-size','9px').attr('transform','rotate(40)').style('text-anchor','start');
+
+  ysvg.append('g')
+    .attr('transform', 'translate(40,0)')
+    .call(d3.axisLeft(y).ticks(4))
+    .selectAll('text').style('font-size','9px');
+
+  const line = d3.line().x(d => x(d.year)).y(d => y(d.value)).curve(d3.curveMonotoneX);
+  yearDataByCat.forEach(s => {
+    ysvg.append('path')
+      .datum(s.data)
+      .attr('fill','none')
+      .attr('stroke', s.color)
+      .attr('stroke-width', 1.8)
+      .attr('stroke-opacity', 0.9)
+      .attr('d', line);
+  });
+
+  const legend = ysvg.append('g').attr('transform', `translate(${Math.max(46, yw - 190)},14)`);
+  yearDataByCat.slice(0, 8).forEach((s, i) => {
+    const row = legend.append('g').attr('transform', `translate(0,${i * 14})`);
+    row.append('line').attr('x1',0).attr('x2',12).attr('y1',0).attr('y2',0).attr('stroke', s.color).attr('stroke-width',2);
+    row.append('text').attr('x',16).attr('y',3).attr('fill','#c9d1d9').style('font-size','9px').text(s.label.replace('类',''));
+  });
 
   // 2. 饼图
   const cats = G.nodes.filter(n=>n.type==='category').map(c=>({label:c.label, count:c.count, color:c.color})).sort((a,b)=>b.count-a.count);
@@ -177,7 +239,7 @@ function initCharts(){
   // 3. 词云 (简单标签云实现)
   const kwMap = {};
   G.nodes.filter(n=>n.type==='paper').forEach(p=>{ (p.keywords||'').split(/[，,]/).forEach(k=>{ if(k.trim().length>1) kwMap[k.trim()]=(kwMap[k.trim()]||0)+1; }); });
-  const topKws = Object.entries(kwMap).sort((a,b)=>b[1]-a[1]).slice(0,25);
+  const topKws = Object.entries(kwMap).sort((a,b)=>b[1]-a[1]).slice(0,120);
   const kBox = d3.select('#chart-kws .chart-canvas');
   kBox.html(''); 
   topKws.forEach(([word, count])=>{
@@ -510,29 +572,30 @@ function render(){
     .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
     .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.5 : 0.18);
 
-  // 轻云雾背景：按分类颜色做柔和过渡（不画边界）
+  // 论文级晕染：以每个论文气泡为中心的小范围光晕
   const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
   defs.selectAll('*').remove();
-  
-  categories.forEach(c => {
-    const grad = defs.append('radialGradient')
-      .attr('id', 'grad-' + c.cat_id)
-      .attr('cx', '50%').attr('cy', '50%').attr('r', '50%');
-    grad.append('stop').attr('offset', '0%').attr('stop-color', c.color).attr('stop-opacity', 0.12);
-    grad.append('stop').attr('offset', '60%').attr('stop-color', c.color).attr('stop-opacity', 0.04);
-    grad.append('stop').attr('offset', '100%').attr('stop-color', c.color).attr('stop-opacity', 0);
-  });
+  defs.append('filter')
+    .attr('id', 'paper-glow-blur')
+    .attr('x', '-80%')
+    .attr('y', '-80%')
+    .attr('width', '260%')
+    .attr('height', '260%')
+    .append('feGaussianBlur')
+    .attr('stdDeviation', 4.6);
 
-  const cloudBg = gh.append('g')
-    .attr('class', 'cat-clouds')
+  const paperGlow = gh.append('g')
+    .attr('class', 'paper-glow-layer')
     .attr('pointer-events', 'none');
 
-  cloudBg.selectAll('circle.cat-glow').data(categories).join('circle')
-    .attr('class', 'cat-glow')
+  paperGlow.selectAll('circle.paper-glow').data(papers).join('circle')
+    .attr('class', 'paper-glow')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(S * 1.8, Math.sqrt((d.count || 1)) * S * 0.72))
-    .attr('fill', d => `url(#grad-${d.cat_id})`);
+    .attr('r', d => Math.max(11, d.r * 2.8))
+    .attr('fill', d => d.color)
+    .attr('fill-opacity', 0.20)
+    .attr('filter', 'url(#paper-glow-blur)');
 
   const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
 
@@ -561,23 +624,7 @@ function render(){
     .style('cursor','pointer')
     .on('click', (_,d)=>showInfo(d));
 
-  const tt = document.getElementById('tt');
-  paperNode
-    .on('mouseover', (e,d)=>{
-      tt.style.display='block';
-      tt.innerHTML=`<div style="font-weight:bold;color:#79c0ff">${d.full_title || d.label}</div><div style="color:#8b949e;margin-top:4px">论文条目</div>`;
-    })
-    .on('mousemove', e=>{tt.style.left=(e.clientX+15)+'px';tt.style.top=(e.clientY-10)+'px';})
-    .on('mouseout', ()=>tt.style.display='none')
-    .on('click', (_,d)=>showInfo(d));
-
-  catLabel
-    .on('mouseover', (e,d)=>{
-      tt.style.display='block';
-      tt.innerHTML=`<div style="font-weight:bold;color:#79c0ff">${d.label}</div><div style="color:#8b949e;margin-top:4px">研究分类 · ${d.count} 篇</div>`;
-    })
-    .on('mousemove', e=>{tt.style.left=(e.clientX+15)+'px';tt.style.top=(e.clientY-10)+'px';})
-    .on('mouseout', ()=>tt.style.display='none');
+  paperNode.on('click', (_,d)=>showInfo(d));
 
   function updateLabelVisibility(k){ labels.style('opacity', 1); }
   updateLabelVisibility(kScale);
@@ -590,10 +637,21 @@ svg.call(d3.zoom().scaleExtent([0.05, 10]).on('zoom', e=>{kScale = e.transform.k
 render();
 
 setTimeout(()=>{
-  toggleAnalysis();
-  const initCat = categories.find(c => c.cat_id === 'E_事故应急');
-  if(initCat) showInfo(initCat);
-}, 300);
+  const cats = G.nodes.filter(n=>n.type==='category');
+  const initCat = cats.find(c => (c.label || '').includes('事故分析与应急'))
+    || cats.find(c => (c.cat_id || '') === 'E_事故应急')
+    || cats.find(c => (c.cat_id || '').includes('事故') || (c.label || '').includes('事故'))
+    || cats.find(c => (c.cat_id || '').includes('应急') || (c.label || '').includes('应急'));
+
+  if(initCat) {
+    showInfo(initCat);
+    const firstTitle = initCat.papers && initCat.papers.length ? initCat.papers[0].title : null;
+    if(firstTitle){
+      const firstPaper = G.nodes.find(n => n.type==='paper' && n.full_title === firstTitle);
+      if(firstPaper) showInfo(firstPaper);
+    }
+  }
+}, 500);
 </script>
 </body></html>
 '''
