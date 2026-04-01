@@ -14878,7 +14878,7 @@ function render(){
     .attr('width', '340%')
     .attr('height', '340%')
     .append('feGaussianBlur')
-    .attr('stdDeviation', 6.2);
+    .attr('stdDeviation', 4.2);
 
   defs.append('filter')
     .attr('id', 'edge-glow-blur')
@@ -14915,14 +14915,13 @@ function render(){
       .bandwidth(Math.max(28, S * 0.95))
       .thresholds(16);
     const contours = density(plist);
-    const outer = contours.slice(0, Math.min(6, contours.length));
-    outer.forEach((ct, i) => {
-      blobLayer.append('path')
-        .attr('d', geoPath(ct))
-        .attr('fill', color)
-        .attr('fill-opacity', 0.038 - i * 0.005)
-        .attr('filter', 'url(#paper-glow-blur)');
-    });
+    const outer = contours[0];
+    if (!outer) continue;
+    blobLayer.append('path')
+      .attr('d', geoPath(outer))
+      .attr('fill', color)
+      .attr('fill-opacity', 0.024)
+      .attr('filter', 'url(#paper-glow-blur)');
   }
 
   // 2) 连线晕染（仅跨类连线，减轻卡顿）
@@ -14939,10 +14938,10 @@ function render(){
     .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
     .attr('stroke', '#58a6ff')
     .attr('stroke-width', 1.4)
-    .attr('stroke-opacity', 0.084)
+    .attr('stroke-opacity', 0.052)
     .attr('filter', 'url(#edge-glow-blur)');
 
-  // 3) 论文节点微光（降亮40%）
+  // 3) 论文节点微光改为极弱（避免同色交叠变亮）
   const paperGlow = gh.append('g')
     .attr('class', 'paper-glow-layer')
     .attr('pointer-events', 'none');
@@ -14951,9 +14950,9 @@ function render(){
     .attr('class', 'paper-glow')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(30, d.r * 8))
+    .attr('r', d => Math.max(18, d.r * 4.5))
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.066)
+    .attr('fill-opacity', 0.016)
     .attr('filter', 'url(#paper-glow-blur)');
 
   // 4) 类标题微光（降亮40%）
@@ -14967,7 +14966,7 @@ function render(){
     .attr('y', d => d.y)
     .attr('text-anchor', 'middle')
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.132)
+    .attr('fill-opacity', 0.09)
     .style('font-size', '13px')
     .style('font-weight', 700)
     .text(d => d.label)
