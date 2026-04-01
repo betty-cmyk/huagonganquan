@@ -35,7 +35,7 @@ svg{width:100%;height:100%}
 #tt{position:fixed;pointer-events:none;background:rgba(13,17,23,.95);border:1px solid #388bfd;padding:12px;border-radius:8px;font-size:12px;max-width:300px;display:none;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .hull{stroke-width:1.4}
 .cat-label{font-size:13px;font-weight:700;paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round}
-#analysis-btn{background:#388bfd;color:#fff;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;font-size:12px;font-weight:bold}
+#analysis-btn{background:#388bfd;color:#fff;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;font-size:12px;font-weight:bold;pointer-events:auto;box-shadow:0 0 10px rgba(56,139,253,0.4)}
 #charts-tray{position:fixed;bottom:-400px;left:320px;right:0;height:400px;background:#161b22;border-top:1px solid #30363d;transition:bottom .3s;z-index:200;padding:20px;display:flex;gap:20px}
 #charts-tray.active{bottom:0}
 .chart-box{flex:1;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:15px;display:flex;flex-direction:column}
@@ -54,10 +54,10 @@ svg{width:100%;height:100%}
     <svg id="svg"><g id="root"><g id="gh"></g><g id="ge"></g><g id="gn"></g></g></svg>
     <div id="legend">
       <h3 style="font-size:14px;margin-bottom:10px;color:#79c0ff">研究分类视图（固定布局·异形包裹）</h3>
-      <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类异形气泡（包裹论文）</div>
+      <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类标题（无边界底色）</div>
       <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
       <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
-        ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 点击分类查看分类内论文
+        ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 论文气泡颜色代表分类
       </div>
       <button id="analysis-btn" onclick="toggleAnalysis()">查看统计分析图表</button>
     </div>
@@ -165,28 +165,53 @@ function render(){
   const catByKey = new Map(categories.map(c=>[c.cat_id,c]));
 
   const S = 35; // 更大的网格间距，保证文字放得下
-  const D = 9;  // 缩小距离以贴合视觉
+  const D = 10;
 
   // 按语义手工锚定：把工艺安全类放到风险评价/灾害防控附近
   const macroHexByCat = {
     'A_风险评价': {q: 0, r: 0},
     'J_工艺安全': {q: 4, r: -2},
-    'B_灾害防控': {q: 8, r: -4},
-    'E_事故应急': {q: 8, r: 0},
-    'H_运输储存': {q: 4, r: 3},
-    'C_安全管理体系': {q: -4, r: 3},
-    'D_安全技术监测': {q: -8, r: 0},
-    'I_园区企业': {q: -8, r: 4},
-    'G_职业卫生': {q: -4, r: 7},
-    'F_基础理论': {q: 0, r: 7},
+    'B_灾害防控': {q: 10, r: -5},
+    'E_事故应急': {q: 10, r: 0},
+    'H_运输储存': {q: 5, r: 4},
+    'C_安全管理体系': {q: -5, r: 4},
+    'D_安全技术监测': {q: -10, r: 0},
+    'I_园区企业': {q: -10, r: 5},
+    'G_职业卫生': {q: -5, r: 8},
+    'F_基础理论': {q: 0, r: 8},
   };
 
   categories.forEach((c, i)=>{
     const h = macroHexByCat[c.cat_id] || {q: (i-5)*2, r: (i%2===0?0:2)};
     c.axial_q = h.q; c.axial_r = h.r;
-    c.x = S * Math.sqrt(3) * (c.axial_q + c.axial_r/2);
-    c.y = S * 3/2 * c.axial_r;
+    c.anchorX = S * Math.sqrt(3) * (c.axial_q + c.axial_r/2);
+    c.anchorY = S * 3/2 * c.axial_r;
+    c.x = c.anchorX;
+    c.y = c.anchorY;
   });
+
+  // 分类中心做轻量排斥：防止大类气泡重叠成一团
+  const CAT_MIN_DIST = S * 7.5;
+  for (let iter = 0; iter < 80; iter++) {
+    for (let i = 0; i < categories.length; i++) {
+      for (let j = i + 1; j < categories.length; j++) {
+        const a = categories[i], b = categories[j];
+        let dx = b.x - a.x, dy = b.y - a.y;
+        let dist = Math.sqrt(dx*dx + dy*dy) || 0.001;
+        if (dist < CAT_MIN_DIST) {
+          const push = (CAT_MIN_DIST - dist) * 0.06;
+          dx /= dist; dy /= dist;
+          a.x -= dx * push; a.y -= dy * push;
+          b.x += dx * push; b.y += dy * push;
+        }
+      }
+    }
+    // 回弹到语义锚点，防止结构散架
+    categories.forEach(c => {
+      c.x = c.x * 0.92 + c.anchorX * 0.08;
+      c.y = c.y * 0.92 + c.anchorY * 0.08;
+    });
+  }
 
   const hexDirs = [
     {dq: 1, dr: 0}, {dq: 1, dr: -1}, {dq: 0, dr: -1},
@@ -285,14 +310,14 @@ function render(){
     p.x = realPt.x; p.y = realPt.y;
   });
 
-  // 小类标题贴近本类论文簇，避免“标题远离气泡”
+  // 小类标题轻微贴近本类论文簇，避免“标题远离气泡”
   categories.forEach(c => {
     const own = papers.filter(p => p.primary_category === c.cat_id);
     if (own.length > 0 && own.length <= 10) {
       const mx = own.reduce((s, p) => s + p.x, 0) / own.length;
       const my = own.reduce((s, p) => s + p.y, 0) / own.length;
-      c.x = c.x * 0.3 + mx * 0.7;
-      c.y = c.y * 0.3 + my * 0.7;
+      c.x = c.x * 0.88 + mx * 0.12;
+      c.y = c.y * 0.88 + my * 0.12;
     }
   });
 
@@ -339,42 +364,8 @@ function render(){
     .attr('stroke-width', d => Math.min(3, 0.6 + (d.weight || 1) * 0.06))
     .attr('stroke-opacity', 0.28);
 
-  const hullData = categories.map(c=>{
-    const pts = papers.filter(p=>(p.categories && p.categories.includes(c.cat_id)) || p.primary_category === c.cat_id).map(p=>[p.x,p.y]);
-    return {cat:c, pts};
-  });
+  // 按用户要求：移除分类边界线与背景色，仅保留分类标题 + 论文气泡颜色
 
-  hullData.forEach(h=>{
-    if(h.pts.length === 0) return;
-    let path = '';
-    // Give all points a tiny sub-pixel random jitter to prevent D3 from failing on perfectly collinear hex coordinates
-    const safePts = h.pts.map(pt => [pt[0] + (Math.random()-0.5)*0.1, pt[1] + (Math.random()-0.5)*0.1]);
-    
-    if(safePts.length < 3){
-      const rr = 36;
-      path = `M ${h.cat.x-rr},${h.cat.y} a ${rr},${rr} 0 1,0 ${rr*2},0 a ${rr},${rr} 0 1,0 -${rr*2},0`;
-    }else{
-      try {
-        const hull = d3.polygonHull(safePts) || safePts;
-        const ext = expandHull(hull, 22);
-        const line = d3.line().curve(d3.curveCatmullRomClosed.alpha(0.7));
-        path = line(ext);
-      } catch (err) {
-        // Fallback for extreme degenerate cases
-        const rr = 40;
-        path = `M ${h.cat.x-rr},${h.cat.y} a ${rr},${rr} 0 1,0 ${rr*2},0 a ${rr},${rr} 0 1,0 -${rr*2},0`;
-      }
-    }
-    gh.append('path')
-      .attr('class','hull')
-      .attr('d', path)
-      .attr('fill', h.cat.color)
-      .attr('fill-opacity', .06)
-      .attr('stroke', h.cat.color)
-      .attr('stroke-opacity', .35)
-      .style('cursor','pointer')
-      .on('click', ()=>showInfo(h.cat));
-  });
 
   const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
 
