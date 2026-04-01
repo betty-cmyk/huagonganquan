@@ -14878,7 +14878,7 @@ function render(){
     .attr('width', '340%')
     .attr('height', '340%')
     .append('feGaussianBlur')
-    .attr('stdDeviation', 4.2);
+    .attr('stdDeviation', 5.4);
 
   defs.append('filter')
     .attr('id', 'edge-glow-blur')
@@ -14901,7 +14901,8 @@ function render(){
   // 1) 类别Blob平滑边缘（替代规整圆）
   const blobLayer = gh.append('g')
     .attr('class', 'blob-layer')
-    .attr('pointer-events', 'none');
+    .attr('pointer-events', 'none')
+    .style('mix-blend-mode', 'lighten');
 
   const geoPath = d3.geoPath();
   const papersByCat = d3.group(papers, d => d.primary_category);
@@ -14915,13 +14916,15 @@ function render(){
       .bandwidth(Math.max(28, S * 0.95))
       .thresholds(16);
     const contours = density(plist);
-    const outer = contours[0];
-    if (!outer) continue;
-    blobLayer.append('path')
-      .attr('d', geoPath(outer))
-      .attr('fill', color)
-      .attr('fill-opacity', 0.024)
-      .attr('filter', 'url(#paper-glow-blur)');
+    if (!contours || contours.length === 0) continue;
+    const use = contours.slice(0, Math.min(3, contours.length));
+    use.forEach((ct, i) => {
+      blobLayer.append('path')
+        .attr('d', geoPath(ct))
+        .attr('fill', color)
+        .attr('fill-opacity', 0.010 - i * 0.0028)
+        .attr('filter', 'url(#paper-glow-blur)');
+    });
   }
 
   // 2) 连线晕染（仅跨类连线，减轻卡顿）
