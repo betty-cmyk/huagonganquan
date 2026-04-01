@@ -46,7 +46,7 @@ svg{width:100%;height:100%}
   <div id="graph-wrap">
     <svg id="svg"><g id="root"><g id="gh"></g><g id="ge"></g><g id="gn"></g></g></svg>
     <div id="legend">
-      <h3 style="font-size:14px;margin-bottom:10px;color:#79c0ff">研究分类视图</h3>
+      <h3 style="font-size:14px;margin-bottom:10px;color:#79c0ff">研究分类视图（固定布局·异形包裹）</h3>
       <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类异形气泡（包裹论文）</div>
       <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
       <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
@@ -120,23 +120,23 @@ function render(){
 
   const sim = d3.forceSimulation(G.nodes)
     .force('link', d3.forceLink(G.edges).id(d=>d.id).distance(d=>d.type==='cat_cat'?150:34).strength(d=>d.type==='cat_cat'?0.12:0.32))
-    .force('charge', d3.forceManyBody().strength(d=>d.type==='paper'?-10:-15))
+    .force('charge', d3.forceManyBody().strength(d=>d.type==='paper'?-8:0))
     .force('x', d3.forceX(d=>d.type==='category' ? d.fx : (catByKey.get(d.primary_category)?.fx || W/2)).strength(d=>d.type==='category'?1:0.28))
     .force('y', d3.forceY(d=>d.type==='category' ? d.fy : (catByKey.get(d.primary_category)?.fy || H/2)).strength(d=>d.type==='category'?1:0.28))
-    .force('collision', d3.forceCollide().radius(d=>d.type==='paper' ? d.r + 1.8 : 6));
+    .force('collision', d3.forceCollide().radius(d=>d.type==='paper' ? d.r + 1.2 : 0));
 
-  for(let i=0;i<260;i++) sim.tick();
+  for(let i=0;i<520;i++) sim.tick();
   sim.stop();
 
   const ge = d3.select('#ge'); ge.selectAll('*').remove();
   const gh = d3.select('#gh'); gh.selectAll('*').remove();
   const gn = d3.select('#gn'); gn.selectAll('*').remove();
 
-  const edges = G.edges.filter(e=>e.type==='paper_cat');
+  const edges = G.edges.filter(e=>e.type==='cat_cat');
   ge.selectAll('line').data(edges).join('line')
     .attr('x1', d=>d.source.x).attr('y1', d=>d.source.y)
     .attr('x2', d=>d.target.x).attr('y2', d=>d.target.y)
-    .attr('stroke', '#30363d').attr('stroke-width', .45).attr('stroke-opacity', .18);
+    .attr('stroke', '#58a6ff').attr('stroke-width', d=>Math.min(8, Math.max(1, d.weight*0.4))).attr('stroke-opacity', .35);
 
   const hullData = categories.map(c=>{
     const pts = papers.filter(p=>p.primary_category===c.cat_id).map(p=>[p.x,p.y]);
