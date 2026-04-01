@@ -54,12 +54,25 @@ TITLE_STOPWORDS = {
 }
 
 
-def tokenize_text(text):
-    terms = set()
-    for t in re.findall(r'[\u4e00-\u9fff]{2,8}', text or ''):
+def split_keywords(keywords):
+    return [k.strip() for k in re.split(r'[，,;；、\s]+', keywords or '') if len(k.strip()) >= 2]
+
+
+def tokenize_title(title):
+    terms = []
+    for t in re.findall(r'[\u4e00-\u9fff]{2,8}', title or ''):
         if t not in TITLE_STOPWORDS:
-            terms.add(t)
+            terms.append(t)
     return terms
+
+
+def term_weights(title, keywords=''):
+    w = defaultdict(float)
+    for t in tokenize_title(title):
+        w[t] += 1.2
+    for k in split_keywords(keywords):
+        w[k] += 1.8
+    return dict(w)
 
 
 def jaccard_sim(a, b):
@@ -69,6 +82,41 @@ def jaccard_sim(a, b):
     if inter == 0:
         return 0.0
     return inter / len(a | b)
+
+
+def build_tfidf_vectors(weight_maps):
+    n = len(weight_maps)
+    df = defaultdict(int)
+    for wm in weight_maps:
+        for t in wm.keys():
+            df[t] += 1
+    idf = {t: (1.0 + (n + 1) / (dfv + 1)) for t, dfv in df.items()}
+
+    vectors, norms = [], []
+    for wm in weight_maps:
+        vec = {}
+        s2 = 0.0
+        for t, tf in wm.items():
+            v = tf * idf.get(t, 1.0)
+            vec[t] = v
+            s2 += v * v
+        vectors.append(vec)
+        norms.append((s2 ** 0.5) if s2 > 0 else 1.0)
+    return vectors, norms
+
+
+def cosine_sparse(v1, n1, v2, n2):
+    if not v1 or not v2:
+        return 0.0
+    if len(v1) > len(v2):
+        v1, v2 = v2, v1
+        n1, n2 = n2, n1
+    dot = 0.0
+    for k, x in v1.items():
+        y = v2.get(k)
+        if y is not None:
+            dot += x * y
+    return dot / (n1 * n2) if n1 > 0 and n2 > 0 else 0.0
 
 
 def classify_multi(title, keywords=''):
@@ -124,7 +172,7 @@ def main():
             primary = 'J_工艺安全'
         pid = idx
 
-        token_set = tokenize_text(f"{title} {keywords}")
+        term_w = term_weights(title, keywords)
 
         node = {
             'id': pid,
@@ -142,7 +190,8 @@ def main():
             'keywords': keywords,
             'abstract': p.get('abstract', ''),
             'outline': p.get('outline', ''),
-            '_tokens': sorted(token_set),
+            '_terms': term_w,
+            '_kwset': set(split_keywords(keywords)),
         }
         nodes.append(node)
         paper_nodes.append(node)
@@ -167,33 +216,44 @@ def main():
             'type': 'cat_cat'
         })
 
-    # 论文之间关联：按标题+关键词 Jaccard 相似度，分类内+跨分类都保留
+    # 论文之间关联：TF-IDF余弦 + 关键词重合 的混合相似度
     paper_to_neighbors = defaultdict(list)
+    term_maps = [p.get('_terms', {}) for p in paper_nodes]
+    tfidf_vecs, norms = build_tfidf_vectors(term_maps)
+
     for i in range(len(paper_nodes)):
         ni = paper_nodes[i]
-        ti = set(ni.get('_tokens', []))
+        kwi = ni.get('_kwset', set())
         for j in range(i + 1, len(paper_nodes)):
             nj = paper_nodes[j]
-            tj = set(nj.get('_tokens', []))
-            sim = jaccard_sim(ti, tj)
-            if sim < 0.18:
+            kwj = nj.get('_kwset', set())
+
+            cos = cosine_sparse(tfidf_vecs[i], norms[i], tfidf_vecs[j], norms[j])
+            kw_sim = jaccard_sim(kwi, kwj)
+            sim = 0.72 * cos + 0.28 * kw_sim
+            if sim < 0.13:
                 continue
 
             same_primary = ni['primary_category'] == nj['primary_category']
-            # 同类阈值更宽，跨类更严格
-            if same_primary and sim >= 0.18:
+            # 同类阈值略低，跨类阈值略高
+            if same_primary and sim >= 0.13:
                 paper_to_neighbors[ni['id']].append((nj['id'], sim, 'paper_sim_intra'))
                 paper_to_neighbors[nj['id']].append((ni['id'], sim, 'paper_sim_intra'))
-            elif (not same_primary) and sim >= 0.24:
+            elif (not same_primary) and sim >= 0.18:
                 paper_to_neighbors[ni['id']].append((nj['id'], sim, 'paper_sim_cross'))
                 paper_to_neighbors[nj['id']].append((ni['id'], sim, 'paper_sim_cross'))
 
-    # 每篇论文最多保留 Top-K 相似边，防止过密
-    TOP_K = 5
+    # 每篇论文按类型分别保留 Top-K（避免“强同类边”挤掉跨类桥接边）
+    TOP_K_INTRA = 4
+    TOP_K_CROSS = 2
     seen_pair = set()
     for sid, arr in paper_to_neighbors.items():
-        arr.sort(key=lambda x: x[1], reverse=True)
-        for tid, sim, et in arr[:TOP_K]:
+        intra = [x for x in arr if x[2] == 'paper_sim_intra']
+        cross = [x for x in arr if x[2] == 'paper_sim_cross']
+        intra.sort(key=lambda x: x[1], reverse=True)
+        cross.sort(key=lambda x: x[1], reverse=True)
+
+        for tid, sim, et in (intra[:TOP_K_INTRA] + cross[:TOP_K_CROSS]):
             a, b = (sid, tid) if sid < tid else (tid, sid)
             if (a, b) in seen_pair:
                 continue
@@ -207,8 +267,11 @@ def main():
 
     # 去除仅用于构图的临时字段
     for n in nodes:
-        if n.get('type') == 'paper' and '_tokens' in n:
-            del n['_tokens']
+        if n.get('type') == 'paper':
+            if '_terms' in n:
+                del n['_terms']
+            if '_kwset' in n:
+                del n['_kwset']
 
     graph = {'nodes': nodes, 'edges': edges, 'total': len(papers)}
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
