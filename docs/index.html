@@ -14867,17 +14867,51 @@ function render(){
     .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
     .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.5 : 0.18);
 
-  // 论文级晕染：以每个论文气泡为中心的小范围光晕
+  // 全局晕染层：论文气泡（范围放大5倍）+ 连线 + 类标题
   const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
   defs.selectAll('*').remove();
+
   defs.append('filter')
     .attr('id', 'paper-glow-blur')
+    .attr('x', '-180%')
+    .attr('y', '-180%')
+    .attr('width', '460%')
+    .attr('height', '460%')
+    .append('feGaussianBlur')
+    .attr('stdDeviation', 11.5);
+
+  defs.append('filter')
+    .attr('id', 'edge-glow-blur')
     .attr('x', '-80%')
     .attr('y', '-80%')
     .attr('width', '260%')
     .attr('height', '260%')
     .append('feGaussianBlur')
-    .attr('stdDeviation', 4.6);
+    .attr('stdDeviation', 2.8);
+
+  defs.append('filter')
+    .attr('id', 'title-glow-blur')
+    .attr('x', '-120%')
+    .attr('y', '-120%')
+    .attr('width', '340%')
+    .attr('height', '340%')
+    .append('feGaussianBlur')
+    .attr('stdDeviation', 4.8);
+
+  const edgeGlow = gh.append('g')
+    .attr('class', 'edge-glow-layer')
+    .attr('pointer-events', 'none');
+
+  edgeGlow.selectAll('line.sim-glow').data(relEdges).join('line')
+    .attr('class', 'sim-glow')
+    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
+    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
+    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
+    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
+    .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
+    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 3.2 : 2.1)
+    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.26 : 0.16)
+    .attr('filter', 'url(#edge-glow-blur)');
 
   const paperGlow = gh.append('g')
     .attr('class', 'paper-glow-layer')
@@ -14887,10 +14921,26 @@ function render(){
     .attr('class', 'paper-glow')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(11, d.r * 2.8))
+    .attr('r', d => Math.max(55, d.r * 14))
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.20)
+    .attr('fill-opacity', 0.22)
     .attr('filter', 'url(#paper-glow-blur)');
+
+  const titleGlow = gh.append('g')
+    .attr('class', 'title-glow-layer')
+    .attr('pointer-events', 'none');
+
+  titleGlow.selectAll('text.cat-glow').data(categories).join('text')
+    .attr('class', 'cat-glow')
+    .attr('x', d => d.x)
+    .attr('y', d => d.y)
+    .attr('text-anchor', 'middle')
+    .attr('fill', d => d.color)
+    .attr('fill-opacity', 0.52)
+    .style('font-size', '13px')
+    .style('font-weight', 700)
+    .text(d => d.label)
+    .attr('filter', 'url(#title-glow-blur)');
 
   const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
 
