@@ -38,7 +38,7 @@ svg{width:100%;height:100%}
 .hull{stroke-width:1.4}
 .cat-label{font-size:13px;font-weight:700;paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round}
 #analysis-btn{position:absolute;top:20px;right:20px;background:#388bfd;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:bold;pointer-events:auto;box-shadow:0 0 10px rgba(56,139,253,0.4);z-index:150;}
-#charts-tray{position:fixed;bottom:-450px;left:0;right:0;height:450px;background:#161b22;border-top:1px solid #30363d;transition:bottom .3s, right .3s;z-index:200;padding:20px;display:flex;gap:15px;overflow-x:auto}
+#charts-tray{position:fixed;bottom:-320px;left:0;right:0;height:320px;background:#161b22;border-top:1px solid #30363d;transition:bottom .3s, right .3s;z-index:200;padding:14px;display:flex;gap:12px;overflow-x:auto}
 #charts-tray.active{bottom:0}
 #charts-tray.with-sbr{right:320px}
 .chart-box{min-width:300px;flex:1;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:15px;display:flex;flex-direction:column}
@@ -60,7 +60,7 @@ svg{width:100%;height:100%}
       <div id="sbr-header"><span id="sbr-title">论文档案</span><button id="sbr-toggle" onclick="toggleSBR()">关闭</button></div>
       <div id="sbr-list">请在网络图中点击具体论文气泡查看详细信息。</div>
     </div>
-    <div id="charts-tray">
+    <div id="charts-tray" class="active">
       <button id="close-tray" onclick="toggleAnalysis()">×</button>
       <div class="chart-box" id="chart-years"><div class="chart-title">历年论文产出趋势</div><div class="chart-canvas" style="flex:1"></div></div>
       <div class="chart-box" id="chart-cats"><div class="chart-title">研究方向分布</div><div class="chart-canvas" style="flex:1"></div></div>
