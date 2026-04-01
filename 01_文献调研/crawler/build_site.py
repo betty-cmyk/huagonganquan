@@ -14,6 +14,9 @@ HTML_TPL = '''\
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <title>化工安全论文知识网络图</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
