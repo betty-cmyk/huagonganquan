@@ -16181,18 +16181,18 @@ function render(){
     .attr('class', 'cloud-outer')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(S * 5.8, Math.sqrt((d.count || 1)) * S * 2.7))
+    .attr('r', d => Math.max(S * 8.8, Math.sqrt((d.count || 1)) * S * 4.2))
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.055)
+    .attr('fill-opacity', 0.16)
     .attr('filter', 'url(#cloud-blur)');
 
   cloudBg.selectAll('circle.cloud-inner').data(categories).join('circle')
     .attr('class', 'cloud-inner')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(S * 3.2, Math.sqrt((d.count || 1)) * S * 1.8))
+    .attr('r', d => Math.max(S * 5.4, Math.sqrt((d.count || 1)) * S * 3.1))
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.10)
+    .attr('fill-opacity', 0.24)
     .attr('filter', 'url(#cloud-blur)');
 
   const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
