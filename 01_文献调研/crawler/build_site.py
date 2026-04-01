@@ -1,89 +1,57 @@
 # -*- coding: utf-8 -*-
-"""
-build_site.py  —  生成最终 docs/index.html
-修复：1)去掉全部视图 2)默认研究分类视图 3)点击/悬停正常
-"""
-import os, json
+import os
+import json
 
 CRAWLER_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR    = os.path.join(CRAWLER_DIR, '..', 'data')
-ROOT        = os.path.join(CRAWLER_DIR, '..', '..')
-DOCS_DIR    = os.path.join(ROOT, 'docs')
-GRAPH_JSON  = os.path.abspath(os.path.join(DATA_DIR, 'graph_v2.json'))
-OUT_HTML    = os.path.abspath(os.path.join(DOCS_DIR, 'index.html'))
+DATA_DIR = os.path.join(CRAWLER_DIR, '..', 'data')
+ROOT = os.path.join(CRAWLER_DIR, '..', '..')
+DOCS_DIR = os.path.join(ROOT, 'docs')
+GRAPH_JSON = os.path.abspath(os.path.join(DATA_DIR, 'graph_v3.json'))
+OUT_HTML = os.path.abspath(os.path.join(DOCS_DIR, 'index.html'))
 
 HTML_TPL = '''\
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>化工安全论文知识关联图</title>
+<title>化工安全论文知识网络图</title>
 <style>
-*{{margin:0;padding:0;box-sizing:border-box}}
-body{{background:#0d1117;color:#e6edf3;font-family:'Noto Sans SC',sans-serif;overflow:hidden}}
-#app{{width:100vw;height:100vh;display:flex}}
-#sidebar{{width:320px;min-width:320px;height:100vh;background:#161b22;border-right:1px solid #30363d;display:flex;flex-direction:column;transition:width .3s;overflow:hidden}}
-#sidebar.collapsed{{width:0;min-width:0}}
-#sb-header{{padding:14px 16px;border-bottom:1px solid #30363d;display:flex;justify-content:space-between;align-items:center}}
-#sb-title{{font-size:14px;color:#79c0ff;font-weight:bold;flex:1;margin-right:8px}}
-#sb-toggle{{background:none;border:1px solid #30363d;color:#8b949e;border-radius:4px;padding:2px 8px;cursor:pointer;font-size:12px;white-space:nowrap}}
-#sb-toggle:hover{{background:#21262d;color:#e6edf3}}
-#sb-stats{{padding:8px 16px;border-bottom:1px solid #21262d;font-size:12px;color:#8b949e;display:none}}
-#sb-stats span{{color:#f78166;font-weight:bold}}
-#sb-list{{flex:1;overflow-y:auto;padding:4px 0}}
-#sb-list::-webkit-scrollbar{{width:4px}}
-#sb-list::-webkit-scrollbar-thumb{{background:#30363d;border-radius:2px}}
-.sb-item{{padding:8px 16px;border-bottom:1px solid #21262d;transition:background .15s}}
-.sb-item:hover{{background:#21262d}}
-.sb-item-title{{font-size:12px;color:#e6edf3;line-height:1.5;margin-bottom:3px}}
-.sb-item-meta{{font-size:11px;color:#8b949e}}
-.sb-yr{{display:inline-block;background:#21262d;border-radius:3px;padding:0 5px;margin-right:4px;color:#56d364}}
-.sb-ph{{padding:40px 20px;text-align:center;color:#8b949e;font-size:13px;line-height:2}}
-#graph-wrap{{flex:1;position:relative;overflow:hidden}}
-svg{{width:100%;height:100%}}
-#legend{{position:absolute;top:16px;right:16px;background:rgba(22,27,34,.93);border:1px solid #30363d;border-radius:8px;padding:12px 16px;font-size:12px}}
-#legend h3{{font-size:13px;color:#79c0ff;margin-bottom:8px}}
-.lr{{display:flex;align-items:center;gap:7px;margin:4px 0}}
-.ld{{width:12px;height:12px;border-radius:50%;flex-shrink:0}}
-#controls{{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px}}
-button{{background:#21262d;border:1px solid #30363d;color:#e6edf3;border-radius:6px;padding:6px 14px;cursor:pointer;font-size:12px;transition:background .2s}}
-button:hover{{background:#388bfd;border-color:#388bfd}}
-button.active{{background:#388bfd;border-color:#388bfd}}
-#tt{{position:fixed;pointer-events:none;background:rgba(13,17,23,.97);border:1px solid #388bfd;border-radius:7px;padding:10px 14px;font-size:12px;max-width:260px;display:none;line-height:1.8;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,.5)}}
-#tt .ttn{{font-weight:bold;color:#79c0ff;margin-bottom:4px;font-size:13px}}
-#tt .ttp{{color:#e6edf3}}
-#tt .ttl{{margin-top:6px;border-top:1px solid #30363d;padding-top:6px;max-height:160px;overflow-y:auto}}
-#tt .ttli{{color:#8b949e;font-size:11px;padding:2px 0;border-bottom:1px solid #21262d}}
-#tt .ttli:last-child{{border:none}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',sans-serif;overflow:hidden}
+#app{width:100vw;height:100vh;display:flex}
+#sidebar{width:320px;min-width:320px;background:#161b22;border-right:1px solid #30363d;display:flex;flex-direction:column;transition:width .3s;z-index:100}
+#sidebar.collapsed{width:0;min-width:0}
+#sb-header{padding:15px;border-bottom:1px solid #30363d;display:flex;justify-content:space-between;align-items:center}
+#sb-title{font-size:14px;color:#79c0ff;font-weight:bold}
+#sb-toggle{background:none;border:1px solid #30363d;color:#8b949e;border-radius:4px;padding:2px 8px;cursor:pointer}
+#sb-list{flex:1;overflow-y:auto;padding:5px}
+.sb-item{padding:12px;border-bottom:1px solid #21262d;font-size:12px}
+.sb-item-title{color:#e6edf3;margin-bottom:5px;line-height:1.4}
+#graph-wrap{flex:1;position:relative;background:radial-gradient(circle at center, #161b22 0%, #0d1117 100%)}
+svg{width:100%;height:100%}
+#legend{position:absolute;top:20px;right:20px;background:rgba(22,27,34,.8);border:1px solid #30363d;padding:15px;border-radius:10px;pointer-events:none}
+.lr{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:12px}
+.ld{width:10px;height:10px;border-radius:50%}
+#tt{position:fixed;pointer-events:none;background:rgba(13,17,23,.95);border:1px solid #388bfd;padding:12px;border-radius:8px;font-size:12px;max-width:300px;display:none;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.hull{stroke-width:1.4}
+.cat-label{font-size:13px;font-weight:700;paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round}
 </style>
 </head>
 <body>
 <div id="app">
   <div id="sidebar">
-    <div id="sb-header">
-      <span id="sb-title">点击节点查看论文列表</span>
-      <button id="sb-toggle" onclick="toggleSB()">收起</button>
-    </div>
-    <div id="sb-stats"><div id="sb-st"></div></div>
-    <div id="sb-list"><div class="sb-ph">&#128070; 点击图中节点<br>在此查看该方向下的<br>所有论文标题</div></div>
+    <div id="sb-header"><span id="sb-title">文献库</span><button id="sb-toggle" onclick="toggleSB()">收起</button></div>
+    <div id="sb-list"></div>
   </div>
   <div id="graph-wrap">
-    <svg id="svg">
-      <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#3d444d"/></marker></defs>
-      <g id="root"><g id="ge"></g><g id="gn"></g></g>
-    </svg>
+    <svg id="svg"><g id="root"><g id="gh"></g><g id="ge"></g><g id="gn"></g></g></svg>
     <div id="legend">
-      <h3>图例</h3>
-      <div class="lr"><div class="ld" style="background:#f78166"></div>搜索关键词</div>
-      <div class="lr"><div class="ld" style="background:#79c0ff"></div>研究分类</div>
-      <div class="lr"><div class="ld" style="background:#56d364"></div>发表年份</div>
-      <div style="margin-top:8px;color:#8b949e;line-height:1.9;font-size:11px">节点大小 = 论文数<br>线宽 = 关联强度<br>&#128073; 点击节点看论文<br>滚轮缩放 · 拖拽节点</div>
-    </div>
-    <div id="controls">
-      <button id="b-kw"  onclick="setView('keyword')">搜索词视图</button>
-      <button id="b-cat" onclick="setView('category')" class="active">研究分类视图</button>
-      <button id="b-yr"  onclick="setView('year')">年份视图</button>
-      <button onclick="resetV()">重置视图</button>
+      <h3 style="font-size:14px;margin-bottom:10px;color:#79c0ff">研究分类视图</h3>
+      <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类异形气泡（包裹论文）</div>
+      <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
+      <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
+        ● 空间关系固定，不可拖拽<br>● 滚动缩放查看细节<br>● 点击分类查看分类内论文
+      </div>
     </div>
     <div id="tt"></div>
   </div>
@@ -91,108 +59,184 @@ button.active{{background:#388bfd;border-color:#388bfd}}
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
 const G = {GRAPH_DATA};
-const AN = G.nodes, AE = G.edges;
-let svg, root, zoom, sim, sbOpen=true, curView='category';
+let svg, root, sbOpen = true, kScale = 1;
 
-function toggleSB(){{sbOpen=!sbOpen;document.getElementById('sidebar').classList.toggle('collapsed',!sbOpen);document.getElementById('sb-toggle').textContent=sbOpen?'收起':'展开';}}
+function toggleSB(){
+  sbOpen=!sbOpen;
+  document.getElementById('sidebar').classList.toggle('collapsed',!sbOpen);
+  document.getElementById('sb-toggle').textContent=sbOpen?'收起':'展开';
+}
 
-function showPapers(d){{
-  const papers=(d.papers||[]).slice().sort((a,b)=>((b.year||'0')<(a.year||'0')?-1:1));
-  document.getElementById('sb-title').textContent=d.label+' ('+d.count+'篇)';
-  const st=document.getElementById('sb-stats'); st.style.display='block';
-  document.getElementById('sb-st').innerHTML='共 <span>'+papers.length+'</span> 篇论文';
-  if(!papers.length){{document.getElementById('sb-list').innerHTML='<div class="sb-ph">该节点无直接论文数据</div>';return;}}
-  document.getElementById('sb-list').innerHTML=papers.map((p,i)=>
-    '<div class="sb-item"><div class="sb-item-title">'+(i+1)+'. '+p.title+'</div>'
-    +'<div class="sb-item-meta"><span class="sb-yr">'+(p.year||'?')+'</span>'+(p.author||'')+' '+(p.unit?'· '+p.unit:'')+'</div></div>'
-  ).join('');
+function showInfo(d){
+  const list = document.getElementById('sb-list');
+  if(d.type === 'category'){
+    document.getElementById('sb-title').textContent = d.label;
+    const papers = (d.papers || []).sort((a,b)=>((b.year||'0')<(a.year||'0')?-1:1));
+    list.innerHTML = papers.map((p,i)=>`<div class="sb-item"><div class="sb-item-title">${i+1}. ${p.title}</div><div style="color:#8b949e">${p.year||'未知'}</div></div>`).join('');
+  }else{
+    document.getElementById('sb-title').textContent = '论文详情';
+    list.innerHTML = `<div class="sb-item"><div class="sb-item-title" style="font-size:14px;color:#79c0ff">${d.full_title}</div><p style="margin-top:10px">年份: ${d.year||'未知'}</p><p>作者: ${d.author||'未知'}</p><p>单位: ${d.unit||'未知'}</p></div>`;
+  }
   if(!sbOpen) toggleSB();
-}}
+}
 
-function nR(n){{return n.type==='keyword'?Math.sqrt(n.count)*7+22:n.type==='category'?Math.sqrt(n.count)*5+13:Math.sqrt(n.count)*3+9;}}
+function seededAngle(id){
+  const v = (id * 9301 + 49297) % 233280;
+  return (v / 233280) * Math.PI * 2;
+}
 
-function setView(t){{
-  curView=t;
-  [['b-kw','keyword'],['b-cat','category'],['b-yr','year']].forEach(([id,v])=>document.getElementById(id).classList.toggle('active',v===t));
-  const nodes=AN.filter(n=>n.type===t);
-  render(nodes,AE);
-}}
+function expandHull(points, pad){
+  const c = d3.polygonCentroid(points);
+  return points.map(p=>{
+    const dx = p[0]-c[0], dy = p[1]-c[1];
+    const len = Math.sqrt(dx*dx+dy*dy) || 1;
+    return [p[0] + dx/len*pad, p[1] + dy/len*pad];
+  });
+}
 
-function resetV(){{svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity);}}
+function render(){
+  const W = document.getElementById('graph-wrap').clientWidth;
+  const H = window.innerHeight;
 
-function render(nodes,edges){{
-  const ids=new Set(nodes.map(n=>n.id));
-  const ve=edges.filter(e=>{{const s=e.source?.id??e.source,t2=e.target?.id??e.target;return ids.has(s)&&ids.has(t2);}});
-  const nm={{}};const sn=nodes.map(n=>{{const c={{...n}};nm[n.id]=c;return c;}});
-  const se=ve.map(e=>{{return{{...e,source:nm[e.source?.id??e.source],target:nm[e.target?.id??e.target]}};}});
-  if(sim) sim.stop();
-  const W=document.getElementById('graph-wrap').clientWidth, H=window.innerHeight;
-  sim=d3.forceSimulation(sn)
-    .force('link',d3.forceLink(se).distance(d=>130-d.weight*1.2).strength(0.4))
-    .force('charge',d3.forceManyBody().strength(-300))
-    .force('center',d3.forceCenter(W/2,H/2))
-    .force('collision',d3.forceCollide().radius(n=>nR(n)+10));
-  const ge=d3.select('#ge');ge.selectAll('*').remove();
-  const link=ge.selectAll('line').data(se).join('line')
-    .attr('stroke','#3d444d').attr('stroke-width',d=>Math.sqrt(d.weight)+0.5)
-    .attr('stroke-opacity',0.6).attr('marker-end','url(#arr)');
-  const gn=d3.select('#gn');gn.selectAll('*').remove();
-  const node=gn.selectAll('g').data(sn).join('g').attr('cursor','pointer')
-    .call(d3.drag()
-      .on('start',(e,d)=>{{if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;}})
-      .on('drag',(e,d)=>{{d.fx=e.x;d.fy=e.y;}})
-      .on('end',(e,d)=>{{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}}));
-  node.append('circle').attr('r',nR).attr('fill',n=>n.color||'#8b949e')
-    .attr('fill-opacity',0.85).attr('stroke',n=>n.color||'#8b949e')
-    .attr('stroke-width',2).attr('stroke-opacity',0.35);
-  node.append('text').text(n=>n.label).attr('text-anchor','middle')
-    .attr('dy',n=>nR(n)+13).attr('font-size',n=>n.type==='keyword'?13:n.type==='category'?12:11)
-    .attr('fill',n=>n.color||'#8b949e').attr('font-weight',n=>n.type==='keyword'?'bold':'normal')
-    .attr('pointer-events','none');
-  const tt=document.getElementById('tt');
-  node.on('mouseover',(e,d)=>{{  
-    const ps=(d.papers||[]).slice(0,5);
-    const typeL={{keyword:'搜索词',category:'研究分类',year:'发表年份'}};
-    tt.innerHTML='<div class="ttn">'+d.label+'</div>'
-      +'<div class="ttp">类型：'+typeL[d.type]+' &nbsp;|&nbsp; 论文数：'+d.count+' 篇</div>'
-      +(ps.length?'<div class="ttl">'+ps.map(p=>'<div class="ttli">'+(p.year?'['+p.year+'] ':'')+p.title+'</div>').join('')
-        +(d.papers.length>5?'<div class="ttli" style="color:#388bfd">...还有'+(d.papers.length-5)+'篇，点击查看全部</div>':'')+'</div>':'');
-    tt.style.display='block';
-  }}).on('mousemove',(e)=>{{tt.style.left=(e.clientX+16)+'px';tt.style.top=(e.clientY-10)+'px';}}).on('mouseout',()=>{{tt.style.display='none';}});
-  node.on('click',(e,d)=>{{showPapers(d);e.stopPropagation();}});
-  svg.on('click',()=>{{node.select('circle').attr('fill-opacity',0.85);link.attr('stroke-opacity',0.6);}});
-  sim.on('tick',()=>{{link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);node.attr('transform',d=>`translate(${d.x},${d.y})`);}}); 
-}}
+  const categories = G.nodes.filter(n=>n.type==='category');
+  const papers = G.nodes.filter(n=>n.type==='paper');
+  const catByKey = new Map(categories.map(c=>[c.cat_id,c]));
 
-svg=d3.select('#svg');root=d3.select('#root');
-zoom=d3.zoom().scaleExtent([0.1,6]).on('zoom',e=>root.attr('transform',e.transform));
-svg.call(zoom);
-setView('category');
+  const ringR = Math.min(W, H) * 0.34;
+  categories.forEach((c, i)=>{
+    const a = (i / categories.length) * Math.PI * 2 - Math.PI / 2;
+    c.fx = W/2 + Math.cos(a) * ringR;
+    c.fy = H/2 + Math.sin(a) * ringR;
+    c.x = c.fx; c.y = c.fy;
+  });
+
+  papers.forEach(p=>{
+    const c = catByKey.get(p.primary_category) || categories[0];
+    const a = seededAngle(p.id);
+    const rr = 24 + ((p.id * 37) % 90);
+    p.x = c.fx + Math.cos(a) * rr;
+    p.y = c.fy + Math.sin(a) * rr;
+  });
+
+  const sim = d3.forceSimulation(G.nodes)
+    .force('link', d3.forceLink(G.edges).id(d=>d.id).distance(d=>d.type==='cat_cat'?150:34).strength(d=>d.type==='cat_cat'?0.12:0.32))
+    .force('charge', d3.forceManyBody().strength(d=>d.type==='paper'?-10:-15))
+    .force('x', d3.forceX(d=>d.type==='category' ? d.fx : (catByKey.get(d.primary_category)?.fx || W/2)).strength(d=>d.type==='category'?1:0.28))
+    .force('y', d3.forceY(d=>d.type==='category' ? d.fy : (catByKey.get(d.primary_category)?.fy || H/2)).strength(d=>d.type==='category'?1:0.28))
+    .force('collision', d3.forceCollide().radius(d=>d.type==='paper' ? d.r + 1.8 : 6));
+
+  for(let i=0;i<260;i++) sim.tick();
+  sim.stop();
+
+  const ge = d3.select('#ge'); ge.selectAll('*').remove();
+  const gh = d3.select('#gh'); gh.selectAll('*').remove();
+  const gn = d3.select('#gn'); gn.selectAll('*').remove();
+
+  const edges = G.edges.filter(e=>e.type==='paper_cat');
+  ge.selectAll('line').data(edges).join('line')
+    .attr('x1', d=>d.source.x).attr('y1', d=>d.source.y)
+    .attr('x2', d=>d.target.x).attr('y2', d=>d.target.y)
+    .attr('stroke', '#30363d').attr('stroke-width', .45).attr('stroke-opacity', .18);
+
+  const hullData = categories.map(c=>{
+    const pts = papers.filter(p=>p.primary_category===c.cat_id).map(p=>[p.x,p.y]);
+    return {cat:c, pts};
+  });
+
+  hullData.forEach(h=>{
+    if(h.pts.length === 0) return;
+    let path = '';
+    if(h.pts.length < 3){
+      const rr = 36;
+      path = `M ${h.cat.x-rr},${h.cat.y} a ${rr},${rr} 0 1,0 ${rr*2},0 a ${rr},${rr} 0 1,0 -${rr*2},0`;
+    }else{
+      const hull = d3.polygonHull(h.pts) || h.pts;
+      const ext = expandHull(hull, 22);
+      const line = d3.line().curve(d3.curveCatmullRomClosed.alpha(0.7));
+      path = line(ext);
+    }
+    gh.append('path')
+      .attr('class','hull')
+      .attr('d', path)
+      .attr('fill', h.cat.color)
+      .attr('fill-opacity', .13)
+      .attr('stroke', h.cat.color)
+      .attr('stroke-opacity', .55)
+      .style('cursor','pointer')
+      .on('click', ()=>showInfo(h.cat));
+  });
+
+  const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
+
+  paperNode.append('circle')
+    .attr('r', d=>d.r)
+    .attr('fill', d=>d.color)
+    .attr('fill-opacity', .42)
+    .attr('stroke', d=>d.color)
+    .attr('stroke-width', .9);
+
+  const labels = paperNode.append('text')
+    .text(d=>d.label)
+    .attr('text-anchor', 'middle')
+    .attr('dy', d=>d.r+10)
+    .attr('font-size', 3.5)
+    .attr('fill', '#8b949e')
+    .attr('pointer-events','none')
+    .style('opacity', 0);
+
+  const catLabel = gn.selectAll('text.cat-label').data(categories).join('text')
+    .attr('class','cat-label')
+    .attr('x', d=>d.x)
+    .attr('y', d=>d.y)
+    .attr('text-anchor','middle')
+    .attr('fill', d=>d.color)
+    .text(d=>d.label)
+    .style('cursor','pointer')
+    .on('click', (_,d)=>showInfo(d));
+
+  const tt = document.getElementById('tt');
+  paperNode
+    .on('mouseover', (e,d)=>{
+      tt.style.display='block';
+      tt.innerHTML=`<div style="font-weight:bold;color:#79c0ff">${d.full_title || d.label}</div><div style="color:#8b949e;margin-top:4px">论文条目</div>`;
+    })
+    .on('mousemove', e=>{tt.style.left=(e.clientX+15)+'px';tt.style.top=(e.clientY-10)+'px';})
+    .on('mouseout', ()=>tt.style.display='none')
+    .on('click', (_,d)=>showInfo(d));
+
+  catLabel
+    .on('mouseover', (e,d)=>{
+      tt.style.display='block';
+      tt.innerHTML=`<div style="font-weight:bold;color:#79c0ff">${d.label}</div><div style="color:#8b949e;margin-top:4px">研究分类 · ${d.count} 篇</div>`;
+    })
+    .on('mousemove', e=>{tt.style.left=(e.clientX+15)+'px';tt.style.top=(e.clientY-10)+'px';})
+    .on('mouseout', ()=>tt.style.display='none');
+
+  function updateLabelVisibility(k){ labels.style('opacity', k > 2 ? 1 : 0); }
+  updateLabelVisibility(kScale);
+}
+
+svg = d3.select('#svg');
+root = d3.select('#root');
+svg.call(d3.zoom().scaleExtent([0.05, 10]).on('zoom', e=>{kScale = e.transform.k; root.attr('transform', e.transform); root.selectAll('g.paper text').style('opacity', kScale > 2 ? 1 : 0);}));
+
+render();
 </script>
 </body></html>
 '''
 
+
 def main():
     with open(GRAPH_JSON, 'r', encoding='utf-8') as f:
         gdata = f.read()
+
     html = HTML_TPL.replace('{GRAPH_DATA}', gdata)
 
-    # 修复 Python str.format 导致的 CSS/JS 双括号问题
-    # 只处理 <style> 块和 <script> 的 JS 逻辑部分（跳过 JSON 数据）
-    style_s = html.find('<style>') + len('<style>')
-    style_e = html.find('</style>')
-    html = html[:style_s] + html[style_s:style_e].replace('{{','{').replace('}}','}') + html[style_e:]
-
-    # JS 逻辑部分（const AN 之后）
-    an_idx  = html.rfind('const AN')
-    js_end  = html.rfind('</script>')
-    html = html[:an_idx] + html[an_idx:js_end].replace('{{','{').replace('}}','}') + html[js_end:]
-
-    os.makedirs(DOCS_DIR, exist_ok=True)
     with open(OUT_HTML, 'w', encoding='utf-8') as f:
         f.write(html)
-    print('生成完成：' + OUT_HTML + '  (' + str(len(html)) + ' 字符)')
+
+    print(f'Done: {OUT_HTML}')
+
 
 if __name__ == '__main__':
     main()
-
