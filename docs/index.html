@@ -14116,38 +14116,73 @@ function render(){
   const papers = G.nodes.filter(n=>n.type==='paper');
   const catByKey = new Map(categories.map(c=>[c.cat_id,c]));
 
-  const D = 500;
-  const DY = D * 0.866;
-  const hexGrid = [
-    {cx: -D, cy: -DY}, {cx: 0, cy: -DY}, {cx: D, cy: -DY},
-    {cx: -1.5*D, cy: 0}, {cx: -0.5*D, cy: 0}, {cx: 0.5*D, cy: 0}, {cx: 1.5*D, cy: 0},
-    {cx: -D, cy: DY}, {cx: 0, cy: DY}, {cx: D, cy: DY}
+  const S = 24; // 网格单元间距
+  const D = 16; // 大类之间的固定格点距离，完美留出6-7个单位的空气墙
+
+  const macroHex = [
+    {q: 0, r: 0},
+    {q: D, r: 0}, {q: D, r: -D}, {q: 0, r: -D}, {q: -D, r: 0}, {q: -D, r: D}, {q: 0, r: D},
+    {q: 2*D, r: 0}, {q: 2*D, r: -D}, {q: -2*D, r: D}
   ];
 
   categories.forEach((c, i)=>{
-    const pos = hexGrid[i % hexGrid.length];
-    c.fx = W/2 + pos.cx;
-    c.fy = H/2 + pos.cy;
-    c.x = c.fx; c.y = c.fy;
+    const h = macroHex[i % macroHex.length];
+    c.axial_q = h.q; c.axial_r = h.r;
+    c.x = S * Math.sqrt(3) * (c.axial_q + c.axial_r/2);
+    c.y = S * 3/2 * c.axial_r;
   });
 
-  papers.forEach(p=>{
-    const c = catByKey.get(p.primary_category) || categories[0];
-    const a = seededAngle(p.id);
-    const rr = 24 + ((p.id * 37) % 180);
-    p.x = c.fx + Math.cos(a) * rr;
-    p.y = c.fy + Math.sin(a) * rr;
+  const hexDirs = [
+    {dq: 1, dr: 0}, {dq: 1, dr: -1}, {dq: 0, dr: -1},
+    {dq: -1, dr: 0}, {dq: -1, dr: 1}, {dq: 0, dr: 1}
+  ];
+
+  function getHexSpiral(radius) {
+    if (radius === 0) return [{dq:0, dr:0}];
+    let results = [];
+    let curQ = -radius;
+    let curR = radius;
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < radius; j++) {
+            results.push({dq: curQ, dr: curR});
+            curQ += hexDirs[i].dq;
+            curR += hexDirs[i].dr;
+        }
+    }
+    return results;
+  }
+
+  // papers are assigned to exact empty spots around category
+  categories.forEach(c => {
+    const catPapers = papers.filter(p => p.primary_category === c.cat_id);
+    let ring = 2; // 第 0 和第 1 层空出，留给文字排布空间，绝不遮挡
+    let points = [];
+    while(points.length < catPapers.length) {
+      points = points.concat(getHexSpiral(ring));
+      ring++;
+    }
+    catPapers.forEach((p, i) => {
+      p.r = 4.5;
+      p.axial_q = c.axial_q + points[i].dq;
+      p.axial_r = c.axial_r + points[i].dr;
+      p.x = S * Math.sqrt(3) * (p.axial_q + p.axial_r/2);
+      p.y = S * 3/2 * p.axial_r;
+    });
   });
 
-  const sim = d3.forceSimulation(G.nodes)
-    .force('link', d3.forceLink(G.edges).id(d=>d.id).distance(d=>d.type==='cat_cat'?150:40).strength(d=>d.type==='cat_cat'?0.1:0.4))
-    .force('charge', d3.forceManyBody().strength(d=>d.type==='paper'?-8:0))
-    .force('x', d3.forceX(d=>d.type==='category' ? d.fx : (catByKey.get(d.primary_category)?.fx || W/2)).strength(d=>d.type==='category'?1:0.35))
-    .force('y', d3.forceY(d=>d.type==='category' ? d.fy : (catByKey.get(d.primary_category)?.fy || H/2)).strength(d=>d.type==='category'?1:0.35))
-    .force('collision', d3.forceCollide().radius(d=>d.type==='paper' ? d.r + 2.5 : 0));
-
-  for(let i=0;i<550;i++) sim.tick();
-  sim.stop();
+  // Center mathematically
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  [...categories, ...papers].forEach(n => {
+    if(n.x < minX) minX = n.x; if(n.x > maxX) maxX = n.x;
+    if(n.y < minY) minY = n.y; if(n.y > maxY) maxY = n.y;
+  });
+  const cx = (minX + maxX) / 2;
+  const cy = (minY + maxY) / 2;
+  
+  [...categories, ...papers].forEach(n => {
+    n.x = n.x - cx + W/2; 
+    n.y = n.y - cy + H/2;
+  });
 
   const ge = d3.select('#ge'); ge.selectAll('*').remove();
   const gh = d3.select('#gh'); gh.selectAll('*').remove();
