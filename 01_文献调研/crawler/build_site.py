@@ -518,8 +518,8 @@ function render(){
     const grad = defs.append('radialGradient')
       .attr('id', 'grad-' + c.cat_id)
       .attr('cx', '50%').attr('cy', '50%').attr('r', '50%');
-    grad.append('stop').attr('offset', '0%').attr('stop-color', c.color).attr('stop-opacity', 0.22);
-    grad.append('stop').attr('offset', '40%').attr('stop-color', c.color).attr('stop-opacity', 0.1);
+    grad.append('stop').attr('offset', '0%').attr('stop-color', c.color).attr('stop-opacity', 0.12);
+    grad.append('stop').attr('offset', '60%').attr('stop-color', c.color).attr('stop-opacity', 0.04);
     grad.append('stop').attr('offset', '100%').attr('stop-color', c.color).attr('stop-opacity', 0);
   });
 
@@ -531,7 +531,7 @@ function render(){
     .attr('class', 'cat-glow')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(S * 4.5, Math.sqrt((d.count || 1)) * S * 2.1))
+    .attr('r', d => Math.max(S * 1.8, Math.sqrt((d.count || 1)) * S * 0.72))
     .attr('fill', d => `url(#grad-${d.cat_id})`);
 
   const paperNode = gn.selectAll('g.paper').data(papers).join('g').attr('class','paper').attr('transform', d=>`translate(${d.x},${d.y})`).attr('cursor','pointer');
@@ -539,9 +539,9 @@ function render(){
   paperNode.append('circle')
     .attr('r', d=>d.r)
     .attr('fill', d=>d.color)
-    .attr('fill-opacity', .42)
-    .attr('stroke', d=>d.color)
-    .attr('stroke-width', .9);
+    .attr('fill-opacity', .88)
+    .attr('stroke', '#0d1117')
+    .attr('stroke-width', .6);
 
   const labels = paperNode.append('text')
     .text(d=>d.label)
