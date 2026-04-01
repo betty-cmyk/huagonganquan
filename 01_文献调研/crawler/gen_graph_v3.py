@@ -119,6 +119,9 @@ def main():
         keywords = p.get('keywords', '')
         cats = classify_multi(title, keywords)
         primary = cats[0]
+        full_text = f"{title} {keywords}"
+        if 'J_工艺安全' in cats and any(kw in full_text for kw in CLASSIFY_KWS['J_工艺安全']):
+            primary = 'J_工艺安全'
         pid = idx
 
         token_set = tokenize_text(f"{title} {keywords}")

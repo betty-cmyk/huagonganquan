@@ -35,6 +35,13 @@ svg{width:100%;height:100%}
 #tt{position:fixed;pointer-events:none;background:rgba(13,17,23,.95);border:1px solid #388bfd;padding:12px;border-radius:8px;font-size:12px;max-width:300px;display:none;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .hull{stroke-width:1.4}
 .cat-label{font-size:13px;font-weight:700;paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round}
+#analysis-btn{background:#388bfd;color:#fff;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;font-size:12px;font-weight:bold}
+#charts-tray{position:fixed;bottom:-400px;left:320px;right:0;height:400px;background:#161b22;border-top:1px solid #30363d;transition:bottom .3s;z-index:200;padding:20px;display:flex;gap:20px}
+#charts-tray.active{bottom:0}
+.chart-box{flex:1;background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:15px;display:flex;flex-direction:column}
+.chart-title{font-size:13px;color:#79c0ff;margin-bottom:10px;text-align:center;font-weight:bold}
+#close-tray{position:absolute;top:10px;right:10px;background:none;border:none;color:#8b949e;cursor:pointer;font-size:20px}
+.stat-tag{display:inline-block;padding:2px 8px;border-radius:12px;font-size:10px;margin:2px;background:#21262d;border:1px solid #30363d}
 </style>
 </head>
 <body>
@@ -52,8 +59,15 @@ svg{width:100%;height:100%}
       <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
         ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 点击分类查看分类内论文
       </div>
+      <button id="analysis-btn" onclick="toggleAnalysis()">查看统计分析图表</button>
     </div>
     <div id="tt"></div>
+    <div id="charts-tray">
+      <button id="close-tray" onclick="toggleAnalysis()">×</button>
+      <div class="chart-box" id="chart-years"><div class="chart-title">历年论文产出趋势</div><div class="chart-canvas" style="flex:1"></div></div>
+      <div class="chart-box" id="chart-cats"><div class="chart-title">各研究方向占比</div><div class="chart-canvas" style="flex:1"></div></div>
+      <div class="chart-box" id="chart-kws"><div class="chart-title">核心关键词云</div><div class="chart-canvas" style="flex:1;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;overflow:hidden"></div></div>
+    </div>
   </div>
 </div>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -72,12 +86,60 @@ function showInfo(d){
   if(d.type === 'category'){
     document.getElementById('sb-title').textContent = d.label;
     const papers = (d.papers || []).sort((a,b)=>((b.year||'0')<(a.year||'0')?-1:1));
-    list.innerHTML = papers.map((p,i)=>`<div class="sb-item"><div class="sb-item-title">${i+1}. ${p.title}</div><div style="color:#8b949e">${p.year||'未知'}</div></div>`).join('');
+    list.innerHTML = `<div style="padding:10px;font-size:11px;color:#8b949e;background:#0d1117;margin-bottom:5px">共收集论文 ${papers.length} 篇</div>` + 
+      papers.map((p,i)=>`<div class="sb-item"><div class="sb-item-title">${i+1}. ${p.title}</div><div style="display:flex;justify-content:space-between;color:#8b949e"><span>${p.year||'未知'}</span></div></div>`).join('');
   }else{
     document.getElementById('sb-title').textContent = '论文详情';
-    list.innerHTML = `<div class="sb-item"><div class="sb-item-title" style="font-size:14px;color:#79c0ff">${d.full_title}</div><p style="margin-top:10px">年份: ${d.year||'未知'}</p><p>作者: ${d.author||'未知'}</p><p>单位: ${d.unit||'未知'}</p></div>`;
+    list.innerHTML = `<div class="sb-item"><div class="sb-item-title" style="font-size:14px;color:#79c0ff">${d.full_title}</div><p style="margin-top:10px">年份: ${d.year||'未知'}</p><p>作者: ${d.author||'未知'}</p><p>单位: ${d.unit||'未知'}</p>
+      <div style="margin-top:15px;padding-top:10px;border-top:1px solid #30363d">
+        <div style="color:#79c0ff;margin-bottom:5px">关键词:</div>
+        ${(d.keywords || '').split(/[，,]/).map(k=>`<span class="stat-tag">${k}</span>`).join('')}
+      </div></div>`;
   }
   if(!sbOpen) toggleSB();
+}
+
+let chartsInited = false;
+function toggleAnalysis(){
+  const tray = document.getElementById('charts-tray');
+  tray.classList.toggle('active');
+  if(tray.classList.contains('active') && !chartsInited) {
+    initCharts();
+    chartsInited = true;
+  }
+}
+
+function initCharts(){
+  // 1. 年份趋势线
+  const years = {};
+  G.nodes.filter(n=>n.type==='paper').forEach(p=>{ if(p.year && p.year.length===4) years[p.year] = (years[p.year]||0)+1; });
+  const yearData = Object.entries(years).sort((a,b)=>a[0]-b[0]);
+  const yBox = d3.select('#chart-years .chart-canvas');
+  const yw = yBox.node().clientWidth, yh = yBox.node().clientHeight - 20;
+  const ysclX = d3.scalePoint().domain(yearData.map(d=>d[0])).range([30, yw-10]);
+  const ysclY = d3.scaleLinear().domain([0, d3.max(yearData, d=>d[1])]).range([yh-20, 10]);
+  const ysvg = yBox.append('svg').attr('width',yw).attr('height',yh);
+  ysvg.append('path').datum(yearData).attr('fill','none').attr('stroke','#388bfd').attr('stroke-width',2).attr('d', d3.line().x(d=>ysclX(d[0])).y(d=>ysclY(d[1])).curve(d3.curveMonotoneX));
+  ysvg.selectAll('circle').data(yearData).join('circle').attr('cx',d=>ysclX(d[0])).attr('cy',d=>ysclY(d[1])).attr('r',3).attr('fill','#388bfd');
+  ysvg.append('g').attr('transform',`translate(0,${yh-20})`).call(d3.axisBottom(ysclX).tickValues(ysclX.domain().filter((d,i)=>!(i%2)))).selectAll('text').style('font-size','9px').attr('transform','rotate(45)').style('text-anchor','start');
+
+  // 2. 饼图
+  const cats = G.nodes.filter(n=>n.type==='category').map(c=>({label:c.label, count:c.count, color:c.color})).sort((a,b)=>b.count-a.count);
+  const cBox = d3.select('#chart-cats .chart-canvas');
+  const cw = cBox.node().clientWidth, ch = cBox.node().clientHeight;
+  const csvg = cBox.append('svg').attr('width',cw).attr('height',ch).append('g').attr('transform',`translate(${cw/2},${ch/2})`);
+  const pie = d3.pie().value(d=>d.count);
+  const arc = d3.arc().innerRadius(ch/5).outerRadius(ch/2.5);
+  csvg.selectAll('path').data(pie(cats)).join('path').attr('d',arc).attr('fill',d=>d.data.color).attr('stroke','#161b22').attr('stroke-width',1);
+  
+  // 3. 词云 (简单标签云实现)
+  const kwMap = {};
+  G.nodes.filter(n=>n.type==='paper').forEach(p=>{ (p.keywords||'').split(/[，,]/).forEach(k=>{ if(k.trim().length>1) kwMap[k.trim()]=(kwMap[k.trim()]||0)+1; }); });
+  const topKws = Object.entries(kwMap).sort((a,b)=>b[1]-a[1]).slice(0,30);
+  const kBox = d3.select('#chart-kws');
+  topKws.forEach(([word, count])=>{
+    kBox.append('span').attr('class','stat-tag').style('font-size',`${Math.min(18, 9 + count*1.5)}px`).style('color',d3.interpolateCool(Math.random())).text(word);
+  });
 }
 
 function seededAngle(id){
