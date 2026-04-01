@@ -100,6 +100,11 @@ function showInfo(d){
     document.getElementById('sbr-title').textContent = '论文档案';
     rlist.innerHTML = `<div style="font-size:16px;color:#79c0ff;font-weight:bold;margin-bottom:15px;border-bottom:1px solid #30363d;padding-bottom:10px">${d.full_title}</div>
       <div style="display:flex;justify-content:space-between;color:#8b949e;margin-bottom:10px"><span>年份：${d.year||'未知'}</span></div>
+      <div style="margin-bottom:10px">
+        <span class="stat-tag" style="background:${(d.url||d.source_url)?'#11331f':'#3b1f1f'};border-color:${(d.url||d.source_url)?'#238636':'#da3633'}">链接${(d.url||d.source_url)?'已抓取':'缺失'}</span>
+        <span class="stat-tag" style="background:${(d.abstract||'').trim()?'#11331f':'#3b1f1f'};border-color:${(d.abstract||'').trim()?'#238636':'#da3633'}">摘要${(d.abstract||'').trim()?'已抓取':'缺失'}</span>
+        <span class="stat-tag" style="background:${(d.outline||'').trim()?'#11331f':'#3b1f1f'};border-color:${(d.outline||'').trim()?'#238636':'#da3633'}">大纲${(d.outline||'').trim()?'已抓取':'缺失'}</span>
+      </div>
       <div style="color:#e6edf3;margin-bottom:10px"><strong>论文链接：</strong><a href="${(d.url||d.link||d.source_url||('https://kns.cnki.net/kns8s/defaultresult/index?kw=' + encodeURIComponent(d.full_title||'')))}" target="_blank" style="color:#79c0ff;text-decoration:none;word-break:break-all">打开原文/检索页</a></div>
       <div style="color:#e6edf3;margin-bottom:15px"><strong>作者：</strong>${d.author||'未记录'}</div>
       <div style="color:#e6edf3;margin-bottom:20px"><strong>单位：</strong>${d.unit||'未记录'}</div>

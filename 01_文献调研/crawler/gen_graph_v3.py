@@ -188,6 +188,8 @@ def main():
             'author': p.get('author', ''),
             'unit': p.get('unit', ''),
             'keywords': keywords,
+            'source_url': p.get('source_url', ''),
+            'url': p.get('url', p.get('source_url', '')),
             'abstract': p.get('abstract', ''),
             'outline': p.get('outline', ''),
             '_terms': term_w,
