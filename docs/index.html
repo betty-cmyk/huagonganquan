@@ -14878,7 +14878,7 @@ function render(){
     .attr('width', '460%')
     .attr('height', '460%')
     .append('feGaussianBlur')
-    .attr('stdDeviation', 11.5);
+    .attr('stdDeviation', 8.2);
 
   defs.append('filter')
     .attr('id', 'edge-glow-blur')
@@ -14887,7 +14887,7 @@ function render(){
     .attr('width', '260%')
     .attr('height', '260%')
     .append('feGaussianBlur')
-    .attr('stdDeviation', 2.8);
+    .attr('stdDeviation', 1.8);
 
   defs.append('filter')
     .attr('id', 'title-glow-blur')
@@ -14896,7 +14896,7 @@ function render(){
     .attr('width', '340%')
     .attr('height', '340%')
     .append('feGaussianBlur')
-    .attr('stdDeviation', 4.8);
+    .attr('stdDeviation', 2.6);
 
   const edgeGlow = gh.append('g')
     .attr('class', 'edge-glow-layer')
@@ -14909,8 +14909,8 @@ function render(){
     .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
     .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
     .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
-    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 3.2 : 2.1)
-    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.26 : 0.16)
+    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 2.2 : 1.4)
+    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.14 : 0.08)
     .attr('filter', 'url(#edge-glow-blur)');
 
   const paperGlow = gh.append('g')
@@ -14921,9 +14921,9 @@ function render(){
     .attr('class', 'paper-glow')
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
-    .attr('r', d => Math.max(55, d.r * 14))
+    .attr('r', d => Math.max(34, d.r * 9))
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.22)
+    .attr('fill-opacity', 0.11)
     .attr('filter', 'url(#paper-glow-blur)');
 
   const titleGlow = gh.append('g')
@@ -14936,7 +14936,7 @@ function render(){
     .attr('y', d => d.y)
     .attr('text-anchor', 'middle')
     .attr('fill', d => d.color)
-    .attr('fill-opacity', 0.52)
+    .attr('fill-opacity', 0.22)
     .style('font-size', '13px')
     .style('font-weight', 700)
     .text(d => d.label)
