@@ -105,7 +105,9 @@ def main():
             'year': p.get('year', ''),
             'author': p.get('author', ''),
             'unit': p.get('unit', ''),
-            'keywords': p.get('keywords', '')
+            'keywords': p.get('keywords', ''),
+            'abstract': p.get('abstract', ''),
+            'outline': p.get('outline', '')
         })
         idx += 1
 

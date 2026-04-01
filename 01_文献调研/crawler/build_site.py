@@ -138,22 +138,68 @@ function render(){
     return results;
   }
 
-  // papers are assigned to exact empty spots around category
-  categories.forEach(c => {
-    const catPapers = papers.filter(p => p.primary_category === c.cat_id);
-    let ring = 2; // 第 0 和第 1 层空出，留给文字排布空间，绝不遮挡
-    let points = [];
-    while(points.length < catPapers.length) {
-      points = points.concat(getHexSpiral(ring));
-      ring++;
+  // 1. 每篇论文关联多个分类，计算其重力坐标 (Ideal Position)
+  papers.forEach(p => {
+    let cats = [];
+    if(p.categories && p.categories.length) {
+      cats = p.categories.map(cid => catByKey.get(cid)).filter(Boolean);
     }
-    catPapers.forEach((p, i) => {
-      p.r = 4.5;
-      p.axial_q = c.axial_q + points[i].dq;
-      p.axial_r = c.axial_r + points[i].dr;
-      p.x = S * Math.sqrt(3) * (p.axial_q + p.axial_r/2);
-      p.y = S * 3/2 * p.axial_r;
-    });
+    if(!cats.length) cats = [catByKey.get(p.primary_category) || categories[0]];
+    
+    let sumX = 0, sumY = 0;
+    cats.forEach(c => { sumX += c.x; sumY += c.y; });
+    p.idealX = sumX / cats.length + (Math.random()-0.5)*S*0.5;
+    p.idealY = sumY / cats.length + (Math.random()-0.5)*S*0.5;
+    p.r = 4.5;
+  });
+
+  // 2. 占位保护：类别中心及第一圈不得填入论文
+  const occupiedGrid = new Set();
+  categories.forEach(c => {
+    occupiedGrid.add(`${c.axial_q},${c.axial_r}`);
+    hexDirs.forEach(d => occupiedGrid.add(`${c.axial_q+d.dq},${c.axial_r+d.dr}`));
+  });
+
+  // 根据屏幕坐标近似反推格点
+  function screenToHex(x, y) {
+    let q_f = (Math.sqrt(3)/3 * x - 1/3 * y) / S;
+    let r_f = (2/3 * y) / S;
+    let q = Math.round(q_f), r = Math.round(r_f), s = Math.round(-q_f - r_f);
+    let q_d = Math.abs(q - q_f), r_d = Math.abs(r - r_f), s_d = Math.abs(s - (-q_f - r_f));
+    if (q_d > r_d && q_d > s_d) q = -r - s;
+    else if (r_d > s_d) r = -q - s;
+    return {q, r};
+  }
+
+  function axialToPt(q, r) {
+    return { x: S * Math.sqrt(3) * (q + r/2), y: S * 3/2 * r };
+  }
+
+  // 论文按照理想位置寻找附近空旷格点
+  papers.sort(() => Math.random() - 0.5); // 随机顺避免扎堆一侧
+  papers.forEach(p => {
+    const centerHex = screenToHex(p.idealX, p.idealY);
+    let radius = 0;
+    let bestHex = null;
+    while(true) {
+      const ringList = getHexSpiral(radius);
+      let minD = Infinity;
+      for(let pt of ringList) {
+        const hq = centerHex.q + pt.dq, hr = centerHex.r + pt.dr;
+        const key = `${hq},${hr}`;
+        if(!occupiedGrid.has(key)) {
+          const sp = axialToPt(hq, hr);
+          const dist = Math.pow(sp.x - p.idealX, 2) + Math.pow(sp.y - p.idealY, 2);
+          if(dist < minD) { minD = dist; bestHex = {q: hq, r: hr}; }
+        }
+      }
+      if(bestHex) break;
+      radius++;
+    }
+    occupiedGrid.add(`${bestHex.q},${bestHex.r}`);
+    p.axial_q = bestHex.q; p.axial_r = bestHex.r;
+    const realPt = axialToPt(p.axial_q, p.axial_r);
+    p.x = realPt.x; p.y = realPt.y;
   });
 
   // Center mathematically
@@ -189,21 +235,30 @@ function render(){
     .attr('stroke-opacity', .5);
 
   const hullData = categories.map(c=>{
-    const pts = papers.filter(p=>p.primary_category===c.cat_id).map(p=>[p.x,p.y]);
+    const pts = papers.filter(p=>(p.categories && p.categories.includes(c.cat_id)) || p.primary_category === c.cat_id).map(p=>[p.x,p.y]);
     return {cat:c, pts};
   });
 
   hullData.forEach(h=>{
     if(h.pts.length === 0) return;
     let path = '';
-    if(h.pts.length < 3){
+    // Give all points a tiny sub-pixel random jitter to prevent D3 from failing on perfectly collinear hex coordinates
+    const safePts = h.pts.map(pt => [pt[0] + (Math.random()-0.5)*0.1, pt[1] + (Math.random()-0.5)*0.1]);
+    
+    if(safePts.length < 3){
       const rr = 36;
       path = `M ${h.cat.x-rr},${h.cat.y} a ${rr},${rr} 0 1,0 ${rr*2},0 a ${rr},${rr} 0 1,0 -${rr*2},0`;
     }else{
-      const hull = d3.polygonHull(h.pts) || h.pts;
-      const ext = expandHull(hull, 22);
-      const line = d3.line().curve(d3.curveCatmullRomClosed.alpha(0.7));
-      path = line(ext);
+      try {
+        const hull = d3.polygonHull(safePts) || safePts;
+        const ext = expandHull(hull, 22);
+        const line = d3.line().curve(d3.curveCatmullRomClosed.alpha(0.7));
+        path = line(ext);
+      } catch (err) {
+        // Fallback for extreme degenerate cases
+        const rr = 40;
+        path = `M ${h.cat.x-rr},${h.cat.y} a ${rr},${rr} 0 1,0 ${rr*2},0 a ${rr},${rr} 0 1,0 -${rr*2},0`;
+      }
     }
     gh.append('path')
       .attr('class','hull')

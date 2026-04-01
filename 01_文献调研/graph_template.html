@@ -30,6 +30,19 @@
               border-bottom: 1px solid #21262d; }
   .stat-val { color: #f78166; font-weight: bold; }
 
+
+    /* 详情面板 */
+  #detail-panel {
+    position: absolute; right: 20px; top: 120px; bottom: 80px;
+    width: 320px; background: rgba(22,27,34,0.95); border: 1px solid #30363d;
+    border-radius: 10px; padding: 18px; display: none; flex-direction: column;
+    z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .detail-title { color: #79c0ff; font-size: 15px; font-weight: bold; margin-bottom: 10px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
+  .detail-body { overflow-y: auto; flex: 1; font-size: 12px; line-height: 1.5; }
+  .detail-label { color: #f78166; margin-top: 12px; display: block; font-weight: bold; }
+  .detail-text { color: #c9d1d9; white-space: pre-wrap; margin-top: 4px; }
+
   /* tooltip */
   #tooltip {
     position: absolute; pointer-events: none;
@@ -84,6 +97,17 @@
   </div>
 
   <div id="tooltip"></div>
+
+  <div id="detail-panel">
+    <div class="detail-title" id="d-title">标题</div>
+    <div class="detail-body">
+       <span class="detail-label">摘要</span>
+       <div class="detail-text" id="d-abs"></div>
+       <span class="detail-label">大纲</span>
+       <div class="detail-text" id="d-out"></div>
+    </div>
+    <button onclick="document.getElementById('detail-panel').style.display='none'" style="margin-top:10px;width:100%;background:#238636;border:none;color:white;padding:8px;border-radius:6px;cursor:pointer;">关闭详情</button>
+  </div>
 
   <div id="controls">
     <button id="btn-all" class="active" onclick="filterType('all')">全部</button>
@@ -204,8 +228,16 @@ function render(nodes, edges) {
     tt.style.top  = (e.clientY-10)+'px';
   }).on('mouseout', () => { tt.style.display='none'; });
 
-  // 高亮点击
+
+
+    // 高亮点击
   node.on('click', (e, d) => {
+    if (d.full_title) {
+        document.getElementById('detail-panel').style.display = 'flex';
+        document.getElementById('d-title').innerText = d.full_title;
+        document.getElementById('d-abs').innerText = d.abstract || '暂无详细摘要';
+        document.getElementById('d-out').innerText = d.outline || '暂无大纲数据';
+    }
     const connected = new Set([d.id]);
     simEdges.forEach(ed => {
       if(ed.source.id===d.id) connected.add(ed.target.id);

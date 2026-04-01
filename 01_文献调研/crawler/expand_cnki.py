@@ -302,6 +302,8 @@ def rewrite_db(papers: List[dict]) -> None:
     cols = {row[1] for row in cur.fetchall()}
     if "abstract" not in cols:
         cur.execute("ALTER TABLE papers ADD COLUMN abstract TEXT")
+    if "outline" not in cols:
+        cur.execute("ALTER TABLE papers ADD COLUMN outline TEXT")
     if "category_9" not in cols:
         cur.execute("ALTER TABLE papers ADD COLUMN category_9 TEXT")
     if "db_type" not in cols:
@@ -318,7 +320,7 @@ def rewrite_db(papers: List[dict]) -> None:
         cur.execute(
             """
             UPDATE papers
-            SET author=?, unit=?, degree=?, year=?, abstract=?, keywords=?, category_9=?,
+            SET author=?, unit=?, degree=?, year=?, abstract=?, outline=?, keywords=?, category_9=?,
                 directions=?, source_kw=?, db_type=?, db_source=?, source_url=?, source_site=?
             WHERE title=?
             """,
@@ -343,9 +345,9 @@ def rewrite_db(papers: List[dict]) -> None:
             cur.execute(
                 """
                 INSERT INTO papers
-                (title, author, unit, degree, year, abstract, keywords, category_9,
+                (title, author, unit, degree, year, abstract, outline, keywords, category_9,
                  directions, source_kw, db_type, db_source, source_url, source_site)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                 """,
                 (
                     p["title"],
