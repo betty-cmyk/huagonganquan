@@ -45,7 +45,7 @@ svg{width:100%;height:100%}
       <div class="lr"><div class="ld" style="background:#79c0ff"></div>分类标题（无边界底色）</div>
       <div class="lr"><div class="ld" style="background:#8b949e;opacity:.55"></div>论文节点</div>
       <div style="margin-top:10px;color:#8b949e;font-size:11px;line-height:1.6">
-        ● 空间关系固定，不可拖拽<br>● 灰线=标题语义近邻，蓝线=跨分类相似<br>● 论文气泡颜色代表分类
+        ● 空间关系固定，不可拖拽<br>● 仅显示分类标题与论文气泡<br>● 论文气泡颜色代表分类
       </div>
       <button id="analysis-btn" onclick="toggleAnalysis()">查看统计分析图表</button>
     </div>
@@ -15771,6 +15771,7 @@ function initCharts(){
   const ysvg = yBox.append('svg').attr('width',yw).attr('height',yh);
   ysvg.append('path').datum(yearData).attr('fill','none').attr('stroke','#388bfd').attr('stroke-width',2).attr('d', d3.line().x(d=>ysclX(d[0])).y(d=>ysclY(d[1])).curve(d3.curveMonotoneX));
   ysvg.selectAll('circle').data(yearData).join('circle').attr('cx',d=>ysclX(d[0])).attr('cy',d=>ysclY(d[1])).attr('r',3).attr('fill','#388bfd');
+  ysvg.selectAll('.val-label').data(yearData).join('text').attr('class','val-label').attr('x',d=>ysclX(d[0])).attr('y',d=>ysclY(d[1])-8).text(d=>d[1]).attr('text-anchor','middle').attr('fill','#c9d1d9').style('font-size','9px');
   ysvg.append('g').attr('transform',`translate(0,${yh-20})`).call(d3.axisBottom(ysclX).tickValues(ysclX.domain().filter((d,i)=>!(i%2)))).selectAll('text').style('font-size','9px').attr('transform','rotate(45)').style('text-anchor','start');
 
   // 2. 饼图
@@ -15780,7 +15781,9 @@ function initCharts(){
   const csvg = cBox.append('svg').attr('width',cw).attr('height',ch).append('g').attr('transform',`translate(${cw/2},${ch/2})`);
   const pie = d3.pie().value(d=>d.count);
   const arc = d3.arc().innerRadius(ch/5).outerRadius(ch/2.5);
+  const labelArc = d3.arc().innerRadius(ch/2.2).outerRadius(ch/2.2);
   csvg.selectAll('path').data(pie(cats)).join('path').attr('d',arc).attr('fill',d=>d.data.color).attr('stroke','#161b22').attr('stroke-width',1);
+  csvg.selectAll('.pie-label').data(pie(cats)).join('text').attr('class','pie-label').attr('transform',d=>`translate(${labelArc.centroid(d)})`).text(d=>`${d.data.label.replace(/^.*_/,'')} (${d.data.count})`).attr('text-anchor','middle').attr('fill','#c9d1d9').style('font-size','9px');
   
   // 3. 词云 (简单标签云实现)
   const kwMap = {};
@@ -15933,7 +15936,7 @@ function render(){
     return { x: S * Math.sqrt(3) * (q + r/2), y: S * 3/2 * r };
   }
 
-  // 论文按照理想位置寻找附近空旷格点
+  // 论文先按网格占位，再做轻量力学松弛，避免过于规整
   papers.sort(() => Math.random() - 0.5); // 随机顺避免扎堆一侧
   papers.forEach(p => {
     const centerHex = screenToHex(p.idealX, p.idealY);
@@ -15959,6 +15962,46 @@ function render(){
     const realPt = axialToPt(p.axial_q, p.axial_r);
     p.x = realPt.x; p.y = realPt.y;
   });
+
+  // 轻力学：拉向理想位 + 论文间轻排斥（让布局更自然）
+  const RELAX_ITERS = 180;
+  const REPULSE_DIST = S * 1.6;
+  for (let it = 0; it < RELAX_ITERS; it++) {
+    // 拉向理想位
+    papers.forEach(p => {
+      p.x += (p.idealX - p.x) * 0.1;
+      p.y += (p.idealY - p.y) * 0.1;
+    });
+
+    // 论文间排斥
+    for (let i = 0; i < papers.length; i++) {
+      for (let j = i + 1; j < papers.length; j++) {
+        const a = papers[i], b = papers[j];
+        let dx = b.x - a.x, dy = b.y - a.y;
+        let d = Math.sqrt(dx*dx + dy*dy) || 0.001;
+        if (d < REPULSE_DIST) {
+          const push = (REPULSE_DIST - d) * 0.09;
+          dx /= d; dy /= d;
+          a.x -= dx * push; a.y -= dy * push;
+          b.x += dx * push; b.y += dy * push;
+        }
+      }
+    }
+
+    // 约束：不要偏离主分类过远
+    papers.forEach(p => {
+      const pc = catByKey.get(p.primary_category);
+      if (!pc) return;
+      const dx = p.x - pc.x, dy = p.y - pc.y;
+      const d = Math.sqrt(dx*dx + dy*dy) || 0.001;
+      const maxR = S * 8.2;
+      if (d > maxR) {
+        const k = (d - maxR) * 0.08;
+        p.x -= (dx / d) * k;
+        p.y -= (dy / d) * k;
+      }
+    });
+  }
 
   // 小类标题轻微贴近本类论文簇，避免“标题远离气泡”
   categories.forEach(c => {
@@ -15992,27 +16035,8 @@ function render(){
   const nodeById = new Map();
   [...categories, ...papers].forEach(n => nodeById.set(n.id, n));
 
-  const relEdges = G.edges.filter(e => e.type === 'paper_sim_intra' || e.type === 'paper_sim_cross');
-  ge.selectAll('line.sim').data(relEdges).join('line')
-    .attr('class', 'sim')
-    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
-    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
-    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
-    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
-    .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
-    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
-    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.55 : 0.22);
+  // 按用户要求：仅保留分类标题与论文气泡颜色，不绘制任何连线
 
-  const catEdges = G.edges.filter(e => e.type === 'cat_cat');
-  ge.selectAll('line.cat').data(catEdges).join('line')
-    .attr('class', 'cat')
-    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
-    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
-    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
-    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
-    .attr('stroke', '#79c0ff')
-    .attr('stroke-width', d => Math.min(3, 0.6 + (d.weight || 1) * 0.06))
-    .attr('stroke-opacity', 0.28);
 
   // 按用户要求：移除分类边界线与背景色，仅保留分类标题 + 论文气泡颜色
 
@@ -16071,5 +16095,11 @@ root = d3.select('#root');
 svg.call(d3.zoom().scaleExtent([0.05, 10]).on('zoom', e=>{kScale = e.transform.k; root.attr('transform', e.transform); }));
 
 render();
+
+setTimeout(()=>{
+  toggleAnalysis();
+  const initCat = categories.find(c => c.cat_id === 'E_事故应急');
+  if(initCat) showInfo(initCat);
+}, 300);
 </script>
 </body></html>
