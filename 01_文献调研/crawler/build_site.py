@@ -103,7 +103,7 @@ function render(){
   const catByKey = new Map(categories.map(c=>[c.cat_id,c]));
 
   const S = 24; // 网格单元间距
-  const D = 16; // 大类之间的固定格点距离，完美留出6-7个单位的空气墙
+  const D = 10; // 大类中心之间的固定距离为10个格点，对应边缘之间大概留出 6-7 个单位空隙
 
   const macroHex = [
     {q: 0, r: 0},
@@ -175,10 +175,18 @@ function render(){
   const gn = d3.select('#gn'); gn.selectAll('*').remove();
 
   const edges = G.edges.filter(e=>e.type==='cat_cat');
+  // Since we removed forceSimulation, we must map integer IDs to node coordinates manually
+  const nodeById = new Map();
+  [...categories, ...papers].forEach(n => nodeById.set(n.id, n));
+
   ge.selectAll('line').data(edges).join('line')
-    .attr('x1', d=>d.source.x).attr('y1', d=>d.source.y)
-    .attr('x2', d=>d.target.x).attr('y2', d=>d.target.y)
-    .attr('stroke', '#58a6ff').attr('stroke-width', d=>Math.min(8, Math.max(1, d.weight*0.4))).attr('stroke-opacity', .35);
+    .attr('x1', d => nodeById.get(d.source).x)
+    .attr('y1', d => nodeById.get(d.source).y)
+    .attr('x2', d => nodeById.get(d.target).x)
+    .attr('y2', d => nodeById.get(d.target).y)
+    .attr('stroke', '#58a6ff')
+    .attr('stroke-width', d=>Math.min(10, Math.max(2, d.weight*0.4)))
+    .attr('stroke-opacity', .5);
 
   const hullData = categories.map(c=>{
     const pts = papers.filter(p=>p.primary_category===c.cat_id).map(p=>[p.x,p.y]);

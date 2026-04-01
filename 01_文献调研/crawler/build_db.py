@@ -95,6 +95,7 @@ def main():
             degree       TEXT,
             year         INTEGER,
             abstract     TEXT,
+            outline      TEXT,
             keywords     TEXT,
             category_9   TEXT,
             directions   TEXT,
@@ -111,14 +112,14 @@ def main():
             direction TEXT
         )
     ''')
-    for p in filtered:
+        for p in filtered:
         cur.execute(
-            'INSERT INTO papers (title,author,unit,degree,year,abstract,keywords,category_9,directions,source_kw,db_type,db_source,source_url,source_site) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+            'INSERT INTO papers (title,author,unit,degree,year,abstract,keywords,category_9,directions,source_kw,db_type,db_source,source_url,source_site,outline) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
             (p['title'], p.get('author',''), p.get('unit',''),
              p.get('degree',''), int(p['year']) if p.get('year','').isdigit() else 0,
              p.get('abstract',''), p.get('keywords',''), p.get('category_9',''), p['directions_str'],
              p.get('source_keyword',''), p.get('db_type',''), p.get('db_source',''),
-             p.get('source_url',''), p.get('source_site',''))
+             p.get('source_url',''), p.get('source_site',''), p.get('outline',''))
         )
         pid = cur.lastrowid
         for d in p['sub_direction']:
@@ -128,10 +129,10 @@ def main():
     print(f'已写入 SQLite：{DB_PATH}')
 
     # ── 写 CSV ───────────────────────────────────────────
-    with open(CSV_PATH, 'w', encoding='utf-8-sig', newline='') as f:
+        with open(CSV_PATH, 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.DictWriter(f, fieldnames=[
             'title','author','unit','degree','year',
-            'abstract','keywords','category_9','directions_str','source_keyword',
+            'abstract','outline','keywords','category_9','directions_str','source_keyword',
             'db_type','db_source','source_url','source_site'
         ])
         w.writeheader()
@@ -143,6 +144,7 @@ def main():
                 'degree':         p.get('degree',''),
                 'year':           p.get('year',''),
                 'abstract':       p.get('abstract',''),
+                'outline':        p.get('outline',''),
                 'keywords':       p.get('keywords',''),
                 'category_9':     p.get('category_9',''),
                 'directions_str': p['directions_str'],
