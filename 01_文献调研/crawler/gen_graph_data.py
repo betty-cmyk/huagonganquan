@@ -58,7 +58,7 @@ def main():
 
     # 年份节点（只保留2015+)
     for yr, cnt in year_cnt.items():
-        if yr.isdigit() and int(yr) >= 2015:
+        if str(yr).isdigit() and int(yr) >= 2015:
             nid[('yr', yr)] = idx
             nodes.append({'id': idx, 'label': yr, 'type': 'year', 'count': cnt})
             idx += 1
@@ -77,7 +77,7 @@ def main():
     # 边：方向 → 年份
     for d, yrs in dir_year.items():
         for yr, w in yrs.items():
-            if yr.isdigit() and int(yr) >= 2015 and w >= 2:
+            if str(yr).isdigit() and int(yr) >= 2015 and w >= 2:
                 edges.append({
                     'source': nid[('dir', d)],
                     'target': nid[('yr', yr)],

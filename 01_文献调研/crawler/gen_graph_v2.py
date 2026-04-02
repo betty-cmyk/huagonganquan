@@ -86,7 +86,7 @@ CATEGORIES = {
 
 
 def classify_paper(title, keywords=''):
-    text = title + ' ' + keywords
+    text = (title or '') + ' ' + (keywords or '')
     matched = []
     for cat_id, cat in CATEGORIES.items():
         for kw in cat['keywords']:
@@ -115,7 +115,7 @@ def main():
         skw = p.get('source_keyword', '未知')
         for cat in p['category']:
             cat_papers[cat].append(p)
-            if yr and yr.isdigit() and int(yr) >= 2015:
+            if yr and str(yr).isdigit() and int(yr) >= 2015:
                 cat_year[cat][yr].append(p)
             kw_cat[skw][cat].append(p)
 
@@ -154,7 +154,7 @@ def main():
                 'author': p.get('author',''),
                 'unit':   p.get('unit',''),
                 'year':   p.get('year',''),
-                'keywords': p.get('keywords','')
+                'keywords': p.get('keywords', '') or ''
             } for p in plist]
         })
         idx += 1
@@ -163,7 +163,7 @@ def main():
     all_years = set()
     for p in papers:
         yr = p.get('year','')
-        if yr and yr.isdigit() and int(yr) >= 2015:
+        if yr and str(yr).isdigit() and int(yr) >= 2015:
             all_years.add(yr)
 
     yr_cnt = defaultdict(int)
