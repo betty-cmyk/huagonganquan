@@ -99,8 +99,10 @@
   <div id="tooltip"></div>
 
   <div id="detail-panel">
-    <div class="detail-title" id="d-title">标题</div>
+        <div class="detail-title" id="d-title">标题</div>
     <div class="detail-body">
+       <span class="detail-label" style="margin-top:0;">链接</span>
+       <div class="detail-text"><a id="d-link" href="#" target="_blank" style="color:#58a6ff; text-decoration:none; word-break:break-all;">查看原文</a></div>
        <span class="detail-label">摘要</span>
        <div class="detail-text" id="d-abs"></div>
        <span class="detail-label">大纲</span>
@@ -232,11 +234,20 @@ function render(nodes, edges) {
 
     // 高亮点击
   node.on('click', (e, d) => {
-    if (d.full_title) {
+        if (d.full_title) {
         document.getElementById('detail-panel').style.display = 'flex';
         document.getElementById('d-title').innerText = d.full_title;
         document.getElementById('d-abs').innerText = d.abstract || '暂无详细摘要';
         document.getElementById('d-out').innerText = d.outline || '暂无大纲数据';
+        
+        const linkEl = document.getElementById('d-link');
+        if (d.source_url) {
+            linkEl.href = d.source_url;
+            linkEl.innerText = "打开学术详情页 (百度学术/知网)";
+            linkEl.style.display = "inline";
+        } else {
+            linkEl.style.display = "none";
+        }
     }
     const connected = new Set([d.id]);
     simEdges.forEach(ed => {

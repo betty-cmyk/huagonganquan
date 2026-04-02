@@ -119,6 +119,26 @@ def cosine_sparse(v1, n1, v2, n2):
     return dot / (n1 * n2) if n1 > 0 and n2 > 0 else 0.0
 
 
+def year_decay(y1, y2):
+    if not isinstance(y1, int) or not isinstance(y2, int):
+        return 0.9
+    gap = abs(y1 - y2)
+    if gap <= 1:
+        return 1.0
+    if gap <= 3:
+        return 0.92
+    if gap <= 6:
+        return 0.84
+    return 0.76
+
+
+def category_overlap_boost(cats1, cats2):
+    a, b = set(cats1 or []), set(cats2 or [])
+    if not a or not b:
+        return 0.0
+    return 0.08 if (a & b) else 0.0
+
+
 def classify_multi(title, keywords=''):
     text = (title or '') + ' ' + (keywords or '')
     matched = []
@@ -174,6 +194,9 @@ def main():
 
         term_w = term_weights(title, keywords)
 
+        yv = p.get('year', '')
+        yint = int(yv) if str(yv).isdigit() else None
+
         node = {
             'id': pid,
             'label': (title[:15] + '...') if len(title) > 15 else title,
@@ -192,6 +215,7 @@ def main():
             'url': p.get('url', p.get('source_url', '')),
             'abstract': p.get('abstract', ''),
             'outline': p.get('outline', ''),
+            '_year_int': yint,
             '_terms': term_w,
             '_kwset': set(split_keywords(keywords)),
         }
@@ -218,7 +242,7 @@ def main():
             'type': 'cat_cat'
         })
 
-    # 论文之间关联：TF-IDF余弦 + 关键词重合 的混合相似度
+    # 论文之间关联：TF-IDF + 关键词重合 + 年份衰减 + 类别重合增强
     paper_to_neighbors = defaultdict(list)
     term_maps = [p.get('_terms', {}) for p in paper_nodes]
     tfidf_vecs, norms = build_tfidf_vectors(term_maps)
@@ -226,28 +250,35 @@ def main():
     for i in range(len(paper_nodes)):
         ni = paper_nodes[i]
         kwi = ni.get('_kwset', set())
+        yi = ni.get('_year_int')
+        ci = ni.get('categories', [])
+
         for j in range(i + 1, len(paper_nodes)):
             nj = paper_nodes[j]
             kwj = nj.get('_kwset', set())
+            yj = nj.get('_year_int')
+            cj = nj.get('categories', [])
 
             cos = cosine_sparse(tfidf_vecs[i], norms[i], tfidf_vecs[j], norms[j])
             kw_sim = jaccard_sim(kwi, kwj)
-            sim = 0.72 * cos + 0.28 * kw_sim
-            if sim < 0.13:
+            y_decay = year_decay(yi, yj)
+            c_boost = category_overlap_boost(ci, cj)
+
+            sim = (0.70 * cos + 0.22 * kw_sim + c_boost) * y_decay
+            if sim < 0.12:
                 continue
 
             same_primary = ni['primary_category'] == nj['primary_category']
-            # 同类阈值略低，跨类阈值略高
-            if same_primary and sim >= 0.13:
+            if same_primary and sim >= 0.12:
                 paper_to_neighbors[ni['id']].append((nj['id'], sim, 'paper_sim_intra'))
                 paper_to_neighbors[nj['id']].append((ni['id'], sim, 'paper_sim_intra'))
-            elif (not same_primary) and sim >= 0.18:
+            elif (not same_primary) and sim >= 0.165:
                 paper_to_neighbors[ni['id']].append((nj['id'], sim, 'paper_sim_cross'))
                 paper_to_neighbors[nj['id']].append((ni['id'], sim, 'paper_sim_cross'))
 
-    # 每篇论文按类型分别保留 Top-K（避免“强同类边”挤掉跨类桥接边）
+    # 每篇论文按类型分别保留 Top-K（保留更多跨类桥接边）
     TOP_K_INTRA = 4
-    TOP_K_CROSS = 2
+    TOP_K_CROSS = 3
     seen_pair = set()
     for sid, arr in paper_to_neighbors.items():
         intra = [x for x in arr if x[2] == 'paper_sim_intra']
@@ -274,6 +305,8 @@ def main():
                 del n['_terms']
             if '_kwset' in n:
                 del n['_kwset']
+            if '_year_int' in n:
+                del n['_year_int']
 
     graph = {'nodes': nodes, 'edges': edges, 'total': len(papers)}
     with open(OUT_JSON, 'w', encoding='utf-8') as f:

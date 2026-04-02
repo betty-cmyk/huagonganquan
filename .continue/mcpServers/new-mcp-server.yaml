@@ -1,0 +1,14 @@
+name: New MCP server
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: chrome-devtools
+    command: npx
+    args:
+      - -y
+      - chrome-devtools-mcp@latest
+    env:
+      # 可选：指定Chrome浏览器路径
+      CHROME_PATH: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome  # macOS
+      # CHROME_PATH: C:\Program Files\Google\Chrome\Application\chrome.exe  # Windows
+      # CHROME_PATH: /usr/bin/google-chrome  # Linux
