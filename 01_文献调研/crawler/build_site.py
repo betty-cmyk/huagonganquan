@@ -697,18 +697,42 @@ function render(){
     .attr('pointer-events', 'none');
 
   const crossEdges = relEdges.filter(d => d.type === 'paper_sim_cross' && edgeDistance(d) <= 260);
-  edgeGlow.selectAll('line.sim-glow').data(crossEdges).join('line')
-    .attr('class', 'sim-glow')
-    .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
-    .attr('y1', d => nodeById.get(d.source)?.y ?? 0)
-    .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
-    .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
+
+  // 连线晕染合批：按距离分桶，每桶一条path，显著降低DOM与滤镜开销
+  function glowPathData(arr){
+    if(!arr.length) return '';
+    return arr.map(d => {
+      const s = nodeById.get(d.source), t = nodeById.get(d.target);
+      if(!s || !t) return '';
+      return `M${s.x},${s.y}L${t.x},${t.y}`;
+    }).join(' ');
+  }
+
+  const nearEdges = [];
+  const midEdges = [];
+  const farEdges = [];
+  crossEdges.forEach(d => {
+    const dist = edgeDistance(d);
+    if (dist <= 120) nearEdges.push(d);
+    else if (dist <= 200) midEdges.push(d);
+    else farEdges.push(d);
+  });
+
+  const glowBuckets = [
+    { cls: 'sim-glow-near', arr: nearEdges, op: 0.028 },
+    { cls: 'sim-glow-mid',  arr: midEdges,  op: 0.016 },
+    { cls: 'sim-glow-far',  arr: farEdges,  op: 0.008 },
+  ];
+
+  edgeGlow.selectAll('path.sim-glow').data(glowBuckets.filter(b => b.arr.length > 0)).join('path')
+    .attr('class', d => `sim-glow ${d.cls}`)
+    .attr('d', d => glowPathData(d.arr))
+    .attr('fill', 'none')
     .attr('stroke', '#58a6ff')
+    .attr('stroke-linecap', 'round')
+    .attr('stroke-linejoin', 'round')
     .attr('stroke-width', 1.0)
-    .attr('stroke-opacity', d => {
-      const dist = edgeDistance(d);
-      return dist <= 120 ? 0.028 : dist <= 200 ? 0.016 : 0.008;
-    })
+    .attr('stroke-opacity', d => d.op)
     .attr('filter', 'url(#edge-glow-blur)');
 
   // 3) 论文节点微光改为极弱（避免同色交叠变亮）
