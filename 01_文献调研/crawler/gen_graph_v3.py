@@ -159,7 +159,9 @@ def classify_multi(title, keywords=''):
 
 def main():
     with open(IN_JSON, 'r', encoding='utf-8') as f:
-        papers = json.load(f)['papers']
+        all_papers = json.load(f)['papers']
+
+    papers = all_papers
 
     nodes = []
     edges = []
@@ -308,12 +310,19 @@ def main():
             if '_year_int' in n:
                 del n['_year_int']
 
-    graph = {'nodes': nodes, 'edges': edges, 'total': len(papers)}
+    graph = {
+        'nodes': nodes,
+        'edges': edges,
+        'total': len(papers),
+        'total_all': len(all_papers),
+        'excluded_low_quality': len(all_papers) - len(papers)
+    }
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(graph, f, ensure_ascii=False, indent=2)
 
     sim_edges = len([e for e in edges if str(e.get('type', '')).startswith('paper_sim')])
-    print(f"Nodes: {len(nodes)}, Edges: {len(edges)}, Cross-links: {len(cat_links)}, Similarity-edges: {sim_edges}")
+    excluded = len(all_papers) - len(papers)
+    print(f"Nodes: {len(nodes)}, Edges: {len(edges)}, Cross-links: {len(cat_links)}, Similarity-edges: {sim_edges}, Excluded-low-quality: {excluded}")
 
 
 if __name__ == '__main__':

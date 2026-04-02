@@ -52,6 +52,16 @@ def paper_score(p):
     return score
 
 
+def is_low_quality_record(p):
+    has_url = bool(norm_text(p.get('source_url') or p.get('url')))
+    has_abs = bool(norm_text(p.get('abstract')))
+    has_kw = bool(norm_text(p.get('keywords')))
+    has_unit = bool(norm_text(p.get('unit')))
+    has_author = bool(norm_text(p.get('author')))
+    # 仅把“标题之外几乎没有信息”的记录视为低质量
+    return (not has_url) and (not has_abs) and (not has_kw) and (not has_unit) and (not has_author)
+
+
 def main():
     with open(PAPERS_CLEAN_JSON, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -102,7 +112,14 @@ def main():
 
     cleaned = list(by_title.values())
 
-    # 3) 重排 id
+    # 3) 标记低质量记录（无 URL 且无摘要）
+    low_quality_count = 0
+    for p in cleaned:
+        p['low_quality'] = is_low_quality_record(p)
+        if p['low_quality']:
+            low_quality_count += 1
+
+    # 4) 重排 id
     for i, p in enumerate(cleaned, start=1):
         p['id'] = i
 
@@ -117,6 +134,7 @@ def main():
     print(f'removed_garbled_title={removed_garbled_title}')
     print(f'removed_bad_year={removed_bad_year}')
     print(f'removed_duplicates={duplicate_count}')
+    print(f'low_quality_marked={low_quality_count}')
     print(f'total_after={len(cleaned)}')
 
 

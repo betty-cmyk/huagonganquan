@@ -116,7 +116,9 @@ def build_evidence(paper, chapter):
 
 def main():
     with open(IN_JSON, 'r', encoding='utf-8') as f:
-        papers = json.load(f).get('papers', [])
+        all_papers = json.load(f).get('papers', [])
+
+    papers = all_papers
 
     buckets = defaultdict(list)
     cards = []
@@ -145,14 +147,21 @@ def main():
         })
 
     with open(OUT_BUCKETS, 'w', encoding='utf-8') as f:
-        json.dump({'total_papers': len(papers), 'chapters': ordered}, f, ensure_ascii=False, indent=2)
+        json.dump({
+            'total_papers': len(papers),
+            'total_all': len(all_papers),
+            'excluded_low_quality': len(all_papers) - len(papers),
+            'chapters': ordered
+        }, f, ensure_ascii=False, indent=2)
 
     cards.sort(key=lambda x: (x['chapter'], str(x.get('year', ''))), reverse=False)
     with open(OUT_CARDS, 'w', encoding='utf-8') as f:
         json.dump({'total_cards': len(cards), 'cards': cards}, f, ensure_ascii=False, indent=2)
 
     non_empty = sum(1 for c in ordered if c['count'] > 0)
+    excluded = len(all_papers) - len(papers)
     print(f'total_papers={len(papers)}')
+    print(f'excluded_low_quality={excluded}')
     print(f'chapters_with_materials={non_empty}')
     print(f'cards={len(cards)}')
     print(f'written={OUT_BUCKETS}')
