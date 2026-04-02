@@ -33664,6 +33664,28 @@ function render(){
   [...categories, ...papers].forEach(n => nodeById.set(n.id, n));
 
   const relEdges = G.edges.filter(e => e.type === 'paper_sim_intra' || e.type === 'paper_sim_cross');
+
+  function edgeDistance(d){
+    const s = nodeById.get(d.source), t = nodeById.get(d.target);
+    if(!s || !t) return 0;
+    const dx = (s.x - t.x), dy = (s.y - t.y);
+    return Math.sqrt(dx*dx + dy*dy);
+  }
+
+  function edgeOpacity(d){
+    const dist = edgeDistance(d);
+    const w = Number(d.weight || 0);
+    const nearBoost = dist <= 95 ? 1.0 : dist <= 180 ? 0.75 : dist <= 300 ? 0.45 : 0.22;
+    const base = d.type === 'paper_sim_cross' ? 0.26 : 0.11;
+    const weightBoost = Math.min(0.12, w * 0.01);
+    return Math.max(0.02, Math.min(0.32, (base + weightBoost) * nearBoost));
+  }
+
+  function edgeWidth(d){
+    const w = Number(d.weight || 0);
+    return d.type === 'paper_sim_cross' ? Math.min(1.0, 0.5 + w * 0.03) : Math.min(0.62, 0.36 + w * 0.02);
+  }
+
   ge.selectAll('line.sim').data(relEdges).join('line')
     .attr('class', 'sim')
     .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
@@ -33671,8 +33693,8 @@ function render(){
     .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
     .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
     .attr('stroke', d => d.type === 'paper_sim_cross' ? '#58a6ff' : '#8b949e')
-    .attr('stroke-width', d => d.type === 'paper_sim_cross' ? 0.9 : 0.45)
-    .attr('stroke-opacity', d => d.type === 'paper_sim_cross' ? 0.5 : 0.18);
+    .attr('stroke-width', d => edgeWidth(d))
+    .attr('stroke-opacity', d => edgeOpacity(d));
 
   // 全局晕染层（降亮40% + 平滑Blob边缘）
   const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
@@ -33739,7 +33761,7 @@ function render(){
     .attr('class', 'edge-glow-layer')
     .attr('pointer-events', 'none');
 
-  const crossEdges = relEdges.filter(d => d.type === 'paper_sim_cross');
+  const crossEdges = relEdges.filter(d => d.type === 'paper_sim_cross' && edgeDistance(d) <= 260);
   edgeGlow.selectAll('line.sim-glow').data(crossEdges).join('line')
     .attr('class', 'sim-glow')
     .attr('x1', d => nodeById.get(d.source)?.x ?? 0)
@@ -33747,8 +33769,11 @@ function render(){
     .attr('x2', d => nodeById.get(d.target)?.x ?? 0)
     .attr('y2', d => nodeById.get(d.target)?.y ?? 0)
     .attr('stroke', '#58a6ff')
-    .attr('stroke-width', 1.4)
-    .attr('stroke-opacity', 0.052)
+    .attr('stroke-width', 1.0)
+    .attr('stroke-opacity', d => {
+      const dist = edgeDistance(d);
+      return dist <= 120 ? 0.028 : dist <= 200 ? 0.016 : 0.008;
+    })
     .attr('filter', 'url(#edge-glow-blur)');
 
   // 3) 论文节点微光改为极弱（避免同色交叠变亮）
