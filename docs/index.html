@@ -33539,8 +33539,14 @@ function render(){
   });
 
   // 轻力学：拉向理想位 + 论文间轻排斥（让布局更自然）
+  // 性能优化：使用空间网格，仅计算近邻排斥，视觉效果保持一致
   const RELAX_ITERS = 180;
   const REPULSE_DIST = S * 3.2;
+  const REPULSE_DIST2 = REPULSE_DIST * REPULSE_DIST;
+  const CELL = REPULSE_DIST;
+
+  function cellKey(cx, cy){ return `${cx},${cy}`; }
+
   for (let it = 0; it < RELAX_ITERS; it++) {
     // 拉向理想位
     papers.forEach(p => {
@@ -33548,17 +33554,42 @@ function render(){
       p.y += (p.idealY - p.y) * 0.1;
     });
 
-    // 论文间排斥
+    // 论文间排斥（空间网格近邻）
+    const grid = new Map();
     for (let i = 0; i < papers.length; i++) {
-      for (let j = i + 1; j < papers.length; j++) {
-        const a = papers[i], b = papers[j];
-        let dx = b.x - a.x, dy = b.y - a.y;
-        let d = Math.sqrt(dx*dx + dy*dy) || 0.001;
-        if (d < REPULSE_DIST) {
-          const push = (REPULSE_DIST - d) * 0.04;
-          dx /= d; dy /= d;
-          a.x -= dx * push; a.y -= dy * push;
-          b.x += dx * push; b.y += dy * push;
+      const p = papers[i];
+      const cx = Math.floor(p.x / CELL);
+      const cy = Math.floor(p.y / CELL);
+      const key = cellKey(cx, cy);
+      if (!grid.has(key)) grid.set(key, []);
+      grid.get(key).push(i);
+    }
+
+    for (let i = 0; i < papers.length; i++) {
+      const a = papers[i];
+      const acx = Math.floor(a.x / CELL);
+      const acy = Math.floor(a.y / CELL);
+
+      for (let ox = -1; ox <= 1; ox++) {
+        for (let oy = -1; oy <= 1; oy++) {
+          const bucket = grid.get(cellKey(acx + ox, acy + oy));
+          if (!bucket) continue;
+
+          for (let bi = 0; bi < bucket.length; bi++) {
+            const j = bucket[bi];
+            if (j <= i) continue;
+
+            const b = papers[j];
+            let dx = b.x - a.x, dy = b.y - a.y;
+            let d2 = dx*dx + dy*dy;
+            if (d2 >= REPULSE_DIST2) continue;
+
+            let d = Math.sqrt(d2) || 0.001;
+            const push = (REPULSE_DIST - d) * 0.04;
+            dx /= d; dy /= d;
+            a.x -= dx * push; a.y -= dy * push;
+            b.x += dx * push; b.y += dy * push;
+          }
         }
       }
     }
